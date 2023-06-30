@@ -1,0 +1,92 @@
+:root {
+    --main-color: #8FB641;
+    --main-dark-color: #316C3B;
+    --text-color: #646464;
+    --text-dark-color: #030202;
+    --text-light-color: #6E6E6E;
+    --form-color: #ababab;
+    --border-color: #d2d2d2;
+    --accord-color: #F3F3F3;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --heading-h1: 35px;
+    --heading-h2: 30px;
+    --heading-h3: 25px;
+    --heading-h4: 20px;
+    --heading-h5: 18px;
+    --heading-h6: 16px;
+    --para-size: 14px;
+    --small-size: 12px;
+    --v-small-size: 10px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+.mat-h1,
+.mat-title,
+.mat-typography .mat-h1,
+.mat-typography .mat-title,
+.mat-typography h1,
+.mat-h2,
+.mat-subheading-1,
+.mat-typography .mat-h2,
+.mat-typography .mat-subheading-1,
+.mat-typography h2,
+.mat-h3,
+.mat-subheading-1,
+.mat-typography .mat-h3,
+.mat-typography .mat-subheading-1,
+.mat-typography h3,
+.mat-h4,
+.mat-subheading-1,
+.mat-typography .mat-h4,
+.mat-typography .mat-subheading-1,
+.mat-typography h4,
+.mat-h5,
+.mat-subheading-1,
+.mat-typography .mat-h5,
+.mat-typography .mat-subheading-1,
+.mat-typography h5,
+.mat-h6,
+.mat-subheading-1,
+.mat-typography .mat-h6,
+.mat-typography .mat-subheading-1,
+.mat-typography h6,
+.mat-body,
+.mat-body-1,
+.mat-typography .mat-body,
+.mat-typography .mat-body-1,
+.mat-typography {
+    font-family: var(--font-family) !important;
+}
+
+.mat-typography {
+    font-family: var(--font-family) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
