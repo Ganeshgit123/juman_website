@@ -18,12 +18,13 @@
     --para-size: 14px;
     --small-size: 12px;
     --v-small-size: 10px;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Noto Sans', sans-serif;
 }
 
 html,
 body {
     height: 100%;
+    font-family:var(--font-family);
 }
 
 body,

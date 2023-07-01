@@ -9,21 +9,26 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+
+
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxBootstrapIconsModule.pick(allIcons),
     NgbModule,
-    HttpClientModule,
+        HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage:'en',
       loader: {
