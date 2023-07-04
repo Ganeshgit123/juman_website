@@ -1,29 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AboutComponent } from './about.component';
+
 import { RouterModule,Routes } from '@angular/router';
-import { ProductDetailsComponent } from './product-details.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-
-
 
 const routes: Routes = [
   {
     path: '',
-    component:  ProductDetailsComponent,
+    component: AboutComponent,
   }
 ]
 
 @NgModule({
   declarations: [
-    ProductDetailsComponent
+    AboutComponent,
   ],
   imports: [
     CommonModule,
-    NgbModule,
     CarouselModule,
-  
     RouterModule.forChild(routes),
   ]
 })
-export class ProductDetailsModule { }
+export class AboutModule { }

@@ -134,15 +134,19 @@ line-height:1.8;
     width:500px;
     height:480px !important;
   }
-  ngb-carousel .wrapper {
-    position: relative;
-    height: 0;
-    padding-top: 55%; /* Keep ratio for 900x500 images */
+ 
+  .in-space{
+    padding:70px;
   }
-  ngb-carousel .wrapper>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  .new .slide img{
+width:900px;
+height:400px;
+padding-left:160px;
+  }
+ .new .owl-theme .owl-nav{
+    color:#000 !important;
+    font-size:72px !important;
+    background: transparent !important;
+    position: relative;
+top:-30%;
   }
