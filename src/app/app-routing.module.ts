@@ -27,6 +27,10 @@ const routes: Routes = [
     path: "about",
     loadChildren: () => import("./about/about.module").then((m) => m.AboutModule),
   },
+  {
+    path: "gcc",
+    loadChildren: () => import("./gcc-installation/gcc-installation.module").then((m) => m.GccInstallationModule),
+  },
 ];
 
 @NgModule({

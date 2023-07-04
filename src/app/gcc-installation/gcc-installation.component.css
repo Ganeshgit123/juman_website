@@ -1,0 +1,33 @@
+.bgimage {
+    width:100%;
+    height:500px;
+    background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size:cover;
+      }
+  .bgimage h1 {
+    text-align: center;
+    color:white;
+    padding-top:8rem;
+    text-shadow:2px 2px #333;
+  }
+  .gcc p{
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .gcc img{
+    padding-top:40px;
+    padding-bottom:30px;
+  }
+  .btn-orange{
+    background: #FAA61A 0% 0% no-repeat padding-box;
+border-radius: 57px;
+margin-left:20px;
+opacity: 1;
+width:20%;
+text-align: center;
+padding: 10px;
+color: #fff;
+  }

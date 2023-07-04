@@ -91,3 +91,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+.new .owl-theme .owl-nav [class*=owl-]{
+    color:#000 !important;
+    font-size:72px !important;
+    background: transparent !important;
+    position: relative;
+top:-70px !important;
+  }
