@@ -31,6 +31,18 @@ const routes: Routes = [
     path: "gcc",
     loadChildren: () => import("./gcc-installation/gcc-installation.module").then((m) => m.GccInstallationModule),
   },
+  {
+    path: "market",
+    loadChildren: () => import("./marketplace/marketplace.module").then((m) => m.MarketplaceModule),
+  },
+  {
+    path: "bod",
+    loadChildren: () => import("./board-of-director/board-of-director.module").then((m) => m.BoardOfDirectorModule),
+  },
+  {
+    path: "home",
+    loadChildren: () => import("./home/home.module").then((m) => m.HomeModule),
+  },
 ];
 
 @NgModule({

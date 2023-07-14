@@ -1,5 +1,8 @@
 :root {
-    --main-color: #8FB641;
+    --main-color:#FAA61A;
+    --color-secondary:#11143B;
+    --white-color:#ffffff;
+    --color:black;
     --main-dark-color: #316C3B;
     --text-color: #646464;
     --text-dark-color: #030202;
@@ -86,7 +89,11 @@ a {
     text-decoration: none !important;
     cursor: pointer;
 }
-
+p{
+    font-size:16px;
+    line-height:1.6;
+    
+}
 img {
     max-width: 100%;
     height: auto;
@@ -98,3 +105,4 @@ img {
     position: relative;
 top:-70px !important;
   }
+ 

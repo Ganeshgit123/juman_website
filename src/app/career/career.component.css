@@ -66,6 +66,21 @@
       }
       .btn-primary{
         background: #FAA61A 0% 0% no-repeat padding-box;
+        border-radius:25px;
+        opacity: 1;
+        border: none;
+        margin-top:20px;
+        width:40%;
+        padding:15px;
+        font-size:15px;
+      }
+      label{
+        font-weight:500;
+        font-size: 16px;
+        padding-bottom:15px;
+      }
+      .btn-pri{
+        background: #F4F4F4 0% 0% no-repeat padding-box;
         border-radius:0px;
         opacity: 1;
         border: none;
@@ -73,24 +88,17 @@
         padding:15px;
         font-size:15px;
       }
-      .form-select{
-        background: #F4F4F4;
-    border: none;
-    border-radius: 8px;
-    height:45px;
+      .form-select {
+background-color:#F4F4F4;
+border:none;
+height:45px;
+background-image: url(../../assets/img/downward-arrow.png);
       }
-      select {
-        background-image:
-          linear-gradient(45deg, transparent 50%, #000 60%),
-          linear-gradient(135deg, #0003 40%, transparent 50%) !important;
-        background-position:
-          calc(100% - 30px) 14px,
-          calc(100% - 20px) 14px,
-          100% 0;
-        background-size:
-          10px 10px,
-          10px 10px;
-        background-repeat: no-repeat;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+   
+      .career-ic{
+        background: rgb(244,244,244);
+        width:200px;
+        border: 1px solid #989898;
+        border-radius: 8px;
+        opacity: 0.05;;
       }

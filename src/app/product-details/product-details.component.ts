@@ -35,6 +35,7 @@ export class ProductDetailsComponent {
         items: 1
       }
     },
-    nav: true
+    nav: true,
+    rtl:true
   }
 }
