@@ -7,7 +7,9 @@ declare var $: any; // declaring jquery in this way solved the problem
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
+  collapsed = true;
   success: OwlOptions = {
     loop: true,
     margin:30,
@@ -33,7 +35,34 @@ export class HomeComponent {
         items: 5
       }
     },
-    nav:false
+    nav:false,
+  }
+  successs: OwlOptions = {
+    loop: true,
+    margin:30,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots:false,
+    autoplay:true,
+    autoplaySpeed:900,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 1 
+      },
+      400: {
+        items: 1
+      },
+      760: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      }
+    },
+    nav:true,
   }
   car: OwlOptions = {
     loop: true,
@@ -65,8 +94,13 @@ export class HomeComponent {
   ex: OwlOptions = {
     loop: true,
     autoWidth: true,
-    margin:40,
+    margin:20,
+    dots:false,
+    autoplay:true,
+    autoplaySpeed:900,
+
   }
+  
 }
 
 $(document).ready(function () {

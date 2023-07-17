@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS,HttpClient } from '@angular/common/http'; 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { HeaderComponent } from './header/header.component';
 
 
 export function createTranslateLoader(http: HttpClient): any {
@@ -19,12 +20,14 @@ export function createTranslateLoader(http: HttpClient): any {
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
-    AppComponent,    
+    AppComponent,   
+    HeaderComponent 
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbCollapseModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgxBootstrapIconsModule.pick(allIcons),
