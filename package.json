@@ -28,6 +28,8 @@
     "bootstrap-icons": "^1.10.5",
     "jquery": "^3.6.3",
     "ngx-bootstrap-icons": "^1.9.2",
+    "ngx-lottie": "^10.0.0",
+    "lottie-web": "^5.11.0",
     "ngx-owl-carousel-o": "^15.0.1",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
