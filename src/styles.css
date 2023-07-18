@@ -1,8 +1,8 @@
 :root {
-    --main-color:#FAA61A;
-    --color-secondary:#11143B;
-    --white-color:#ffffff;
-    --color:black;
+    --main-color: #FAA61A;
+    --color-secondary: #11143B;
+    --white-color: #ffffff;
+    --color: black;
     --main-dark-color: #316C3B;
     --text-color: #646464;
     --text-dark-color: #030202;
@@ -27,7 +27,7 @@
 html,
 body {
     height: 100%;
-    font-family:var(--font-family);
+    font-family: var(--font-family);
 }
 
 body,
@@ -89,22 +89,33 @@ a {
     text-decoration: none !important;
     cursor: pointer;
 }
-p{
-    font-size:16px;
-    line-height:1.6;
-    
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
-.new .owl-theme .owl-nav [class*=owl-]{
-    color:#000 !important;
-    font-size:72px !important;
+
+.new .owl-theme .owl-nav [class*=owl-] {
+    color: #000 !important;
+    font-size: 72px !important;
     background: transparent !important;
     position: relative;
-top:-70px !important;
-  }
-  .newr .owl-theme .owl-dots .owl-dot.active span {
-    background:var(--main-color);
-    }
+    top: -70px !important;
+}
+
+.newr .owl-theme .owl-dots .owl-dot.active span {
+    background: var(--main-color);
+}
+
+.client .owl-theme .owl-dots .owl-dot span{
+    background: #FDE4BA;
+}
+.client .owl-theme .owl-dots .owl-dot.active span{
+    background: var(--main-color) !important;
+}
