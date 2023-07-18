@@ -488,24 +488,15 @@ border-top:2px solid #A8A8A8;
  .about{
   padding-top:30px;
  }
- .logo-back{
+.logo-back{
   background:rgba(255,255,255,0.6);
-padding:40px;
-margin-top: 30px;
-position:absolute;
-top:30px;
-left:70%;
+  padding: 40px;
+  position: relative;
+  top:8rem;
+  left: -6rem;
+  z-index: 1;
+}
 
- }
- .logo-pos{
-  width:80px;
-  height: 80px;
-  
-z-index: 1;
- }
  .part-two{
   background: var(--main-color);
-  position: relative;
-
-  z-index: 1;
  }

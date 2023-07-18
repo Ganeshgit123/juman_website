@@ -11,6 +11,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 export function createTranslateLoader(http: HttpClient): any {
@@ -21,7 +22,8 @@ export function createTranslateLoader(http: HttpClient): any {
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   declarations: [
     AppComponent,   
-    HeaderComponent 
+    HeaderComponent,
+    FooterComponent
   ],
 
   imports: [
