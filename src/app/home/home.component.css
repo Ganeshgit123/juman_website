@@ -209,14 +209,17 @@ top:40%;
       height: 400px;
       border-radius: 30px;
       overflow:hidden;
-      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+     
       margin: 30px;
     }
     
     .hero-profile-img {
       height: 70%;
     }
-    
+    .hr{
+          background: var(--main-color);
+          height:3px;
+              }
     .hero-description-bk {
       background-image: linear-gradient(0deg , #3f5efb, #fc466b);
       border-radius: 30px;
@@ -280,9 +283,229 @@ top:40%;
     .jum{
       position:relative;
       left:-13%;
+      width:300px;
     }
     .about h6{
       font-size:30px;
       font-weight:700;
       padding-bottom:20px;
     }
+    .client{
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+   .client .cli{
+    text-align: left;
+font-size: 12px;
+letter-spacing: 0px;
+padding-left: 40px;
+padding-bottom:40px;
+color: #37C2D4;
+text-transform: uppercase;
+opacity: 1;
+   }
+   .trust{
+    padding-left: 40px;
+padding-bottom:10px;
+padding-top:10px;
+   }
+   .trust::after{
+    content:'';
+  display:inline-block;
+  width:30%;
+ margin-top: -20px; 
+   height:100%;
+   position: relative;
+   left: 20px;
+   top: -7px;
+
+  /* margin-right:100%; */
+  border-top:2px solid #A8A8A8;
+   
+   }
+   .testimonal{
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+ .testimonal .cli{
+  text-align: left;
+font-size: 12px;
+letter-spacing: 0px;
+padding-left: 0px;
+padding-bottom:20px;
+color: #37C2D4;
+text-transform: uppercase;
+opacity: 1;
+ }
+ .trust1{
+  padding-left: 0px;
+padding-bottom:10px;
+padding-top:10px;
+ }
+ .trust1::after{
+  content:'';
+display:inline-block;
+width:30%;
+margin-top: -20px; 
+ height:100%;
+ position: relative;
+ left: 20px;
+ top: -7px;
+
+/* margin-right:100%; */
+border-top:2px solid #A8A8A8;
+ 
+ }
+ .latest{
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-bottom:0px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  opacity: 1;
+ }
+ .roln{
+  text-align: left;
+font-size: 35px;
+padding-top:20px;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+ }
+ .roln::after{
+  content:'';
+display:inline-block;
+width:10%;
+margin-top: -20px; 
+ height:100%;
+ position: relative;
+ left: 20px;
+ top: -7px;
+
+/* margin-right:100%; */
+border-top:2px solid #A8A8A8;
+ 
+ }
+ .btn-yellow{
+  background: var(--main-color);
+  color:var(--color-black);
+  padding:12px;
+  }
+  .part{
+    background: var(--color-secondary);
+  }
+  .part h3{
+    padding-left:30px;
+    padding-top:40px;
+    padding-right:30px;
+    font-size:30px;
+    color: var(--white-color);
+  }
+  .set-part{
+    padding-top:60px;
+  }
+  .part p{
+    padding-left:30px;
+    padding-top:20px;
+    padding-right:30px;
+    color: var(--white-color);
+  }
+  .part-grey{
+    background: #F1F1F1;
+    padding:20px;
+  }
+   .newr.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background:var(--main-color) !important;
+    display: inline-block;
+    cursor: pointer;
+ 
+    border-radius: 3px;
+}
+
+.newr .owl-carousel .owl-nav .owl-prev {
+  position: relative !important;
+  top: 80px !important;
+  left: 190px !important;
+}
+.carousel-wrapper {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  font-family: sans-serif;
+}
+.owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #5110e9;
+}
+
+.owl-carousel .item {
+  text-align: center;
+}
+.owl-carousel .nav-button {
+  height: 50px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 110px !important;
+}
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+.owl-carousel .owl-prev {
+  left: -35px;
+}
+.owl-carousel .owl-next {
+  right: -35px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  color: #ffffff;
+  font-size: 39px;
+  background: #000000;
+  border-radius: 3px;
+}
+.owl-carousel .prev-carousel:hover {
+  background-position: 0px -53px;
+}
+.owl-carousel .next-carousel:hover {
+  background-position: -24px -53px;
+}
+ .service{
+  padding-top: 60px;
+ }
+ .about{
+  padding-top:30px;
+ }
+ .logo-back{
+  background:rgba(255,255,255,0.6);
+padding:40px;
+margin-top: 30px;
+position:absolute;
+top:30px;
+left:70%;
+
+ }
+ .logo-pos{
+  width:80px;
+  height: 80px;
+  
+z-index: 1;
+ }
+ .part-two{
+  background: var(--main-color);
+  position: relative;
+
+  z-index: 1;
+ }
