@@ -119,3 +119,20 @@ img {
 .client .owl-theme .owl-dots .owl-dot.active span{
     background: var(--main-color) !important;
 }
+.set-part .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    position: relative;
+    top: 65px;
+    left: 231px;
+   }
+   .set-part .owl-theme .owl-dots .owl-dot.active span {
+    background: var(--main-color);
+}
+
+.testimonal  .owl-dots .owl-dot span {
+    width: 10px;
+
+   }
+   .testimonal  .owl-theme .owl-dots .owl-dot.active span {
+    background: var(--white-color);
+}

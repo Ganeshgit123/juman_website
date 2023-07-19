@@ -16,7 +16,7 @@ export class HomeComponent {
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots:true,
+    dots:false,
     autoplay:true,
     autoplaySpeed:900,
     navSpeed: 600,
@@ -43,6 +43,33 @@ export class HomeComponent {
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
+    dots:true,
+    autoplay:true,
+    autoplaySpeed:900,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 1 
+      },
+      400: {
+        items: 1
+      },
+      760: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      }
+    },
+    nav:false,
+  }
+  suc: OwlOptions = {
+    loop: true,
+    margin:30,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     dots:false,
     autoplay:true,
     autoplaySpeed:900,
@@ -62,7 +89,34 @@ export class HomeComponent {
         items: 5
       }
     },
-    nav:true,
+    nav:false,
+  }
+  succ: OwlOptions = {
+    loop: true,
+    margin:30,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots:false,
+    autoplay:true,
+    autoplaySpeed:900,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 1 
+      },
+      400: {
+        items: 1
+      },
+      760: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      }
+    },
+    nav:false,
   }
   car: OwlOptions = {
     loop: true,

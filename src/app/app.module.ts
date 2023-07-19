@@ -31,6 +31,7 @@ export function createTranslateLoader(http: HttpClient): any {
     AppRoutingModule,
     NgbCollapseModule,
     BrowserAnimationsModule,
+   
     HttpClientModule,
     NgxBootstrapIconsModule.pick(allIcons),
     NgbModule,

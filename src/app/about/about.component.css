@@ -1,5 +1,5 @@
 .get{
-    padding-top:40px;
+    padding-top:120px;
     padding-bottom:40px;
 }
 .get h1{
@@ -294,7 +294,7 @@
     position:absolute;
     left:70%;
     z-index:1;
-    top:220px;
+    top:320px;
     width:100px;
     height:80px;
   }
