@@ -66,9 +66,13 @@
       </div>
       <div class="col-md-6 part-two">
           <div class="col-md-6">
-            <div class="logo-back">
-              <img src="../../assets/img/logo1.png" class="logo-pos">
-            </div>
+            <owl-carousel-o [options]="successs" class="log_caroou">
+              <ng-template carouselSlide>
+                <div class="logo-back">
+                  <img src="../../assets/img/logo1.png" class="logo-pos">
+                </div>
+              </ng-template>
+            </owl-carousel-o>
           </div>
         <h3>SUCESSFULL PARTNER</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

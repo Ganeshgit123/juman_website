@@ -11,7 +11,6 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public isCollapsed = true;
   title = 'juman';
   isLoading: any;
   constructor(private router: Router, private translateservice: TranslateService) {
