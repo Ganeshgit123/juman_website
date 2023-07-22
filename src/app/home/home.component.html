@@ -1,16 +1,49 @@
 <section class="banner">
  
-              <owl-carousel-o [options]="car">
-                  <ng-template carouselSlide>
-                   <img src="../../assets/img/gcc.png">
-                   <h1>At Juman, we promote <br>collaborative manufacturing<br> partnerships</h1>
-                              </ng-template>
-                              <ng-template carouselSlide>
-                                <img src="../../assets/img/banner.png">
-                                           </ng-template>
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/banner.png);">
+      <div class="container too">
+        <h2 data-animate="bottom" class="animeslide-heading">
+          At Juman, we promote <br>collaborative manufacturing<br> partnerships
+        </h2>
 
-        </owl-carousel-o>
+        <p data-animate="bottom" class="animeslide-desc">
+          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
+        </p>
+      </div>
+    </div>
+    <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/banner.png);">
+      <div class="container too">
+        <h2 data-animate="bottom" class="animeslide-heading">
+          At Juman, we promote <br>collaborative manufacturing<br> partnerships
+        </h2>
+
+        <p data-animate="bottom" class="animeslide-desc">
+          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
+        </p>
+      </div>
+    </div>
+
+      
+    </div>
+    <!-- Add Pagination -->
    
+    <!-- Add Arrows -->
+    <div class="flex animeslide-bottom">
+      <div class="cell small">
+        <div class="animeslide-pagination swiper-pagination"></div>
+      </div>
+      <div class="cell medium">
+        <div class="animeslide-scrollbar swiper-scrollbar"></div>
+      </div>
+      <div class="cell small">
+        <div class="animeslide-button-prev swiper-button-prev"></div>
+        <div class="animeslide-button-next swiper-button-next"></div>
+      </div>
+    </div>
+  </swiper>
+                                 
 </section>
 
 <section class="about">

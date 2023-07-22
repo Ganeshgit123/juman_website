@@ -1,0 +1,48 @@
+<header>
+
+<nav class="navbar  fixed-top  navbar-expand-lg navbar-light bg-light">
+   
+    <hr>
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../assets/img/main-logo.png" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+       <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">who we are</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="operating">Operating Companies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bod">Board of Director</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Services</a>
+          <div class="dropdown-content">
+            <a href="gcc">Juman Installation</a>
+            <a href="market">Juman Market place</a>
+        </div>
+        </li>
+             <li class="nav-item">
+          <a class="nav-link" href="product" >Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn-yellow" href="contact">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+</header>
+  

@@ -12,6 +12,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderOneComponent } from './header-one/header-one.component';
 
 
 export function createTranslateLoader(http: HttpClient): any {
@@ -23,7 +24,8 @@ export function createTranslateLoader(http: HttpClient): any {
   declarations: [
     AppComponent,   
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderOneComponent
   ],
 
   imports: [

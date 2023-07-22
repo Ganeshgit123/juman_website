@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { RouterModule,Routes } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     CommonModule,
     CarouselModule,
     NgbCollapseModule,
+    NgxUsefulSwiperModule,
     RouterModule.forChild(routes),
   ]
 })
