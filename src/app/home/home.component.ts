@@ -172,6 +172,10 @@ export class HomeComponent {
     autoplaySpeed:900,
 
   }
+
+  ngOnInit() {
+   sessionStorage.setItem('pageName', 'home');
+  }
   
 }
 

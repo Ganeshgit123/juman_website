@@ -30,7 +30,18 @@ export class AppComponent {
   }
   lang: any;
   dir: any;
+  header: any;
+  transparentHeader: any;
   ngOnInit(): void {
+    this.router.events
+    .subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.header = (event.url !== '/')
+      }
+      if (event instanceof NavigationEnd) {
+        this.transparentHeader = (event.url == '/')
+      }
+    });
     this.lang = localStorage.getItem("lang") || "en";
     this.dir = localStorage.getItem("dir") || "ltr";
   }

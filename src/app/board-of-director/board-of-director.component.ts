@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./board-of-director.component.css']
 })
 export class BoardOfDirectorComponent {
+  constructor() { }
 
+  ngOnInit(): void {
+   sessionStorage.setItem('pageName', 'bod');
+  }
 }

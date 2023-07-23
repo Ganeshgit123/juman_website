@@ -38,4 +38,8 @@ export class ProductDetailsComponent {
     nav: true,
     rtl:true
   }
+  
+  ngOnInit(): void {
+    sessionStorage.setItem('pageName', 'product');
+  }
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./gcc-installation.component.css']
 })
 export class GccInstallationComponent {
+  constructor() { }
 
+  ngOnInit(): void {
+   sessionStorage.setItem('pageName', 'service');
+  }
 }

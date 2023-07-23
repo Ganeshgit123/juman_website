@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./marketplace.component.css']
 })
 export class MarketplaceComponent {
+  constructor() { }
 
+  ngOnInit(): void {
+   sessionStorage.setItem('pageName', 'service');
+  }
 }

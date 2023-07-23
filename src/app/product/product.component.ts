@@ -6,16 +6,18 @@ import { PostService } from '../product.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent  implements OnInit {
+export class ProductComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
   tableSize: number = 7;
   tableSizes: any = [3, 6, 9, 12];
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService) { }
+
   ngOnInit(): void {
     this.fetchPosts();
+    sessionStorage.setItem('pageName', 'product');
   }
   fetchPosts(): void {
     this.postService.getAllPosts().subscribe(

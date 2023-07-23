@@ -1,48 +1,56 @@
 <header>
-
-<nav class="navbar  fixed-top  navbar-expand-lg navbar-light bg-light">
-   
-    <hr>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" [ngClass]="{'headBackground': headBackground}">
+    <div class="top_header">
+     <p class="pb-0 top_para">
+      <a *ngIf="lang == 'en'" (click)="switchLang('ar')">AR <img src="../../assets/img/saudi_flag.png" class="flag_img"></a>
+      <a *ngIf="lang == 'ar'" (click)="switchLang('en')">EN <img src="../../assets/img/saudi_flag.png" class="flag_img"></a>
+     </p>
+    </div>
     <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="../../assets/img/main-logo.png" class="img-fluid"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
-      (click)="isCollapsed = !isCollapsed">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-       <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about">who we are</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="operating">Operating Companies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bod">Board of Director</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Services</a>
-          <div class="dropdown-content">
-            <a href="gcc">Juman Installation</a>
-            <a href="market">Juman Market place</a>
+        <a class="navbar-brand" routerLink="/"><img src="../../assets/img/main-logo.png" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+          (click)="isCollapsed = !isCollapsed">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/" [ngClass]="{'active': page == 'home'}"
+                (click)="pageActive('home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about" [ngClass]="{'active': page == 'about'}"
+                (click)="pageActive('about')">who we are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/operating" [ngClass]="{'active': page == 'operating'}"
+                (click)="pageActive('operating')">Operating Companies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/bod" [ngClass]="{'active': page == 'bod'}"
+                (click)="pageActive('bod')">Board of Director</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active': page == 'service'}" (click)="pageActive('service')">Services</a>
+              <div class="dropdown-content">
+                <a routerLink="/gcc">Juman Installation</a>
+                <a routerLink="/market">Juman Market place</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/product" [ngClass]="{'active': page == 'product'}"
+                (click)="pageActive('product')">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/career" [ngClass]="{'active': page == 'career'}"
+                (click)="pageActive('career')">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-yellow" routerLink="/contact">CONTACT US</a>
+            </li>
+          </ul>
         </div>
-        </li>
-             <li class="nav-item">
-          <a class="nav-link" href="product" >Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="career">Career</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn-yellow" href="contact">CONTACT US</a>
-        </li>
-      </ul>
-    </div>
-    </div>
+      </div>
   </nav>
 </header>
-  

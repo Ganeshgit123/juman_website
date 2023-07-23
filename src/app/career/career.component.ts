@@ -27,6 +27,7 @@ export class CareerComponent {
      this.aFormGroup = this.formBuilder.group({
        recaptcha: ['', Validators.required]
      });
+    sessionStorage.setItem('pageName', 'career');
    }
    // reset(): void {
    //   this.captchaElem.resetCaptcha();

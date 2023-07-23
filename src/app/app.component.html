@@ -1,5 +1,6 @@
 <div>
-<app-header-one></app-header-one>
+  <app-header *ngIf="header"></app-header>
+  <app-header-one *ngIf="transparentHeader"></app-header-one>
 </div>
 <div *ngIf="isLoading" class="spinner-wrapper">
   <div class="spinner">Loading...</div>
@@ -15,5 +16,5 @@
 </div>
 
 <div>
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </div>

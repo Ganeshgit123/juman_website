@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  constructor() { }
   customOptions: OwlOptions = {
     loop: true,
     margin:30,
@@ -61,5 +61,11 @@ export class AboutComponent {
       }
     },
     nav:false
+  }
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+   sessionStorage.setItem('pageName', 'about');
   }
 }

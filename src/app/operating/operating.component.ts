@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./operating.component.css']
 })
 export class OperatingComponent {
+  constructor() { }
 
+  ngOnInit(): void {
+   sessionStorage.setItem('pageName', 'operating');
+  }
 }

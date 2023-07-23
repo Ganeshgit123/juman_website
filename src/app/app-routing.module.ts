@@ -41,10 +41,6 @@ const routes: Routes = [
   {
     path: "bod",
     loadChildren: () => import("./board-of-director/board-of-director.module").then((m) => m.BoardOfDirectorModule),
-  },
-  {
-    path: "home",
-    loadChildren: () => import("./home/home.module").then((m) => m.HomeModule),
   }
 ];
 
