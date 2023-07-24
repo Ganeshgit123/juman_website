@@ -13,15 +13,15 @@ export class HeaderComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.page = sessionStorage.getItem('pageName')
+    this.page = sessionStorage.getItem('pageName');
   }
 
   pageActive(value){
     if(value == 'home'){
-      sessionStorage.setItem('pageName', value);
+      sessionStorage.setItem('pageName', 'home');
     }else{
       this.page = value;
     }
-    console.log("page",this.page)
+    // console.log("page",this.page)
   }
 }

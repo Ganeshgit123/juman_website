@@ -25,7 +25,7 @@ export class HeaderOneComponent {
 
   }
   ngOnInit(): void {
-    this.page = sessionStorage.getItem('pageName');
+    this.page = 'home';
     this.lang = localStorage.getItem("lang") || "en";
     this.dir = localStorage.getItem("dir") || "ltr"
   }

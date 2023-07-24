@@ -32,10 +32,10 @@
                 (click)="pageActive('bod')">Board of Director</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" [ngClass]="{'active': page == 'service'}" (click)="pageActive('service')">Services</a>
+              <a class="nav-link" [ngClass]="{'active': page == 'service'}">Services</a>
               <div class="dropdown-content">
-                <a routerLink="/gcc">Juman Installation</a>
-                <a routerLink="/market">Juman Market place</a>
+                <a routerLink="/gcc" (click)="pageActive('service')">Juman Installation</a>
+                <a routerLink="/market" (click)="pageActive('service')">Juman Market place</a>
               </div>
             </li>
             <li class="nav-item">
