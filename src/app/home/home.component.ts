@@ -31,6 +31,7 @@ export class HomeComponent {
   success: OwlOptions = {
     loop: true,
     margin:30,
+    rtl:true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
@@ -58,6 +59,7 @@ export class HomeComponent {
   successs: OwlOptions = {
     loop: true,
     margin:30,
+    rtl:true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
@@ -85,6 +87,7 @@ export class HomeComponent {
   suc: OwlOptions = {
     loop: true,
     margin:30,
+    rtl:true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
@@ -112,6 +115,7 @@ export class HomeComponent {
   succ: OwlOptions = {
     loop: true,
     margin:30,
+    rtl:true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
@@ -139,6 +143,7 @@ export class HomeComponent {
   car: OwlOptions = {
     loop: true,
     margin:30,
+    rtl:true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
@@ -166,11 +171,25 @@ export class HomeComponent {
   ex: OwlOptions = {
     loop: true,
     autoWidth: true,
+    rtl:true,
     margin:20,
     dots:false,
     autoplay:true,
     autoplaySpeed:900,
-
+    responsive: {
+      0: {
+        items: 1 
+      },
+      400: {
+        items: 1
+      },
+      760: {
+        items: 1
+      },
+      1000: {
+        items: 3
+      }
+    },
   }
 
   ngOnInit() {

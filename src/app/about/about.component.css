@@ -319,3 +319,82 @@ opacity: 1;
     padding-top:50px;
     padding-bottom:50px;
   }
+  @media only screen and (max-width: 1199px) and (min-width: 320px){
+   
+    .juman:before {
+      content: "";
+      display: block;
+      width:0px;
+      height: 3px;
+      background:transparent;
+      left:0px;
+      top: 50%;
+      position: absolute;
+    }
+    .juman:after {
+      content: "";
+      display: block;
+      width:0px;
+      height: 3px;
+      background: transparent;
+      right:0px;
+      top: 50%;
+      position: absolute;
+    }
+    .invest:before {
+      content: "";
+      display: block;
+      width: 0px;
+      height:2px;
+      background:transparent;
+      left:0px;
+      top: 50%;
+      position: absolute;
+    }
+    .invest:after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 2px;
+      background:transparent;
+      right:0px;
+      top: 50%;
+      position: absolute;
+    }
+    .sec-t{
+      height:auto;
+    }
+    .about img{
+margin-top:0px;
+    }
+    .interested a {
+      border: 2px solid var(--black-color);
+      border-radius: 50px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+       left: 10%; 
+      margin-top: 20px;
+      display: inline-block;
+      width: 80%;
+      color: var(--black-color);
+  }
+  .interested{
+    padding: 50px !important;
+  }
+  .interested h6{
+    line-height:1.6;
+  }
+  .interested h3{
+    line-height:1.6;
+  }
+  .hr {
+    width: 100px;
+    background: #000;
+    border-width: 3px;
+    position: relative;
+    top: -31px;
+    left: 47%;
+}
+
+  }
