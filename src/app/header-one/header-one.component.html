@@ -47,7 +47,8 @@
                 (click)="pageActive('career')">Career</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-yellow" routerLink="/contact">CONTACT US</a>
+              <a class="nav-link btn-yellow" routerLink="/contact" [ngClass]="{'': page == 'contact'}"
+              (click)="pageActive('contact')">CONTACT US</a>
             </li>
           </ul>
         </div>
