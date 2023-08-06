@@ -507,11 +507,12 @@ border-top:2px solid #A8A8A8;
   .animeslide-slide {
     position: relative;
     padding: 15px 0;
-    min-height: 550px;
+    min-height: 700px;
     background-size: cover;
   }
   .animeslide-slide .container {
     position: relative;
+    top:70px;
   }
   .animeslide-slide.swiper-slide-active [data-animate] {
     opacity: 1;
@@ -564,7 +565,7 @@ border-top:2px solid #A8A8A8;
     background-color: var(--main-color);
     max-width: 180px;
     z-index: 1;
-    top:450px;
+    top:550px;
       padding:0px;
     left: 30px;
     font-size: 14px;
@@ -607,6 +608,7 @@ border-top:2px solid #A8A8A8;
     position: relative;
     top:-86px;
   }
+  
   .too {
     max-width:80rem;
     margin: 0 auto;
@@ -616,7 +618,7 @@ border-top:2px solid #A8A8A8;
   .btn-read [dir="rtl"]{
     padding: 12px;
     position: relative;
-    left: -5% !important;
+    left:5% !important;
     display: inline-block;
     width: 40%;
     text-align: center;
