@@ -62,7 +62,7 @@
     border-bottom: 4px solid #D0D0D0;
 }
 .about .nav-pills li+li{
-    margin-left:50px;
+    margin-left:70px;
 }
 .about .nav-link.active:before {
     content: '';
@@ -104,6 +104,7 @@
 .about  p{
     line-height:1.7;
     font-size:16px;
+    padding-top: 10px;
 }
 .box img{
     width:50px;
@@ -295,7 +296,7 @@
     left:70%;
     z-index:1;
     top:320px;
-    width:100px;
+    /* width:100px; */
     height:80px;
   }
   .boxed{

@@ -1,45 +1,75 @@
 <nav class="navbar  fixed-top  navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-  <a class="navbar-brand" routerLink="/"><img src="../../assets/img/main-logo.png" class="img-fluid"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
-    (click)="isCollapsed = !isCollapsed">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a class="navbar-brand" routerLink="/"><img src="../../assets/img/main-logo.png" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/" [ngClass]="{'active': page == 'home'}" (click)="pageActive('home')">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about" [ngClass]="{'active': page == 'about'}" (click)="pageActive('about')">who we are</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/operating" [ngClass]="{'active': page == 'operating'}" (click)="pageActive('operating')">Operating Companies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/bod" [ngClass]="{'active': page == 'bod'}" (click)="pageActive('bod')">Board of Director</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': page == 'service'}">Services</a>
-        <div class="dropdown-content">
-          <a routerLink="/gcc" (click)="pageActive('service')">Juman Installation</a>
-          <a routerLink="/market" (click)="pageActive('service')">Juman Market place</a>
-      </div>
-      </li>
-           <li class="nav-item">
-        <a class="nav-link" routerLink="/product" [ngClass]="{'active': page == 'product'}" (click)="pageActive('product')">Product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/career" [ngClass]="{'active': page == 'career'}" (click)="pageActive('career')">Career</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link btn-yellow" routerLink="/contact" (click)="pageActive('contact')"
-        (click)="pageActive('contact')">CONTACT US</a>
-      </li>
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item" *ngFor="let item of home">
+          <a class="nav-link" routerLink="/" [ngClass]="{'active': page == 'home'}" (click)="pageActive('home')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" *ngFor="let item of whoWeAre">
+          <a class="nav-link" routerLink="/about" [ngClass]="{'active': page == 'about'}" (click)="pageActive('about')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let item of operating">
+          <a class="nav-link" routerLink="/operating" [ngClass]="{'active': page == 'operating'}"
+            (click)="pageActive('operating')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let item of board">
+          <a class="nav-link" routerLink="/bod" [ngClass]="{'active': page == 'bod'}" (click)="pageActive('bod')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let item of service">
+          <a class="nav-link" [ngClass]="{'active': page == 'service'}">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+          <div class="dropdown-content">
+            <a routerLink="/gcc" (click)="pageActive('service')" *ngFor="let item of installation">
+              <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+              <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+            </a>
+            <a routerLink="/market" (click)="pageActive('service')" *ngFor="let item of market">
+              <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+              <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item" *ngFor="let item of project">
+          <a class="nav-link" routerLink="/product" [ngClass]="{'active': page == 'product'}"
+            (click)="pageActive('project')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let item of career">
+          <a class="nav-link" routerLink="/career" [ngClass]="{'active': page == 'career'}"
+            (click)="pageActive('career')">
+            <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngFor="let item of contact">
+          <a class="nav-link btn-yellow" routerLink="/contact" (click)="pageActive('contact')"
+            (click)="pageActive('contact')"><span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
-

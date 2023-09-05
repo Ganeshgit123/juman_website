@@ -1,5 +1,4 @@
 export const environment = {
   production: false,
-  baseUrl: 'http://157.241.93.98:8080/v1/user',
-  s3Url: 'http://157.241.93.98:7000'
+  baseUrl: 'https://api1.webdev.juman-bm.com'
 };

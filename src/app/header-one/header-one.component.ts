@@ -1,4 +1,5 @@
 import { Component,HostListener } from '@angular/core';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-header-one',
@@ -12,7 +13,20 @@ export class HeaderOneComponent {
   lang: any;
   dir: any;
   headBackground:any;
+  getData = [];
+  home = [];
+  whoWeAre = [];
+  operating = [];
+  board = [];
+  service = [];
+  installation = [];
+  market = [];
+  project = [];
+  career = [];
+  contact = [];
   
+  constructor(public authService: AuthService,) { }
+
   @HostListener("window:scroll", [])
   onWindowScroll() {
 
@@ -27,7 +41,43 @@ export class HeaderOneComponent {
   ngOnInit(): void {
     this.page = 'home';
     this.lang = localStorage.getItem("lang") || "en";
-    this.dir = localStorage.getItem("dir") || "ltr"
+    this.dir = localStorage.getItem('dir');
+
+    this.authService.getHeader().subscribe(
+      (res: any) => {
+        this.getData = res.payload;
+        
+        this.home = this.getData.filter(element =>{
+          return element.seq === 1;
+        })
+        this.whoWeAre = this.getData.filter(element =>{
+          return element.seq === 2;
+        })
+        this.operating = this.getData.filter(element =>{
+          return element.seq === 3;
+        })
+        this.board = this.getData.filter(element =>{
+          return element.seq === 4;
+        })
+        this.service = this.getData.filter(element =>{
+          return element.seq === 5;
+        })
+        this.installation = this.getData.filter(element =>{
+          return element.seq === 6;
+        })
+        this.market = this.getData.filter(element =>{
+          return element.seq === 7;
+        })
+        this.project = this.getData.filter(element =>{
+          return element.seq === 8;
+        })
+        this.contact = this.getData.filter(element =>{
+          return element.seq === 9;
+        })
+        this.career = this.getData.filter(element =>{
+          return element.seq === 10;
+        })
+      })
   }
 
   pageActive(value){
