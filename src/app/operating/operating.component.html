@@ -1,52 +1,55 @@
-<section class="bgimage" style="background: url(../../assets/img/back-op.png);">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1>Operating Companies</h1>
-         
-        </div>
+<section class="bgimage" style="background-image: url({{endpoint}}/{{item.path}});" *ngFor="let item of getBanners">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h1>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="space-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 back-operating" style="background: url(../../assets/img/g1.png);">
+<section class="space-section">
+  <div class="container-fluid">
+    <div class="row" *ngFor="let item of gerFlowSec">
+      <div class="col-md-6 back-operating" style="background: url({{endpoint}}/{{item.images[1].path}});">
 
-            </div>
-        <div class="col-md-6 set">
-            <p><img src="../../assets/img/01.svg" width="75px" height="75px">&nbsp;<img src="../../assets/img/logo1.png" width="250px" height="140px"></p>
-<p>Gerflor Middle East (formerly BCIC) is a Joint Venture between Gerflor S.A.S France and Juman that traces its roots back to 1976. Gerflor Middle East is the only manufacturer of vinyl flooring systems in the Middle East. It grew over the last 40 years to become a major Middle Eastern supplier of vinyl flooring, wall coverings, adhesives and other building finishing material to the Healthcare, Education, Sports, Hospitality and Retail segments in the region.</p>
-<a href="" class="btn-blue">CLICK HERE</a>
-         
-</div>
+      </div>
+      <div class="col-md-6 set">
+        <p><img src="../../assets/img/01.svg" width="75px" height="75px">&nbsp;<img
+            src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px"></p>
 
-        </div>
-        <div class="row">
-            <div class="col-md-6 set">
-                <p><img src="../../assets/img/02.svg" width="75px" height="75px">&nbsp;<img src="../../assets/img/logo2.png" width="250px" height="140px"></p>
-    <p>USG Middle East (USGME) is a Joint Venture between USG (a Knauf Subsidiary) and Juman Industrial Investment Company-Saudi investor in the Building Materials segment (juman.sa). Since being founded in Dammam, Saudi Arabia in 1985, USGME has been a leading manufacturer of Ceiling, Interior Finishing, and Drywall Partitions. Our products are supplied to more than 45 countries through 4 regional manufacturing plants via a wide network of sales and technical offices and distributors.</p>
-    <a href="" class="btn-orange">CLICK HERE</a> 
-     
-</div>
-            <div class="col-md-6 back-operating" style="background: url(../../assets/img/g2.png);">
-
-            </div>
-        
-
-        </div>
-        <div class="row">
-           
-            <div class="col-md-6 back-operating" style="background:url(../../assets/img/g3.png);">
-
-            </div>
-            <div class="col-md-6 set">
-                <p><img src="../../assets/img/03.svg" width="75px" height="75px">&nbsp;<img src="../../assets/img/logo3.png" width="180px" height="120px"></p>
-    <p>USG Middle East (USGME) is a Joint Venture between USG (a Knauf Subsidiary) and Juman Industrial Investment Company-Saudi investor in the Building Materials segment (juman.sa). Since being founded in Dammam, Saudi Arabia in 1985, USGME has been a leading manufacturer of Ceiling, Interior Finishing, and Drywall Partitions. Our products are supplied to more than 45 countries through 4 regional manufacturing plants via a wide network of sales and technical offices and distributors.</p>
-    <a href="" class="btn-blue-light">CLICK HERE</a>               
-</div>
-
-        </div>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        <a href="" class="btn-blue">{{"CLICK HERE" | translate}}</a>
+      </div>
     </div>
-  </section>
+
+    <div class="row" *ngFor="let item of usgMESec">
+      <div class="col-md-6 set">
+        <p><img src="../../assets/img/02.svg" width="75px" height="75px">&nbsp;<img
+            src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px"></p>
+
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        <a href="" class="btn-orange">{{"CLICK HERE" | translate}}</a>
+      </div>
+      <div class="col-md-6 back-operating" style="background: url({{endpoint}}/{{item.images[1].path}});">
+      </div>
+    </div>
+    <div class="row" *ngFor="let item of bostikSec">
+      <div class="col-md-6 back-operating" style="background:url('{{endpoint}}/{{item.images[1].path}}');">
+      </div>
+      <div class="col-md-6 set">
+        <p><img src="../../assets/img/03.svg" width="75px" height="75px">&nbsp;<img
+            src="{{endpoint}}/{{item.images[0].path}}" width="180px" height="120px"></p>
+
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        <a href="" class="btn-blue-light">{{"CLICK HERE" | translate}}</a>
+      </div>
+    </div>
+  </div>
+</section>

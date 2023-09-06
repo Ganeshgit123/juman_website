@@ -1,44 +1,43 @@
-
-
-<section class="bgimage" style="background: url(../../assets/img/back-op.png);">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1>OUR SERVICES</h1>
-         
-        </div>
+<section class="bgimage" style="background: url({{endpoint}}/{{item.path}});" *ngFor="let item of getBanners">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h1>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 <section class="gcc">
-      <div class="container">
-        <div class="row">
-        
-    <div class="col-md-6">
+  <div class="container">
+    <div class="row" *ngFor="let item of getData">
+
+      <div class="col-md-6">
         <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+      </div>
+      <div class="col-md-4">
+        <img src="{{endpoint}}/{{item.images[0].path}}" class="img-mar img-fluid" />
+      </div>
     </div>
-    <div class="col-md-4">
-        <img src="assets/img/market-j.png"  class="img-mar img-fluid"/>
-    </div>
-    </div>
-    </div>
+  </div>
 </section>
 
 
 <section class="gcc-p">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-            <img src="assets/img/moc.png"  class="img-career img-fluid"/>
-        </div>
-  <div class="col-md-4 tex-h">
-    
-      <h4>Download <br>Our<br> Mobile App</h4>
-  </div>
- 
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="assets/img/moc.png" class="img-career img-fluid" />
+      </div>
+      <div class="col-md-4 tex-h">
+
+        <h4>{{"Download" | translate}} <br>{{"Our" | translate}}<br> {{"MobileApp" | translate}}</h4>
+      </div>
+
+    </div>
   </div>
 </section>
