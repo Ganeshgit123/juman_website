@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^15.2.1",
+    "@angular/animations": "^15.2.9",
     "@angular/cdk": "^15.2.1",
     "@angular/common": "^15.2.1",
     "@angular/compiler": "^15.2.1",
@@ -37,6 +37,7 @@
     "ngx-lottie": "^10.0.0",
     "ngx-owl-carousel-o": "^15.0.1",
     "ngx-pagination": "^6.0.3",
+    "ngx-toastr": "^16.2.0",
     "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~7.8.0",
     "swiper": "^6.8.4",

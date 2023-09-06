@@ -4,5 +4,12 @@
     "knowMore":"Know More",
     "Download":"Download",
     "Our":"Our",
-    "MobileApp":"Mobile App"
+    "MobileApp":"Mobile App",
+    "YourName":"Your Name",
+    "YourEmailAddress":"Your e-mail address",
+    "PhoneNumber":"Phone Number",
+    "Department":"Department",
+    "UploadResume":"Upload Resume(Pdf,Jpeg,png)",
+    "SubmitForm":"Submit Form",
+    "Required":"Required"
  }

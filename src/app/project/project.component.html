@@ -1,109 +1,107 @@
-<section class="bgimage" style="background: url(../../assets/img/back-op.png);">
+<section class="bgimage" style="background: url({{endpoint}}/{{item.path}});" *ngFor="let item of getBanners">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1 class="pro">Products</h1>
-         
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="pro">
+                    <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                </h1>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 <section class="space-section">
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-sm-6 top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Williamson</h3>
-                                   </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6  top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Kristiana</h3>
-                    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Williamson</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-6 top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Kristiana</h3>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Kristiana</h3>
-                    
+            <div class="col-md-4 col-sm-6  top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Kristiana</h3>
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-6 top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Kristiana</h3>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 top-space">
-            <div class="our-team">
-                <div class="pic">
-                    <img src="../../assets/img/img-1.png">
-                    <ul class="social">
-                        <a routerLink="/product-details" class="btn btn-or">More</a>
-                    </ul>
-                </div>
-                <div class="team-content">
-                    <h3 class="title">Kristiana</h3>
-                    
+            <div class="col-md-4 col-sm-6 top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Kristiana</h3>
+
+                    </div>
                 </div>
             </div>
+            <div class="col-md-4 col-sm-6 top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Kristiana</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Kristiana</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 top-space">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../../assets/img/img-1.png">
+                        <ul class="social">
+                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Kristiana</h3>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
+        <br>
+        <div class="d-flex justify-content-center">
+            <!-- <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+            </pagination-controls> -->
+        </div>
     </div>
-    <br>
-    <div class="d-flex justify-content-center">
-        <pagination-controls
-          previousLabel="Prev"
-          nextLabel="Next"
-          (pageChange)="onTableDataChange($event)"
-        >
-        </pagination-controls>
-      </div>
-</div>
 </section>

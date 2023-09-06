@@ -31,6 +31,9 @@ export class AuthService {
     return this.http.post<any>(`${this.endpoint}/site/banners/list`,data);
   }
 
+  createCareer(data){
+    return this.http.post<any>(`${this.endpoint}/site/career`, data);
+  }
 }
 
 
