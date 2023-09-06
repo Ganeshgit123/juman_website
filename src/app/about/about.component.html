@@ -148,15 +148,19 @@
       <div class="col-md-12">
         <div class="col-lg-12">
           <owl-carousel-o [options]="customOptions" class="new">
-            <ng-template carouselSlide>
+            <ng-template carouselSlide *ngFor="let item of strategy">
               <div class="box">
-                <img src="../../assets/img/discipline.svg">
-                <h2>Disciplined</h2>
-                <p>We target investments in the Building Materials sector that have a clear opportunity for value</p>
-                <a href="">Read More</a>
+                <img src="{{endpoint}}/{{item.images[0].path}}">
+                <h2>
+                  <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                  <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                </h2>
+                <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+                <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+                <!-- <a href="">Read More</a> -->
               </div>
             </ng-template>
-            <ng-template carouselSlide>
+            <!-- <ng-template carouselSlide>
               <div class="box1">
                 <img src="../../assets/img/success.svg">
                 <h2>Ambitious</h2>
@@ -171,7 +175,7 @@
                 <p>We target investments in the Building Materials sector that have a clear opportunity for value</p>
                 <a href="">Read More</a>
               </div>
-            </ng-template>
+            </ng-template> -->
           </owl-carousel-o>
         </div>
       </div>
@@ -181,46 +185,20 @@
 
 <section class="set-part">
   <div class="container-fluid" style="padding:0px;">
-    <div class="row g-0">
+    <div class="row g-0" *ngFor="let item of partnerSec">
       <div class="col-md-6 part">
-        <h3>SUCESSFULL PARTNER</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <h3>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h3>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
       <div class="col-md-6 part-grey">
         <owl-carousel-o [options]="success" class="new">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let img of partnerSecImages">
             <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
+              <img src="{{endpoint}}/{{img.path}}" alt="img 1" class="partner_img">
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -241,7 +219,10 @@
           <span *ngIf="dir == 'ltr'">{{item.erContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
         </h6>
-        <a href="" class="text-center">CONTACT NOW</a>
+        <a href="" class="text-center">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.enString}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arString}}</span>
+        </a>
       </div>
     </div>
   </div>

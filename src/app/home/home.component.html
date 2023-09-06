@@ -1,56 +1,20 @@
 <section class="banner">
- 
+
   <swiper [config]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/home_banner.jpg);">
-      <div class="container too">
-        <h2 data-animate="bottom" class="animeslide-heading">
-          At Juman, we promote <br>collaborative manufacturing<br> partnerships
-        </h2>
+      <div class="swiper-slide animeslide-slide" style="background-image: url({{endpoint}}/{{item.path}});"
+        *ngFor="let item of getBanners">
+        <div class="container too">
+          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'ltr'">{{item.erTitle}}</h2>
+          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'rtl'">{{item.arTitle}}</h2>
 
-        <p data-animate="bottom" class="animeslide-desc">
-          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
-        </p>
+          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'ltr'">{{item.erContent}}</p>
+          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'rtl'">{{item.arContent}}</p>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/home_banner1.jpg);">
-      <div class="container too">
-        <h2 data-animate="bottom" class="animeslide-heading">
-          At Juman, we promote <br>collaborative manufacturing<br> partnerships
-        </h2>
-
-        <p data-animate="bottom" class="animeslide-desc">
-          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
-        </p>
-      </div>
-    </div>
-    <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/home_banner2.jpg);">
-      <div class="container too">
-        <h2 data-animate="bottom" class="animeslide-heading">
-          At Juman, we promote <br>collaborative manufacturing<br> partnerships
-        </h2>
-
-        <p data-animate="bottom" class="animeslide-desc">
-          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
-        </p>
-      </div>
-    </div>
-    <div class="swiper-slide animeslide-slide" style="background-image: url(../../assets/img/home_banner3.jpg);">
-      <div class="container too">
-        <h2 data-animate="bottom" class="animeslide-heading">
-          At Juman, we promote <br>collaborative manufacturing<br> partnerships
-        </h2>
-
-        <p data-animate="bottom" class="animeslide-desc">
-          uman’s current portfolio includes operating companies that  manufacture, supply and install wall
-        </p>
-      </div>
-    </div>
-
-      
     </div>
     <!-- Add Pagination -->
-   
+
     <!-- Add Arrows -->
     <div class="flex animeslide-bottom">
       <div class="cell small">
@@ -65,29 +29,31 @@
       </div>
     </div>
   </swiper>
-                                 
+
 </section>
 
 <section class="about">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <h6>ABOUT US</h6>
-        <p>Established in 2005 Juman Industrial Investment Company (Juman) is a family-owned business, based in Al
-          Khobar, Saudi Arabia that is focused on investing and operating Joint Ventures and wholly- owned subsidiaries
-          in the Building Material sector. Jumans operations extend the Kingdom</p>
+      <div class="col-md-6" *ngFor="let item of aboutSec">
+        <h6>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h6>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
         <img src="../../assets/img/juman.png" class="jum">
         <br>
-        <a href="" class="download">Download</a>
+        <a href="{{endpoint}}/{{item.images[0].path}}" target="_blank" class="download">Download</a>
       </div>
-      <div class="col-md-6">
-        <h6>What Do We Do</h6>
+      <div class="col-md-6" *ngFor="let item of whatWeDoSec">
+        <h6>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h6>
         <hr class="hr">
-        <p>At Juman, we promote collaborative manufacturing partnerships in building materials and invest in new
-          building solutions and services to complement these partnerships. Juman’s operations extend the Kingdom of
-          Saudi Arabia, the GCC, and neighboring Middle Eastern countries. Juman’s current portfolio includes operating
-          companies that manufacture, supply and install wall Solution,Ceiling systems, roofing products, flooring
-          systems,and construction adhesives</p>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
     </div>
   </div>
@@ -98,69 +64,54 @@
     <div class="row g-0">
       <div class="col-md-6">
         <owl-carousel-o [options]="suc" class="newr">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let img of operatingImgSec">
             <div class="slide">
-              <img src="../../assets/img/g1.png">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/g2.png">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/g3.png">
+              <img src="{{endpoint}}/{{img.images[1].path}}">
             </div>
           </ng-template>
         </owl-carousel-o>
       </div>
       <div class="col-md-6 part-two">
-          <div class="col-md-6">
-            <owl-carousel-o [options]="succ" class="log_caroou">
-              <ng-template carouselSlide>
-                <div class="logo-back">
-                  <img src="../../assets/img/logo1.png" class="logo-pos">
-                </div>
-              </ng-template>
-              <ng-template carouselSlide>
-                <div class="logo-back">
-                  <img src="../../assets/img/logo2.png" class="logo-pos">
-                </div>
-              </ng-template>
-              <ng-template carouselSlide>
-                <div class="logo-back">
-                  <img src="../../assets/img/logo3.png" class="logo-pos">
-                </div>
-              </ng-template>
-            </owl-carousel-o>
-          </div>
-        <h3>OPERATING COMPANIES</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisc ing elit,sed do eiusmod,Lorem ipsum dolor sit amet, consectetur adipisc ing elit,sed do eiusmod</p>
-        
-      </div>
+        <div class="col-md-6">
+          <owl-carousel-o [options]="succ" class="log_caroou">
+            <ng-template carouselSlide *ngFor="let img of operatingImgSec">
+              <div class="logo-back">
+                <img src="{{endpoint}}/{{img.images[0].path}}" class="logo-pos">
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
 
+        <span *ngFor="let item of operatingSect">
+          <h3>
+            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+          </h3>
+          <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        </span>
+      </div>
     </div>
   </div>
 </section>
+
 <section class="service">
   <div class="container">
-    <div class="row">
+    <div class="row" *ngFor="let item of serviceSect;">
       <div class="col-md-5">
-        <div class="markkk" style="background: url(../../assets/img/gcc.png);">
-          <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;">
-          <a href="" class="btn-read">Read More</a>
+        <div class="markkk" style="background: url({{endpoint}}/{{item.images[0].path}});">
+          <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
+          <a routerLink="/gcc" class="btn-read">{{"ReadMore" | translate}}</a>
         </div>
 
       </div>
       <div class="col-md-6">
-        <h3 class="title">OUR SERVICE</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <h3 class="title">
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h3>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
 
       <div class="col-md-4">
@@ -169,13 +120,10 @@
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-6">
-        <div class="mar"
-          style="background: url(../../assets/img/jmart.png);">
-          <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;">
-          <a href="" class="btn-readd">Read More</a>
+        <div class="mar" style="background: url({{endpoint}}/{{item.images[1].path}});">
+          <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
+          <a href="" class="btn-readd">{{"ReadMore" | translate}}</a>
         </div>
-
-
       </div>
     </div>
   </div>
@@ -183,46 +131,20 @@
 
 <section class="set-part">
   <div class="container-fluid" style="padding:0px;">
-    <div class="row g-0">
+    <div class="row g-0" *ngFor="let item of partnerSec">
       <div class="col-md-6 part">
-        <h3>SUCESSFULL PARTNER</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+        <h3>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h3>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
       <div class="col-md-6 part-grey">
         <owl-carousel-o [options]="successs" class="hii">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let img of partnerSecImages">
             <div class="slidee">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slidee">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slidee">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
+              <img src="{{endpoint}}/{{img.path}}" alt="img 1" class="partner_img">
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -233,41 +155,22 @@
 
 <section class="client">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" *ngFor="let item of clientSec">
       <div class="col-md-12">
-        <span class="cli">OUR CLIENTS</span>
-        <h1 class="trust">TRUSTED BY</h1>
+        <span class="cli">
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </span>
+        <h1 class="trust">
+          <span *ngIf="dir == 'ltr'">{{item.erContent}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
+        </h1>
       </div>
       <div class="col-md-12 car">
         <owl-carousel-o [options]="success" class="new">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let item of clientImageSec">
             <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="slide">
-              <img src="../../assets/img/moon.png" alt="img 1">
+              <img src="{{endpoint}}/{{item.path}}" alt="img 1">
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -279,83 +182,30 @@
 <section class="testimonal">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <span class="cli">OUR CLIENTS</span>
-        <h1 class="trust1">Testimonal</h1>
+      <div class="col-md-12" *ngFor="let item of testimonialHeadingSec">
+        <span class="cli" *ngFor="let clie of clientSec">
+          <span *ngIf="dir == 'ltr'">{{clie.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{clie.arTitle}}</span>
+        </span>
+        <h1 class="trust1">
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h1>
       </div>
       <div class="col-md-12 yes">
         <owl-carousel-o [options]="car" class="new">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let item of testimonialContentSec">
             <div class="row">
               <div class="col-md-3">
-                <img src="../../assets/img/chair.png" class="img-u">
-                <h6>Client Name</h6>
+                <img src="{{endpoint}}/{{item.images[0].path}}" class="img-u">
+                <h6>{{item.erContent}}</h6>
               </div>
               <div class="col-md-9">
                 <img src="../../assets/img/quote.svg" class="quote">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.</p>
+                <p>{{item.arContent}}</p>
               </div>
             </div>
           </ng-template>
-          <ng-template carouselSlide>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../../assets/img/chair.png" class="img-u">
-                <h6>Client Name</h6>
-              </div>
-              <div class="col-md-9">
-                <img src="../../assets/img/quote.svg" class="quote">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../../assets/img/chair.png" class="img-u">
-                <h6>Client Name</h6>
-              </div>
-              <div class="col-md-9">
-                <img src="../../assets/img/quote.svg" class="quote">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../../assets/img/chair.png" class="img-u">
-                <h6>Client Name</h6>
-              </div>
-              <div class="col-md-9">
-                <img src="../../assets/img/quote.svg" class="quote">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="row">
-              <div class="col-md-3">
-                <img src="../../assets/img/chair.png" class="img-u">
-                <h6>Client Name</h6>
-              </div>
-              <div class="col-md-9">
-                <img src="../../assets/img/quote.svg" class="quote">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </ng-template>
-
         </owl-carousel-o>
       </div>
     </div>

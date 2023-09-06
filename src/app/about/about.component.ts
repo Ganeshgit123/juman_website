@@ -77,7 +77,9 @@ export class AboutComponent {
   interestedSec = [];
   investHead = [];
   strategy = [];
-
+  partnerSec = [];
+  partnerSecImages = [];
+  
   constructor(private router: Router, private route: ActivatedRoute, public authService: AuthService,) { }
 
   ngOnInit(): void {
@@ -94,34 +96,48 @@ export class AboutComponent {
     this.authService.getSectionsByHeaderId(object).subscribe(
       (res: any) => {
         this.getData = res.payload;
-        this.bannerSec = this.getData.filter(element =>{
+        this.bannerSec = this.getData.filter(element => {
           return element.code === 'WHO';
         })
-        this.whatWeDoSec = this.getData.filter(element =>{
+        this.whatWeDoSec = this.getData.filter(element => {
           return element.code === 'ABOUT';
         })
-        this.countSec = this.getData.filter(element =>{
+        this.countSec = this.getData.filter(element => {
           return element.code === 'COUNT';
         })
-        this.tabSec1 = this.getData.filter(element =>{
+        this.tabSec1 = this.getData.filter(element => {
           return element.code === 'ABOTAB' && element.seq == 3;
         })
-        this.tabSec2 = this.getData.filter(element =>{
+        this.tabSec2 = this.getData.filter(element => {
           return element.code === 'ABOTAB' && element.seq == 4;
         })
-        this.tabSec3 = this.getData.filter(element =>{
+        this.tabSec3 = this.getData.filter(element => {
           return element.code === 'ABOTAB' && element.seq == 5;
         })
-        this.interestedSec = this.getData.filter(element =>{
+        this.interestedSec = this.getData.filter(element => {
           return element.code === 'ABBOTT';
         })
-        this.investHead = this.getData.filter(element =>{
+        this.investHead = this.getData.filter(element => {
           return element.code === 'INVEST';
         })
-        this.strategy = this.getData.filter(element =>{
+        this.strategy = this.getData.filter(element => {
           return element.code === 'STRAGY';
         })
-        console.log("tab",this.strategy)
+      });
+
+    const object1 = {
+      relations: ["header", "images"],
+      filter: {
+        id: "0cce9f1b-c98a-49ab-a6bd-11770eeefcc2"
+      },
+      sort: { seq: "ASC" }
+    }
+    this.authService.getSectionsByHeaderId(object1).subscribe(
+      (res: any) => {
+        this.partnerSec = res.payload
+        this.partnerSecImages = this.partnerSec[0].images.sort(function (first, second) {
+          return first.seq - second.seq;
+        });
       });
   }
 }
