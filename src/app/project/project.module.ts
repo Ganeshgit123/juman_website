@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from './product.component';
+import { ProjectComponent } from './project.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 const routes: Routes = [
   {
     path: '',
-    component:  ProductComponent,
+    component:  ProjectComponent,
   }
 ]
 
 
 @NgModule({
   declarations: [
-    ProductComponent
+    ProjectComponent
   ],
   imports: [
     CommonModule,
@@ -22,4 +22,4 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ]
 })
-export class ProductModule { }
+export class ProjectModule { }

@@ -3,10 +3,10 @@ import { PostService } from '../product.service';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.css']
 })
-export class ProductComponent implements OnInit {
+export class ProjectComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchPosts();
-    sessionStorage.setItem('pageName', 'product');
+    sessionStorage.setItem('pageName', 'project');
   }
   fetchPosts(): void {
     this.postService.getAllPosts().subscribe(

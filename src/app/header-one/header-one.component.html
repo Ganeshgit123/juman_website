@@ -56,8 +56,8 @@
             </div>
           </li>
           <li class="nav-item"  *ngFor="let item of project">
-            <a class="nav-link" routerLink="/product" [ngClass]="{'active': page == 'product'}"
-              (click)="pageActive('product')">
+            <a class="nav-link" routerLink="/project" [ngClass]="{'active': page == 'project'}"
+              (click)="pageActive('project')">
               <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
               <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span></a>
           </li>
