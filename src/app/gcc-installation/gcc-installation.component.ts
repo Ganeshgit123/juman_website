@@ -14,6 +14,9 @@ export class GccInstallationComponent {
   getData = [];
   gccContentSec = [];
   gccTabSecArray = [];
+  selectedItem = 0;
+  imagesArray = [];
+  idArray = [];
 
   constructor(public authService: AuthService,) { }
 
@@ -49,6 +52,44 @@ export class GccInstallationComponent {
         this.gccTabSecArray = this.getData.filter(element => {
           return element.code === 'GCCTAB';
         })
+        this.gccTabSecArray.forEach(element => {
+          this.idArray.push(element.id);
+        });
+        const ids = {
+          sectionIds: this.idArray
+        }
+        this.authService.getImagesBySectionId(ids).subscribe(
+          (res: any) => {
+            this.imagesArray = res.payload;
+          });
+        const allData = {
+          code: 'ALLTAB',
+          erTitle: "All",
+          arTitle: 'All'
+        }
+        this.gccTabSecArray.unshift(allData);
+        // console.log("te",this.gccTabSecArray)
       });
+  }
+
+  tabClick(data, index) {
+    this.selectedItem = index;
+    if (data.code == 'ALLTAB') {
+      const ids = {
+        sectionIds: this.idArray
+      }
+      this.authService.getImagesBySectionId(ids).subscribe(
+        (res: any) => {
+          this.imagesArray = res.payload;
+        });
+    } else {
+      const ids = {
+        sectionIds: [data.id]
+      }
+      this.authService.getImagesBySectionId(ids).subscribe(
+        (res: any) => {
+          this.imagesArray = res.payload;
+        });
+    }
   }
 }
