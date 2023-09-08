@@ -1,5 +1,6 @@
 import { Component,HostListener } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-header-one',
@@ -7,7 +8,7 @@ import { AuthService } from 'src/app/shared/auth.service';
   styleUrls: ['./header-one.component.css']
 })
 export class HeaderOneComponent {
-
+  endpoint = environment.baseUrl;
   public isCollapsed = true;
   page:any;
   lang: any;
@@ -24,6 +25,7 @@ export class HeaderOneComponent {
   project = [];
   career = [];
   contact = [];
+  logoImg = [];
   
   constructor(public authService: AuthService,) { }
 
@@ -77,7 +79,11 @@ export class HeaderOneComponent {
         this.career = this.getData.filter(element =>{
           return element.seq === 10;
         })
+        this.logoImg = this.getData.filter(element =>{
+          return element.seq === 11;
+        })
       })
+      
   }
 
   pageActive(value){

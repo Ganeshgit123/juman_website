@@ -11,5 +11,7 @@
     "Department":"Department",
     "UploadResume":"Upload Resume(Pdf,Jpeg,png)",
     "SubmitForm":"Submit Form",
-    "Required":"Required"
+    "Required":"Required",
+    "DROPYOURMESSAGEHERE":"DROP YOUR MESSAGE HERE",
+    "Message":"Message"
  }

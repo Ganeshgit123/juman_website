@@ -14,7 +14,8 @@ export class BoardOfDirectorComponent {
   getData = [];
   chairmanSec = [];
   ceoSec = [];
-  
+  boardHead = [];
+
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
@@ -48,6 +49,9 @@ export class BoardOfDirectorComponent {
         })
         this.ceoSec = this.getData.filter(element => {
           return element.code === 'BOCEO';
+        })
+        this.boardHead = this.getData.filter(element => {
+          return element.code === 'BOHEAD';
         })
       });
   }

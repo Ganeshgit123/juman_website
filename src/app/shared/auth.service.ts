@@ -38,6 +38,10 @@ export class AuthService {
   createCareer(data){
     return this.http.post<any>(`${this.endpoint}/site/career`, data);
   }
+
+  createContact(data){
+    return this.http.post<any>(`${this.endpoint}/site/contacts`, data);
+  }
 }
 
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { AuthService } from 'src/app/shared/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
- 
+  endpoint = environment.baseUrl;
   public isCollapsed = true;
   page:any;
   getData = [];
@@ -22,6 +23,7 @@ export class HeaderComponent {
   project = [];
   career = [];
   contact = [];
+  logoImg = [];
   dir:any;
 
   constructor(private router: Router, private route: ActivatedRoute,public authService: AuthService,) { }
@@ -63,6 +65,9 @@ export class HeaderComponent {
         })
         this.career = this.getData.filter(element =>{
           return element.seq === 10;
+        })
+        this.logoImg = this.getData.filter(element =>{
+          return element.seq === 11;
         })
       })
   }
