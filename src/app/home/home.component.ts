@@ -208,6 +208,7 @@ export class HomeComponent {
   clientImageSec = [];
   testimonialHeadingSec = [];
   testimonialContentSec = [];
+  latestSec = [];
   
   constructor(public authService: AuthService,) { }
 
@@ -266,6 +267,9 @@ export class HomeComponent {
         })
         this.testimonialContentSec = this.getData.filter(element => {
           return element.code === 'TESTI';
+        })
+        this.latestSec = this.getData.filter(element => {
+          return element.code === 'LANEWS';
         })
       });
 

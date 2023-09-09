@@ -216,121 +216,35 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <p class="latest">LATEST NEWS</p>
-        <h4 class="roln">READ OUR LATEST NEWS</h4>
+        <p class="latest">{{"LATESTNEWS" | translate}}</p>
+        <h4 class="roln">{{"READURLATESTNEWS" | translate}}</h4>
       </div>
       <div class="col-md-2">
         <br> <br>
-        <a href="" class="btn-yellow"> View All</a>
+        <a href="" class="btn-yellow"> {{"ViewAll" | translate}}</a>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <owl-carousel-o [options]="ex" class="new">
-          <ng-template carouselSlide>
+          <ng-template carouselSlide *ngFor="let img of latestSec">
             <div class="second hero">
               <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
+                src="{{endpoint}}/{{img.images[0].path}}" alt="">
               <div class="hero-description-bk"></div>
 
               <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>{{img.arTitle}}</p>
               </div>
               <div class="hero-date">
-                <p>20.02.2019</p>
+                <p>{{img.arContent | date:'mediumDate'}}</p>
               </div>
               <div class="hero-btn">
-                <a href="#">Learn More</a>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="second hero">
-              <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
-              <div class="hero-description-bk"></div>
-
-              <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="hero-date">
-                <p>20.02.2019</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">Learn More</a>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="second hero">
-              <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
-              <div class="hero-description-bk"></div>
-
-              <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="hero-date">
-                <p>20.02.2019</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">Learn More</a>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="second hero">
-              <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
-              <div class="hero-description-bk"></div>
-
-              <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="hero-date">
-                <p>20.02.2019</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">Learn More</a>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="second hero">
-              <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
-              <div class="hero-description-bk"></div>
-
-              <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="hero-date">
-                <p>20.02.2019</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">Learn More</a>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="second hero">
-              <img class="hero-profile-img"
-                src="https://i.pinimg.com/originals/9f/b1/ff/9fb1ffb05dd28039d1a06ad8e90cbd75.jpg" alt="">
-              <div class="hero-description-bk"></div>
-
-              <div class="hero-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="hero-date">
-                <p>20.02.2019</p>
-              </div>
-              <div class="hero-btn">
-                <a href="#">Learn More</a>
+                <a href="{{img.erContent}}" target="_blank">{{"LearnMore" | translate}}</a>
               </div>
             </div>
           </ng-template>
         </owl-carousel-o>
-
       </div>
     </div>
   </div>

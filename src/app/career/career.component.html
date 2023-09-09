@@ -63,10 +63,11 @@
                                     <select class="form-select" aria-label="Default select example"
                                         formControlName="department"
                                         [ngClass]="{'is-invalid': submitted && f['department'].errors}">
-                                        <option selected>IT</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>department
+                                        <option value="" disabled>{{"SelectDepart" | translate}}</option>
+                                        <option value={{item.id}} *ngFor="let item of getData">
+                                            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                                            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                                        </option>
                                     </select>
                                     <div *ngIf="submitted && f['department'].errors" class="invalid-feedback">
                                         <div *ngIf="f['department'].errors['required']">{{'Required' |

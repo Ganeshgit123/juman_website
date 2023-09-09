@@ -65,6 +65,18 @@ export class CareerComponent {
         department: ['', [Validators.required]],
         resume: [''],
       });
+
+      const object = {
+        relations: ["header", "images"],
+        filter: {
+          header: { id: "168d8ed9-6ea5-4707-bdce-c8d0689090f4" }
+        },
+        sort: { seq: "ASC" }
+      }
+      this.authService.getSectionsByHeaderId(object).subscribe(
+        (res: any) => {
+          this.getData = res.payload;
+        });
    }
    // reset(): void {
    //   this.captchaElem.resetCaptcha();
