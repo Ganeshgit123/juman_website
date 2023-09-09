@@ -21,6 +21,7 @@ export class ContactComponent {
   getData = [];
   contactForm: FormGroup;
   submitted = false;
+  getFooter = [];
 
   constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService, private toastr: ToastrService,) { }
 
@@ -40,23 +41,28 @@ export class ContactComponent {
         this.getBanners = res.payload;
       });
 
-      this.contactForm = this.fb.group({
-        name: ['', [Validators.required]],
-        email: ['', [Validators.required]],
-        mobileNumber: ['', [Validators.required]],
-        message: ['', [Validators.required]],
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      mobileNumber: ['', [Validators.required]],
+      message: ['', [Validators.required]],
+    });
+
+    this.authService.getFooter().subscribe(
+      (res: any) => {
+        this.getFooter = res.payload;
       });
   }
 
   get f() { return this.contactForm.controls; }
 
-  onSubmitData(){
+  onSubmitData() {
     this.submitted = true;
-      if (!(this.contactForm.valid)) {
-        return false;
-      }
+    if (!(this.contactForm.valid)) {
+      return false;
+    }
 
-      this.authService.createContact(this.contactForm.value)
+    this.authService.createContact(this.contactForm.value)
       .subscribe((res: any) => {
         if (res.code == 200) {
           this.submitted = false;
@@ -67,5 +73,5 @@ export class ContactComponent {
           this.toastr.error('Error ', 'Error');
         }
       });
-   }
+  }
 }

@@ -80,25 +80,24 @@
 <br>
 <section class="phone-sec">
     <div class="container">
-        <div class="row">
+        <div class="row" *ngFor="let item of getFooter">
             <div class="col-md-4">
                 <div class="box">
                     <p><img src="assets/img/loc.svg"></p>
-                    <p>Location</p>
+                    <p>{{item.address}}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box">
                     <p><img src="assets/img/phone.svg"></p>
-                    <p>phone</p>
+                    <p>{{item.mobileNumber}}</p>
                 </div>
 
             </div>
             <div class="col-md-4">
                 <div class="box">
                     <p><img src="assets/img/mail.svg"></p>
-                    <p>Mail</p>
-
+                    <p>{{item.email}}</p>
                 </div>
             </div>
         </div>
