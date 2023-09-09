@@ -46,6 +46,10 @@ export class ProjectComponent implements OnInit {
     this.authService.getSectionsByHeaderId(object).subscribe(
       (res: any) => {
         this.getData = res.payload;
+
+        this.getData.forEach(element => {
+          element.image = element.images[0].path
+        });
       });
   }
 

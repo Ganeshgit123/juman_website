@@ -1,36 +1,70 @@
 <section class="footer-section">
     <div class="container">
-        <div class="row">
+        <div class="row" *ngFor="let item of getData">
             <div class="col-lg-6">
-               <img src="../../assets/img/foo-logo.png" class="foo-img">
-<ul class="li">
-    <li>Juman@Juman.sa</li>
-    <li> <span class="dot"></span>+966-13-882 8086</li>
-    <li> <span class="dot"></span>Al Khobar, Saudi Arabia (Head Office)</li>
-</ul>
-               <p class="copy">Copyrights © 2023 Saudi Juman All rights reserved.</p>
-               <p class="copy">Stay Tuned</p>
-               <ul class="social">
-                <li><img src="../../assets/img/instagram.svg"></li>
-                <li><img src="../../assets/img/facebook-f.svg"></li>
-                <li><img src="../../assets/img/twitter.svg"></li>
-               </ul>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-lg-4 top-f">
-                <p class="copy">Quick Links</p>
+                <img src="../../assets/img/foo-logo.png" class="foo-img">
                 <ul class="li">
-                    <li>Who We are</li>
-                    <li><span class="dot"></span>Who We are</li>
-                    <li><span class="dot"></span>Who We are</li>
-                    <li><span class="dot"></span>Career</li>
+                    <li>{{item.email}}</li>
+                    <li> <span class="dot"></span>{{item.mobileNumber}}</li>
+                    <li> <span class="dot"></span>{{item.address}}</li>
                 </ul>
-                <p class="copy">Operating Companies</p>
+                <p class="copy">{{item.copyright}}</p>
+                <p class="copy">
+                    <span *ngIf="dir == 'ltr'">{{item.quickLink[0].stayStringEn}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.quickLink[0].stayStringAr}}</span>
+                </p>
+                <ul class="social">
+                    <li>
+                        <a href="{{item.instaLink}}" target="_blank"><img src="../../assets/img/instagram.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{item.fbLink}}" target="_blank"><img src="../../assets/img/facebook-f.svg">
+                        </a>
+                    </li>
+                    <li><a href="{{item.twitterLink}}" target="_blank"><img src="../../assets/img/twitter.svg">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-lg-5 top-f">
+                <p class="copy">
+                    <span *ngIf="dir == 'ltr'">{{item.quickLink[0].quickStingEn}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.quickLink[0].quickStingAr}}</span>
+                </p>
                 <ul class="li">
-                    <li>Gerflor</li>
-                    <li><span class="dot"></span>BOSTIK</li>
-                    <li><span class="dot"></span>USG ME</li>
-                                    </ul>
+                    <li>
+                        <a routerLink="/about"><span *ngIf="dir == 'ltr'">{{item.quickLink[0].whoStringEn}}</span>
+                            <span *ngIf="dir == 'rtl'">{{item.quickLink[0].whoStringAr}}</span></a>
+                    </li>
+                    <li><span class="dot"></span>
+                        <a routerLink="/gcc"><span *ngIf="dir == 'ltr'">{{item.quickLink[0].serviceStringEn}}</span>
+                            <span *ngIf="dir == 'rtl'">{{item.quickLink[0].serviceStringAr}}</span></a>
+                    </li>
+                    <li><span class="dot"></span>
+                        <a routerLink="/project"><span *ngIf="dir == 'ltr'">{{item.quickLink[0].projectStringEn}}</span>
+                            <span *ngIf="dir == 'rtl'">{{item.quickLink[0].projectStringAr}}</span></a>
+                    </li>
+                    <li><span class="dot"></span>
+                        <a routerLink="/career"><span *ngIf="dir == 'ltr'">{{item.quickLink[0].careerStringEn}}</span>
+                            <span *ngIf="dir == 'rtl'">{{item.quickLink[0].careerStringAr}}</span></a>
+                    </li>
+                </ul>
+                <p class="copy">
+                    <span *ngIf="dir == 'ltr'">{{item.quickLink[0].operatingStringEn}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.quickLink[0].operatingStringAr}}</span>
+                </p>
+                <ul class="li">
+                    <li>
+                        <a href="{{item.quickLink[0].gerflorLink}}">{{item.quickLink[0].gerflorString}}</a>
+                    </li>
+                    <li><span class="dot"></span>
+                        <a href="{{item.quickLink[0].bostikLink}}">{{item.quickLink[0].bostikString}}</a>
+                    </li>
+                    <li><span class="dot"></span>
+                        <a href="{{item.quickLink[0].usgMeLink}}">{{item.quickLink[0].usgMeString}}</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

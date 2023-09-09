@@ -13,90 +13,22 @@
 <section class="space-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-6 top-space">
+            <div class="col-md-4 col-sm-6 top-space" *ngFor="let item of getData">
                 <div class="our-team">
                     <div class="pic">
-                        <img src="../../assets/img/img-1.png">
+                        <img src="{{endpoint}}/{{item.image}}">
                         <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
+                            <a routerLink="/project-details/{{item.id}}" class="btn btn-or">More</a>
                         </ul>
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Williamson</h3>
+                        <h3 class="title">
+                            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                        </h3>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6  top-space">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="../../assets/img/img-1.png">
-                        <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 top-space">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="../../assets/img/img-1.png">
-                        <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 top-space">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="../../assets/img/img-1.png">
-                        <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 top-space">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="../../assets/img/img-1.png">
-                        <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 top-space">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="../../assets/img/img-1.png">
-                        <ul class="social">
-                            <a routerLink="/product-details" class="btn btn-or">More</a>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Kristiana</h3>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
         <br>
         <div class="d-flex justify-content-center">

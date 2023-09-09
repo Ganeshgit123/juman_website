@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule,Routes } from '@angular/router';
-import { ProductDetailsComponent } from './product-details.component';
+import { ProjectDetailsComponent } from './project-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -10,13 +10,13 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 const routes: Routes = [
   {
     path: '',
-    component:  ProductDetailsComponent,
+    component:  ProjectDetailsComponent,
   }
 ]
 
 @NgModule({
   declarations: [
-    ProductDetailsComponent
+    ProjectDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -26,4 +26,4 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ]
 })
-export class ProductDetailsModule { }
+export class ProjectDetailsModule { }

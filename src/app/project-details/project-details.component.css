@@ -88,6 +88,10 @@
     color: #707070;
     text-transform: capitalize;
 }
+.proj_img{
+  width: 1024px;
+  height: 500px;
+}
 @media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 30px; }
 }
