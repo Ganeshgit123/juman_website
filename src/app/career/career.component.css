@@ -12,7 +12,9 @@
   height: 500px;
   padding-top: 120px;
 }
-
+.pull-left:lang(ar){
+  float: right ;
+}
 .bgimage h1 {
   text-align: center;
   color: white;

@@ -275,6 +275,12 @@
   .login_div a img {
     width: 50px;
   }
+  .nav-link.active:before{
+    display: none;
+  }
+  .nav-item a {
+    padding: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

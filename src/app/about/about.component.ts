@@ -36,7 +36,8 @@ export class AboutComponent {
         items: 3
       }
     },
-    nav: false
+    nav: false,
+    rtl:true
   }
   success: OwlOptions = {
     loop: true,
@@ -63,7 +64,8 @@ export class AboutComponent {
         items: 1
       }
     },
-    nav: false
+    nav: false,
+    rtl:true
   }
 
   getData = [];

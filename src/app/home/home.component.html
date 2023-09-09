@@ -44,7 +44,7 @@
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
         <img src="../../assets/img/juman.png" class="jum">
         <br>
-        <a href="{{endpoint}}/{{item.images[0].path}}" target="_blank" class="download">Download</a>
+        <a href="{{endpoint}}/{{item.images[0].path}}" target="_blank" class="download">{{"Download" | translate}}</a>
       </div>
       <div class="col-md-6" *ngFor="let item of whatWeDoSec">
         <h6>

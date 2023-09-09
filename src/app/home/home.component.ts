@@ -169,15 +169,16 @@ export class HomeComponent {
       }
     },
     nav: false,
-    rtl: true
+    rtl: true,
   }
+
   ex: OwlOptions = {
-    loop: true,
+    loop: false,
     autoWidth: true,
     rtl: true,
     margin: 20,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 900,
     responsive: {
       0: {
