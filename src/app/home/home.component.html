@@ -5,11 +5,11 @@
       <div class="swiper-slide animeslide-slide" style="background-image: url({{endpoint}}/{{item.path}});"
         *ngFor="let item of getBanners">
         <div class="container too">
-          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'ltr'">{{item.erTitle}}</h2>
-          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'rtl'">{{item.arTitle}}</h2>
+          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'ltr'" [innerHTML]="item.erTitle"></h2>
+          <h2 data-animate="bottom" class="animeslide-heading" *ngIf="dir == 'rtl'" [innerHTML]="item.arTitle"></h2>
 
-          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'ltr'">{{item.erContent}}</p>
-          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'rtl'">{{item.arContent}}</p>
+          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'ltr'" [innerHTML]="item.erContent"></p>
+          <p data-animate="bottom" class="animeslide-desc" *ngIf="dir == 'rtl'" [innerHTML]="item.arContent"></p>
         </div>
       </div>
     </div>
