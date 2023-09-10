@@ -40,11 +40,11 @@
             <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
           </a>
           <div class="dropdown-content">
-            <a routerLink="/gcc" (click)="pageActive('service')" *ngFor="let item of installation">
+            <a routerLink="/market" (click)="pageActive('service')" *ngFor="let item of market">
               <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
               <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
             </a>
-            <a routerLink="/market" (click)="pageActive('service')" *ngFor="let item of market">
+            <a routerLink="/gcc" (click)="pageActive('service')" *ngFor="let item of installation">
               <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
               <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
             </a>
