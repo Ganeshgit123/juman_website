@@ -21,7 +21,7 @@ export class ProjectComponent implements OnInit {
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'project');
 
     const bannerData = {

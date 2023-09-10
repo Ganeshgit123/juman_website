@@ -21,7 +21,7 @@ export class GccInstallationComponent {
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'service');
 
     const bannerData = {

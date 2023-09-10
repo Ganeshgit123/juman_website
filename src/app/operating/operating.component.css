@@ -1,145 +1,160 @@
 .bgimage {
-  width:100%;
-  height:400px;
   background-repeat: no-repeat !important;
-  background-position:100% 100% !important;
-  background-size:contain !important;
-  height:500px;
-  padding-top:120px;
-      }
-  .bgimage h1 {
-    text-align: center;
-    color:white;
-    font-size:45px;
-        padding-top:8rem;
-    text-shadow:2px 2px #333;
+  background-size: cover !important;
+  height: 500px;
+  padding-top: 120px;
+}
+
+.bgimage h1 {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  padding-top: 8rem;
+  text-shadow: 2px 2px #333;
+}
+
+.back-operating {
+  background-size: cover !important;
+  height: 400px;
+  background-repeat: no-repeat !important;
+  background-position: left;
+}
+
+.btn-blue {
+  background: #11133C 0% 0% no-repeat padding-box;
+  border-radius: 57px;
+  opacity: 1;
+  margin-left: 21px;
+  margin-top: -10px;
+  width: 20%;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+}
+
+.btn-blue:hover {
+  background: transparent;
+  border: 2px solid #11133C;
+  color: #11133C;
+  font-weight: 700;
+}
+
+.btn-orange {
+  background: #FAA61A 0% 0% no-repeat padding-box;
+  border-radius: 57px;
+  opacity: 1;
+  padding: 10px;
+  margin-left: 21px;
+  margin-top: -10px;
+  width: 20%;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-orange:hover {
+  background: transparent;
+  border: 2px solid #FAA61A;
+  color: #FAA61A;
+  font-weight: 700;
+}
+
+.btn-blue-light {
+  background: #37C2D4 0% 0% no-repeat padding-box;
+  border-radius: 57px;
+  opacity: 1;
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: 21px;
+  width: 20%;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-blue-light:hover {
+  background: transparent;
+  border: 2px solid #37C2D4;
+  color: #37C2D4;
+  font-weight: 700;
+}
+
+.space-section {
+  padding-top: 70px;
+}
+
+.set p {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+}
+
+.set p img {
+  padding: 0px;
+
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 320px) {
+  .bgimage {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat !important;
+    background-position: 100% 100% !important;
+    background-size: cover !important;
+    height: 500px;
+    padding-top: 120px;
   }
-  .back-operating{
-   background-size:cover !important;
-   height:400px;
-   background-repeat: no-repeat !important;
-     background-position:left;
-  }
-  .btn-blue{
+
+  .btn-blue {
     background: #11133C 0% 0% no-repeat padding-box;
     border-radius: 57px;
     opacity: 1;
-    margin-left:21px;
-    margin-top:-10px;
-    width:20%;
+    margin-top: -10px;
+    margin-left: 21px;
+    width: 80%;
     text-align: center;
     color: #fff;
     display: inline-block;
-padding:10px;
+    padding: 10px;
   }
-  .btn-blue:hover{
-    background: transparent;
-    border:2px solid #11133C;
-    color: #11133C;
-    font-weight:700;
-  }
-  .btn-orange{
+
+  .btn-orange {
     background: #FAA61A 0% 0% no-repeat padding-box;
-border-radius: 57px;
-opacity: 1;
-padding:10px;
-margin-left:21px;
-margin-top:-10px;
-    width:20%;
+    border-radius: 57px;
+    opacity: 1;
+    padding: 10px;
+    margin-top: -10px;
+    margin-left: 21px;
+    width: 80%;
     text-align: center;
     color: #fff;
     display: inline-block;
   }
-  .btn-orange:hover{
-    background: transparent;
-    border:2px solid #FAA61A ;
-    color: #FAA61A ;
-    font-weight:700;
+
+  .back-operating {
+    margin-top: 30px !important;
   }
-  .btn-blue-light{
+
+  .btn-blue-light {
     background: #37C2D4 0% 0% no-repeat padding-box;
     border-radius: 57px;
     opacity: 1;
-    padding:10px;
-    margin-top:-10px;
-    margin-left:21px;
-        width:20%;
-        text-align: center;
-        color: #fff;
-        display: inline-block;
+    margin-top: -10px;
+    padding: 10px;
+    margin-left: 21px;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
   }
-  .btn-blue-light:hover{
-    background: transparent;
-    border:2px solid #37C2D4 ;
-    color: #37C2D4 ;
-    font-weight:700;
+
+  .bgimage h1 {
+    line-height: 1.6;
   }
-  .space-section{
-    padding-top:70px;
+
+  .set {
+    padding-bottom: 20px;
   }
-  .set p{
-    padding-left:30px;
-    padding-bottom:20px;
-    padding-right:20px;
-    padding-top:1px;
-      }
-      .set p img{
-      padding:0px;
-       
-          }
-          @media only screen and (max-width: 1199px) and (min-width: 320px){
-            .bgimage{
-              width:100%;
-        height:400px;
-        background-repeat: no-repeat !important;
-        background-position:100% 100% !important;
-        background-size:cover !important;
-        height:500px;
-        padding-top:120px;
-            }
-            .btn-blue{
-              background: #11133C 0% 0% no-repeat padding-box;
-              border-radius: 57px;
-              opacity: 1;
-              margin-top:-10px;
-              margin-left:21px;
-              width:80%;
-              text-align: center;
-              color: #fff;
-              display: inline-block;
-          padding:10px;
-            }
-            .btn-orange{
-              background: #FAA61A 0% 0% no-repeat padding-box;
-          border-radius: 57px;
-          opacity: 1;
-          padding:10px;
-          margin-top:-10px;
-          margin-left:21px;
-              width:80%;
-              text-align: center;
-              color: #fff;
-              display: inline-block;
-            }
-            .back-operating{
-              margin-top:30px !important;
-            }
-            .btn-blue-light{
-              background: #37C2D4 0% 0% no-repeat padding-box;
-              border-radius: 57px;
-              opacity: 1;
-              margin-top:-10px;
-              padding:10px;
-              margin-left:21px;
-                  width:80%;
-                  text-align: center;
-                  color: #fff;
-                  display: inline-block;
-            }
-            .bgimage h1{
-              line-height: 1.6;
-                  }
-.set{
-  padding-bottom: 20px;
 }
-          }

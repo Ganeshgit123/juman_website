@@ -214,7 +214,7 @@ export class HomeComponent {
   constructor(public authService: AuthService,) { }
 
   ngOnInit() {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'home');
 
     const bannerData = {

@@ -27,7 +27,7 @@ export class ContactComponent {
 
   ngOnInit() {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
 
     const bannerData = {
       relations: ["header"],

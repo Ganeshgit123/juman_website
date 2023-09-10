@@ -39,7 +39,7 @@ export class CareerComponent {
    constructor(public fb: FormBuilder,public authService: AuthService,private toastr: ToastrService,) {}
   
    ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'career');
 
      this.aFormGroup = this.fb.group({

@@ -29,7 +29,7 @@ export class HeaderComponent {
   constructor(private router: Router, private route: ActivatedRoute,public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     this.page = sessionStorage.getItem('pageName');
 
     this.authService.getHeader().subscribe(

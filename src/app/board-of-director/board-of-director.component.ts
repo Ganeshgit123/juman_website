@@ -19,7 +19,7 @@ export class BoardOfDirectorComponent {
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'bod');
 
     const bannerData = {

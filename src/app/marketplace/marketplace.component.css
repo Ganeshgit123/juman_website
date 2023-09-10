@@ -1,51 +1,55 @@
-.gcc p{
-       padding:10px;
+.gcc p {
+  padding: 10px;
 }
 
-.img-mar{
-    padding-top: 38px;
-    height:460px;
+.img-mar {
+  padding-top: 38px;
+  height: 460px;
 }
+
 .bgimage {
-  width:100%;
-  height:400px;
   background-repeat: no-repeat !important;
-  background-position:100% 100% !important;
-  background-size:contain !important;
-  height:500px;
-  padding-top:120px;
-      }
-  .bgimage h1 {
-    text-align: center;
-    color:white;
-    padding-top:8rem;
-    text-shadow:2px 2px #333;
+  background-size: cover !important;
+  height: 500px;
+  padding-top: 120px;
+}
+
+.bgimage h1 {
+  text-align: center;
+  color: white;
+  padding-top: 8rem;
+  text-shadow: 2px 2px #333;
+}
+
+.tex-h h4 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.img-career {
+  width: 260px;
+  height: 400px;
+}
+
+.tex-h h4 {
+  font-size: 40px;
+  padding-top: 80px;
+}
+
+.gcc-p {
+  padding-top: 60px;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 320px) {
+  .bgimage {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat !important;
+    background-position: 100% 100% !important;
+    background-size: cover !important;
+    height: 500px;
+    padding-top: 120px;
   }
-  .tex-h h4{
-font-size:30px;
-font-weight:700;
-line-height:1.6;
-  }
-  .img-career{
-    width: 260px;
-    height:400px;
-  }
-  .tex-h h4{
-    font-size:40px;
-    padding-top:80px;
-  }
-  .gcc-p{
-    padding-top:60px;
-  }
-  @media only screen and (max-width: 1199px) and (min-width: 320px){
-    .bgimage{
-      width:100%;
-  height:400px;
-  background-repeat: no-repeat !important;
-  background-position:100% 100% !important;
-  background-size:cover !important;
-  height:500px;
-  padding-top:120px;
-    }
-    
-  }
+
+}

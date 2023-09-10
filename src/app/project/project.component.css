@@ -1,41 +1,53 @@
-.our-team{
+.our-team {
     text-align: center;
     transition: all 0.5s ease 0s;
 }
-.our-team:hover{
-    box-shadow: 8px 16px 32px #00000029; 
+
+.our-team:hover {
+    box-shadow: 8px 16px 32px #00000029;
 
 }
-.our-team .pic{
+
+.our-team .pic {
     overflow: hidden;
     position: relative;
 }
+
 .our-team .pic:before,
-.our-team .pic:after{
+.our-team .pic:after {
     content: "";
     width: 200%;
     height: 80%;
-    background: rgba(38,37,37,0.8);
+    background: rgba(38, 37, 37, 0.8);
     position: absolute;
     top: -100%;
     left: -4%;
     transform: rotate(45deg);
     transition: all 0.5s ease 0s;
 }
-.our-team .pic:after{
-    background: rgba(250,166,26,0.4);
+
+.our-team .pic:after {
+    background: rgba(250, 166, 26, 0.4);
     top: auto;
     left: auto;
     bottom: -100%;
     right: -4%;
 }
-.our-team:hover .pic:before{ top: 0; }
-.our-team:hover .pic:after{ bottom: 0; }
-.our-team .pic img{
+
+.our-team:hover .pic:before {
+    top: 0;
+}
+
+.our-team:hover .pic:after {
+    bottom: 0;
+}
+
+.our-team .pic img {
     width: 100%;
     height: auto;
 }
-.our-team .social{
+
+.our-team .social {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -47,9 +59,16 @@
     z-index: 2;
     transition: all 0.5s ease 0.3s;
 }
-.our-team:hover .social{ opacity: 1; }
-.our-team .social li{ display: inline-block; }
-.our-team .social li a{
+
+.our-team:hover .social {
+    opacity: 1;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
     display: block;
     width: 40px;
     height: 40px;
@@ -60,7 +79,8 @@
     position: relative;
     transition: all 0.3s ease 0s;
 }
-.our-team .social li a:after{
+
+.our-team .social li a:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -72,66 +92,81 @@
     z-index: -1;
     transition: all 0.3s ease 0s;
 }
-.our-team .social li a:hover:after{ transform: rotate(180deg); }
-.our-team .team-content{ padding: 20px; }
-.our-team .title{
+
+.our-team .social li a:hover:after {
+    transform: rotate(180deg);
+}
+
+.our-team .team-content {
+    padding: 20px;
+}
+
+.our-team .title {
     font-size: 22px;
     font-weight: 700;
-        color: #000;
-    text-transform:capitalize;
+    color: #000;
+    text-transform: capitalize;
     margin-bottom: 7px;
 }
-.our-team .post{
+
+.our-team .post {
     display: block;
     font-size: 17px;
     font-weight: 600;
     color: #707070;
     text-transform: capitalize;
 }
-@media only screen and (max-width: 990px){
-    .our-team{ margin-bottom: 30px; }
-}
-.bgimage {
-    width:100%;
-    height:400px;
-    background-repeat: no-repeat !important;
-    background-position:100% 100% !important;
-    background-size:contain !important;
-    height:500px;
-    padding-top:120px;
-      }
-  .pro{
-    text-align: center;
-    color:white;
-    font-size:45px;
-    padding-top:8rem;
-        text-shadow:2px 2px #333;
-  }
-  .space-section{
-    padding-top:50px;
-  }
-  .btn-or{
-    background: #FAA61A 0% 0% no-repeat padding-box;
-border:none;
-opacity: 1;
-color: #000;
-width:40%;
-text-transform:uppercase;
-text-align: center;
-border-radius: 0px;
-padding:10px;
-  }
-  .top-space{
-    margin-top:40px;
-  }
-  @media only screen and (max-width: 1199px) and (min-width: 320px){
-    .bgimage{
-      width:100%;
-height:400px;
-background-repeat: no-repeat !important;
-background-position:100% 100% !important;
-background-size:cover !important;
-height:500px;
-padding-top:120px;
+
+@media only screen and (max-width: 990px) {
+    .our-team {
+        margin-bottom: 30px;
     }
-  }
+}
+
+.bgimage {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 500px;
+    padding-top: 120px;
+}
+
+
+.pro {
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    padding-top: 8rem;
+    text-shadow: 2px 2px #333;
+}
+
+.space-section {
+    padding-top: 50px;
+}
+
+.btn-or {
+    background: #FAA61A 0% 0% no-repeat padding-box;
+    border: none;
+    opacity: 1;
+    color: #000;
+    width: 40%;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+.top-space {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 320px) {
+    .bgimage {
+        width: 100%;
+        height: 400px;
+        background-repeat: no-repeat !important;
+        background-position: 100% 100% !important;
+        background-size: cover !important;
+        height: 500px;
+        padding-top: 120px;
+    }
+}

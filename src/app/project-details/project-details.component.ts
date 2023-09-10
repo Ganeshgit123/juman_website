@@ -49,7 +49,7 @@ export class ProjectDetailsComponent {
   constructor(public authService: AuthService, private router: Router, private route: ActivatedRoute,) { }
   
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'product');
 
     this.route.params.subscribe((params) => {

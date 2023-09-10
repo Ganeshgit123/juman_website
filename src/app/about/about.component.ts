@@ -85,7 +85,7 @@ export class AboutComponent {
   constructor(private router: Router, private route: ActivatedRoute, public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'about');
 
     const object = {

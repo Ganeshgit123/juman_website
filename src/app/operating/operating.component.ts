@@ -19,7 +19,7 @@ export class OperatingComponent {
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'operating');
 
     const bannerData = {

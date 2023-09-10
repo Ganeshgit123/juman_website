@@ -43,7 +43,7 @@ export class HeaderOneComponent {
   ngOnInit(): void {
     this.page = 'home';
     this.lang = localStorage.getItem("lang") || "en";
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
 
     this.authService.getHeader().subscribe(
       (res: any) => {

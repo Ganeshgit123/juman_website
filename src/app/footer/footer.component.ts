@@ -15,7 +15,7 @@ export class FooterComponent {
   constructor(public authService: AuthService) { }
 
   ngOnInit() {
-    this.dir = localStorage.getItem('dir');
+    this.dir = localStorage.getItem('dir')  || "ltr";
     this.authService.getFooter().subscribe(
       (res: any) => {
         this.getData = res.payload;
