@@ -99,7 +99,8 @@
   <div class="container">
     <div class="row" *ngFor="let item of serviceSect;">
       <div class="col-md-5">
-        <div class="markkk" style="background: url({{endpoint}}/{{item.images[1].path}});">
+        <div class="markkk" style="background: url('{{endpoint}}/{{item.images[1].path}}');background-size: contain;
+        background-repeat: no-repeat;">
           <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
           <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
         </div>
@@ -120,7 +121,8 @@
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-6">
-        <div class="mar" style="background: url({{endpoint}}/{{item.images[0].path}});">
+        <div class="mar" style="background: url('{{endpoint}}/{{item.images[0].path}}');background-size: contain;
+         background-repeat: no-repeat;">
           <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
           <a routerLink="/gcc" class="btn-readd">{{"ReadMore" | translate}}</a>
         </div>
@@ -202,7 +204,7 @@
               </div>
               <div class="col-md-9">
                 <img src="../../assets/img/quote.svg" class="quote">
-                <p>{{item.arContent}}</p>
+                <p [innerHTML]="item.arContent"></p>
               </div>
             </div>
           </ng-template>
@@ -229,11 +231,12 @@
         <owl-carousel-o [options]="ex" class="new">
           <ng-template carouselSlide *ngFor="let img of latestSec">
             <div class="second hero">
-              <img class="hero-profile-img"
-                src="{{endpoint}}/{{img.images[0].path}}" alt="">
-              <div class="hero-description-bk"></div>
+              <img class="hero-profile-img" src="{{endpoint}}/{{img.images[0].path}}" alt="">
+              <div class="hero-description-bk">
+              </div>
 
               <div class="hero-description">
+                <p>{{img.erTitle}}</p>
                 <p>{{img.arTitle}}</p>
               </div>
               <div class="hero-date">

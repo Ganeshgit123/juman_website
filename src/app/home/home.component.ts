@@ -24,6 +24,10 @@ export class HomeComponent {
         return `<b>${indC}</b><span>/</span>${indT}`;
       }
     },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true
+    },
     navigation: {
       nextEl: ".animeslide-button-next",
       prevEl: ".animeslide-button-prev"
