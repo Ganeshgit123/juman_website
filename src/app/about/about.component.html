@@ -43,19 +43,28 @@
     </div>
     <div class="row number">
       <div class="col-md-4">
-        <h3 class="text-center">{{item.additionalInfo.firstValue}}</h3>
+        <h3 class="text-center">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.firstValue}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.firstValueAr}}</span>
+        </h3>
         <p> <span *ngIf="dir == 'ltr'">{{item.additionalInfo.firstContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arFirstContent}}</span>
         </p>
       </div>
       <div class="col-md-4">
-        <h3 class="text-center">{{item.additionalInfo.secondValue}}</h3>
+        <h3 class="text-center">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.secondValue}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.secondValueAr}}</span>
+        </h3>
         <p> <span *ngIf="dir == 'ltr'">{{item.additionalInfo.secondContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arSecondContent}}</span>
         </p>
       </div>
       <div class="col-md-4">
-        <h3 class="text-center">{{item.additionalInfo.thirdValue}}</h3>
+        <h3 class="text-center">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.thirdValue}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.thirdValueAr}}</span>
+        </h3>
         <p> <span *ngIf="dir == 'ltr'">{{item.additionalInfo.thirdContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arThirdContent}}</span>
         </p>

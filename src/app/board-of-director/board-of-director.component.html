@@ -13,16 +13,16 @@
 
 <section class="set-space">
   <div class="container">
-    <div class="row space-row" >
+    <div class="row space-row" *ngFor="let item of chairmanSec">
       <div class="col-md-3">
-        <div class="board-box" *ngFor="let item of boardHead">
+        <div class="board-box">
           <h5>
-            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
-            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
           </h5>
         </div>
       </div>
-      <div class="col-md-8 chair" *ngFor="let item of chairmanSec">
+      <div class="col-md-8 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -31,8 +31,9 @@
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
     </div>
-    <div class="row space-row">
-      <div class="col-md-8 ceo" *ngFor="let item of ceoSec">
+
+    <div class="row space-row"  *ngFor="let item of ceoSec">
+      <div class="col-md-8 ceo">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -41,12 +42,31 @@
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
       <div class="col-md-4">
-        <div class="board-boxx" *ngFor="let item of boardHead">
+        <div class="board-boxx">
           <h5>
-            <span *ngIf="dir == 'ltr'">{{item.erContent}}</span>
-            <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
+            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
           </h5>
         </div>
+      </div>
+    </div>
+
+    <div class="row space-row" *ngFor="let item of boaDD">
+      <div class="col-md-3">
+        <div class="board-box">
+          <h5>
+            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
+          </h5>
+        </div>
+      </div>
+      <div class="col-md-8 chair">
+        <h4>
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </h4>
+        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
     </div>
   </div>

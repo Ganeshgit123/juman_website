@@ -90,7 +90,12 @@
 .top-f {
     padding-top: 60px;
 }
-
+.mob:lang(ar){
+    direction: ltr;
+}
+.mob .dot:lang(ar){
+   display: none;
+}
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
 
     .li li {

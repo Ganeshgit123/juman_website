@@ -14,7 +14,7 @@ export class BoardOfDirectorComponent {
   getData = [];
   chairmanSec = [];
   ceoSec = [];
-  boardHead = [];
+  boaDD = [];
 
   constructor(public authService: AuthService,) { }
 
@@ -50,8 +50,8 @@ export class BoardOfDirectorComponent {
         this.ceoSec = this.getData.filter(element => {
           return element.code === 'BOCEO';
         })
-        this.boardHead = this.getData.filter(element => {
-          return element.code === 'BOHEAD';
+        this.boaDD = this.getData.filter(element => {
+          return element.code === 'BOADD';
         })
       });
   }
