@@ -16,16 +16,18 @@
     <!-- Add Pagination -->
 
     <!-- Add Arrows -->
-    <div class="flex animeslide-bottom">
-      <div class="cell small">
-        <div class="animeslide-pagination swiper-pagination"></div>
-      </div>
-      <div class="cell medium">
-        <div class="animeslide-scrollbar swiper-scrollbar"></div>
-      </div>
-      <div class="cell small">
-        <div class="animeslide-button-prev swiper-button-prev"></div>
-        <div class="animeslide-button-next swiper-button-next"></div>
+    <div class="container too">
+      <div class="flex animeslide-bottom">
+        <div class="cell small">
+          <div class="animeslide-pagination swiper-pagination"></div>
+        </div>
+        <div class="cell medium">
+          <div class="animeslide-scrollbar swiper-scrollbar"></div>
+        </div>
+        <div class="cell small">
+          <div class="animeslide-button-prev swiper-button-prev"></div>
+          <div class="animeslide-button-next swiper-button-next"></div>
+        </div>
       </div>
     </div>
   </swiper>
@@ -82,14 +84,14 @@
           </owl-carousel-o>
         </div>
 
-        <span *ngFor="let item of operatingSect">
+        <div *ngFor="let item of operatingSect">
           <h3>
             <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
             <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
           </h3>
           <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
           <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -98,33 +100,39 @@
 <section class="service">
   <div class="container">
     <div class="row" *ngFor="let item of serviceSect;">
-      <div class="col-md-5">
-        <div class="markkk" style="background: url('{{endpoint}}/{{item.images[1].path}}');background-size: contain;
+      <div class="col-md-6">
+        <div class="equal_space_right">
+          <div class="markkk" style="background: url('{{endpoint}}/{{item.images[1].path}}');background-size: cover;
         background-repeat: no-repeat;">
-          <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-          <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
+            <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
+            <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
+          </div>
         </div>
-
       </div>
       <div class="col-md-6">
-        <h3 class="title">
-          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
-          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
-        </h3>
-        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        <div class="equal_space_left">
+          <h3 class="title">
+            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+          </h3>
+          <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        </div>
       </div>
 
-      <div class="col-md-4">
-        <br><br>
-        <img src="../../assets/img/services.png">
-      </div>
-      <div class="col-md-1"></div>
       <div class="col-md-6">
-        <div class="mar" style="background: url('{{endpoint}}/{{item.images[0].path}}');background-size: contain;
+        <div class="equal_space_right">
+          <br><br>
+          <img src="../../assets/img/services.png">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="equal_space_left">
+          <div class="mar" style="background: url('{{endpoint}}/{{item.images[0].path}}');background-size: cover;
          background-repeat: no-repeat;">
-          <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-          <a routerLink="/gcc" class="btn-readd">{{"ReadMore" | translate}}</a>
+            <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
+            <a routerLink="/gcc" class="btn-readd">{{"ReadMore" | translate}}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -172,7 +180,7 @@
         <owl-carousel-o [options]="success" class="new">
           <ng-template carouselSlide *ngFor="let item of clientImageSec">
             <div class="slide">
-              <img src="{{endpoint}}/{{item.path}}" alt="img 1">
+              <img src="{{endpoint}}/{{item.path}}" alt="img 1" class="client_img">
             </div>
           </ng-template>
         </owl-carousel-o>

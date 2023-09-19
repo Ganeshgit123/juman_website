@@ -83,10 +83,10 @@ export class HomeComponent {
         items: 1
       },
       760: {
-        items: 4
+        items: 1
       },
       1000: {
-        items: 5
+        items: 1
       }
     },
     nav: false,
@@ -111,10 +111,10 @@ export class HomeComponent {
         items: 1
       },
       760: {
-        items: 4
+        items: 1
       },
       1000: {
-        items: 5
+        items: 1
       }
     },
     nav: false,
@@ -139,10 +139,10 @@ export class HomeComponent {
         items: 1
       },
       760: {
-        items: 4
+        items: 1
       },
       1000: {
-        items: 5
+        items: 1
       }
     },
     nav: false,

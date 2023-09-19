@@ -13,13 +13,12 @@
   text-shadow: 2px 2px #333;
 }
 
-.back-operating {
-  background-size: cover !important;
-  height: 400px;
-  background-repeat: no-repeat !important;
-  background-position: left;
+.back_operating{
+  padding: 0;
 }
-
+.logo_img{
+  margin-left: 3rem;
+}
 .btn-blue {
   background: #11133C 0% 0% no-repeat padding-box;
   border-radius: 57px;
@@ -93,9 +92,13 @@
 
 .set p img {
   padding: 0px;
-
 }
-
+.second_cont_sec{
+  margin-top: 7rem;
+}
+.third_cont_sec{
+  margin-top: 6rem;
+}
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .bgimage {
     width: 100%;
@@ -156,5 +159,14 @@
 
   .set {
     padding-bottom: 20px;
+  }
+  .second_cont_sec{
+    margin-top: 0;
+  }
+  .third_cont_sec{
+    margin-top: 0;
+  }
+  .third_img{
+    margin-top: 20px;
   }
 }

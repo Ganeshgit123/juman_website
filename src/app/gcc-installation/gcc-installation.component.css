@@ -24,14 +24,12 @@
 }
 
 .btn-orange {
-  background: #FAA61A 0% 0% no-repeat padding-box;
+  background: #FAA61A;
   border-radius: 57px;
-  margin-left: 20px;
-  opacity: 1;
-  width: 20%;
   text-align: center;
-  padding: 15px;
+  padding: 15px 40px;
   color: #fff;
+  margin-top: 20px;
 }
 
 .gcc .nav-pills {

@@ -11,6 +11,7 @@
 <section class="space-section">
   <div class="container">
     <div class="row" *ngFor="let item of whatWeDoSec">
+      <div class="col-md-1"></div>
       <div class="col-md-6 col-sm-6">
         <h2 *ngIf="dir == 'ltr'">{{item.erTitle}}</h2>
         <h2 *ngIf="dir == 'rtl'">{{item.arTitle}}</h2>
@@ -24,6 +25,7 @@
           <img src="{{endpoint}}/{{item.images[0].path}}" class="lap">
         </div>
       </div>
+      <div class="col-md-1"></div>
     </div>
     <br>
   </div>

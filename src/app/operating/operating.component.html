@@ -14,12 +14,13 @@
 <section class="space-section">
   <div class="container-fluid">
     <div class="row" *ngFor="let item of gerFlowSec">
-      <div class="col-md-6 back-operating" style="background: url({{endpoint}}/{{item.images[1].path}});">
-
+      <div class="col-md-6 back_operating">
+        <img src="{{endpoint}}/{{item.images[1].path}}">
       </div>
       <div class="col-md-6 set">
-        <p><img src="../../assets/img/01.svg" width="75px" height="75px">&nbsp;<img
-            src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px"></p>
+        <p><img src="../../assets/img/01.svg" width="75px" height="75px">
+          <img src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px" class="logo_img">
+        </p>
 
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
@@ -29,26 +30,32 @@
 
     <div class="row" *ngFor="let item of usgMESec">
       <div class="col-md-6 set">
-        <p><img src="../../assets/img/02.svg" width="75px" height="75px">&nbsp;<img
-            src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px"></p>
+        <div class="second_cont_sec">
+          <p><img src="../../assets/img/02.svg" width="75px" height="75px">&nbsp;<img
+              src="{{endpoint}}/{{item.images[0].path}}" width="250px" height="140px"></p>
 
-        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-        <a href="" class="btn-orange">{{"CLICKHERE" | translate}}</a>
+          <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+          <a href="" class="btn-orange">{{"CLICKHERE" | translate}}</a>
+        </div>
       </div>
-      <div class="col-md-6 back-operating" style="background: url({{endpoint}}/{{item.images[1].path}});">
+      <div class="col-md-6 back_operating">
+        <img src="{{endpoint}}/{{item.images[1].path}}">
       </div>
     </div>
     <div class="row" *ngFor="let item of bostikSec">
-      <div class="col-md-6 back-operating" style="background:url('{{endpoint}}/{{item.images[1].path}}');">
+      <div class="col-md-6 back_operating">
+        <img src="{{endpoint}}/{{item.images[1].path}}" class="third_img">
       </div>
       <div class="col-md-6 set">
-        <p><img src="../../assets/img/03.svg" width="75px" height="75px">&nbsp;<img
-            src="{{endpoint}}/{{item.images[0].path}}" width="180px" height="120px"></p>
+        <div class="third_cont_sec">
+          <p><img src="../../assets/img/03.svg" width="75px" height="75px">&nbsp;<img
+              src="{{endpoint}}/{{item.images[0].path}}" width="180px" height="120px"></p>
 
-        <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-        <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-        <a href="" class="btn-blue-light">{{"CLICKHERE" | translate}}</a>
+          <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+          <a href="" class="btn-blue-light">{{"CLICKHERE" | translate}}</a>
+        </div>
       </div>
     </div>
   </div>

@@ -20,9 +20,11 @@
   padding: 40px;
   direction: ltr;
 }
-.yes:lang(ar){
+
+.yes:lang(ar) {
   direction: rtl;
 }
+
 .yes h6 {
   text-align: center;
   padding-top: 15px;
@@ -40,67 +42,96 @@
 .btn-read {
   padding: 12px;
   position: relative;
-  left: 45%;
+  left: 55%;
   display: inline-block;
-  width: 40%;
+  width: 30%;
   text-align: center;
   border-radius: 57px;
   color: var(--white-color);
   top: 80%;
   background: var(--main-color);
 }
-.btn-read:lang(ar){
-  right: 45%;
+
+.btn-read:lang(ar) {
+  right: 55%;
   left: auto;
 }
+
 .im-t {
   position: absolute;
   left: 10%;
   top: 40%;
 }
+
 .im-t:lang(ar) {
   right: 10%;
   left: auto;
 }
+
 .markkk {
   position: relative;
   top: 0%;
-  height: 450px !important;
-  width: 400px;
+  height: 500px !important;
   margin-top: 0rem;
 }
-
 .mar {
   position: relative;
-  top: -18%;
-  height: 500px;
-  width: 500px;
-  margin-top: -6rem;
-  background-position: center;
-
+  height: 550px;
+  margin-top: -15rem;
 }
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .markkk {
+    position: relative;
+    top: 0%;
+    height: 450px !important;
+    margin-top: 0rem;
+  }
+  .mar {
+    position: relative;
+    height: 500px;
+    margin-top: -15rem;
+  }
+}
+
+
 
 .im-tt {
   position: relative;
   top: 40%;
 }
 
+.equal_space_right {
+  padding-right: 20px;
+}
+.equal_space_right:lang(ar){
+  padding-left: 20px;
+  padding-right: auto;
+}
+.equal_space_left {
+  padding-left: 20px;
+}
+.equal_space_left:lang(ar){
+  padding-right: 20px;
+  padding-left: auto;
+}
 .btn-readd {
   padding: 12px;
   position: relative;
-  left: 43%;
+  left: 58%;
   display: inline-block;
-  width: 35% !important;
+  width: 30% !important;
   text-align: center;
   border-radius: 57px;
   color: var(--white-color);
   top: 80%;
   background: var(--main-color);
 }
-.btn-readd:lang(ar){
-  right: 43%;
+
+.btn-readd:lang(ar) {
+  right: 58%;
   left: auto;
 }
+
 .title {
   font-size: var(--heading-h2);
 }
@@ -251,7 +282,8 @@
   .post-slide .date {
     font-size: 14px;
   }
-  .markkk{
+
+  .markkk {
     width: 100%;
   }
 }
@@ -327,10 +359,12 @@
   left: 28px;
   bottom: 20%;
 }
-.hero-description:lang(ar){
+
+.hero-description:lang(ar) {
   right: 28px;
   left: auto;
 }
+
 .hero-btn {
   position: absolute;
   color: #fff;
@@ -339,10 +373,12 @@
   padding: 10px 20px;
   border: 1px solid #fff;
 }
-.hero-btn:lang(ar){
+
+.hero-btn:lang(ar) {
   left: 30px;
   right: auto;
 }
+
 .hero-btn a {
   color: #fff;
 }
@@ -353,12 +389,21 @@
   left: 30px;
   bottom: 10%;
 }
+
 .hero-date:lang(ar) {
   right: 30px;
   left: auto;
 }
-.partner_img{
-  width: 400px !important;
+
+.partner_img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+.client_img{
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
 }
 /* END CARD DESIGN */
 .jum {
@@ -366,9 +411,11 @@
   left: -13%;
   width: 300px;
 }
-.jum:lang(ar){
+
+.jum:lang(ar) {
   left: 0;
 }
+
 .about h6 {
   font-size: 30px;
   font-weight: 700;
@@ -390,20 +437,24 @@
   text-transform: uppercase;
   opacity: 1;
 }
-.client .cli:lang(ar){
+
+.client .cli:lang(ar) {
   text-align: right;
   padding-right: 40px;
   padding-left: auto;
 }
+
 .trust {
   padding-left: 40px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
-.trust:lang(ar){
+
+.trust:lang(ar) {
   padding-right: 40px;
   padding-left: auto;
 }
+
 .trust::after {
   content: '';
   display: inline-block;
@@ -418,7 +469,8 @@
   border-top: 2px solid #A8A8A8;
 
 }
-.trust:lang(ar)::after{
+
+.trust:lang(ar)::after {
   right: 20px;
   left: auto;
 }
@@ -457,10 +509,12 @@
   /* margin-right:100%; */
   border-top: 2px solid #A8A8A8;
 }
-.trust1:lang(ar):after{
+
+.trust1:lang(ar):after {
   right: 20px;
   left: auto;
 }
+
 .latest {
   text-align: left;
   font-size: 12px;
@@ -471,9 +525,11 @@
   text-transform: uppercase;
   opacity: 1;
 }
-.latest:lang(ar){
+
+.latest:lang(ar) {
   text-align: right;
 }
+
 .roln {
   text-align: left;
   font-size: 35px;
@@ -482,9 +538,11 @@
   color: #000000;
   opacity: 1;
 }
-.roln:lang(ar){
+
+.roln:lang(ar) {
   text-align: right;
 }
+
 .roln::after {
   content: '';
   display: inline-block;
@@ -497,10 +555,12 @@
   /* margin-right:100%; */
   border-top: 2px solid #A8A8A8;
 }
+
 .roln:lang(ar):after {
   right: 20px;
   left: auto;
 }
+
 .btn-yellow {
   background: var(--main-color);
   color: var(--color-black);
@@ -547,8 +607,13 @@
 }
 
 .newr .slide img {
-  width: 800px;
-  height: 500px;
+  height: 580px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .newr .slide img {
+    height: 530px;
+  }
 }
 
 .newr .slidee img {
@@ -575,10 +640,12 @@
   left: -10rem;
   top: 8rem;
 }
-.log_caroou:lang(ar){
+
+.log_caroou:lang(ar) {
   right: -10rem;
   left: auto;
 }
+
 .logo-back {
   background: rgba(255, 255, 255, 0.6);
   padding: 40px;
@@ -595,22 +662,26 @@
   font-weight: 600;
   position: relative;
   left: 70%;
-  top: -20%;
+  margin-top: -6rem;
 }
+
 .part-two h3:lang(ar) {
-  right: 70%;
+  right: 80%;
   left: auto;
 }
+
 .part-two p {
   font-size: 16px;
-  margin-top: -80px;
-  padding-left: 25px;
+  /* margin-top: -100px; */
+  padding: 0 15px 0 25px;
 }
-.part-two p:lang(ar){
+
+.part-two p:lang(ar) {
   padding-left: 0;
-  padding-right: 25px;
-  margin-top: 80px;
+  padding: 0 25px 0 15px;
+  margin-top: 60px;
 }
+
 .download {
   background: var(--main-color);
   display: inline-block;
@@ -633,8 +704,17 @@
 .animeslide-slide {
   position: relative;
   padding: 15px 0;
-  min-height: 700px;
+  min-height: 790px;
   background-size: cover;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .animeslide-slide {
+    position: relative;
+    padding: 15px 0;
+    min-height: 700px;
+    background-size: cover;
+  }
 }
 
 .animeslide-slide .container {
@@ -701,13 +781,15 @@
   z-index: 1;
   top: 550px;
   padding: 0px;
-  left: 30px;
+  margin-left: 20px;
   font-size: 14px;
 }
-.animeslide-bottom:lang(ar){
-  left: auto;
-  right: 30px;
+
+.animeslide-bottom:lang(ar) {
+  margin-left: auto;
+  margin-right: 20px;
 }
+
 .animeslide-bottom .cell {
   position: relative;
   top: -7px;
@@ -809,18 +891,22 @@
     color: #000000;
     opacity: 1;
   }
-  .roln:lang(ar){
+
+  .roln:lang(ar) {
     text-align: right;
   }
-  .title{
+
+  .title {
     padding-top: 40px;
   }
-  .part-two h3{
+
+  .part-two h3 {
     writing-mode: horizontal-tb;
     left: 20px;
     top: -40%;
   }
-  .game-section{
+
+  .game-section {
     padding-top: 0px;
   }
 }

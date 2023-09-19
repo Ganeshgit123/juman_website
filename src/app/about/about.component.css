@@ -372,14 +372,13 @@
 
 .img-h {
   position: absolute;
-  left: 70%;
+  left: 75%;
   z-index: 1;
   top: 320px;
-  /* width:100px; */
   height: 80px;
 }
 .img-h:lang(ar){
-  right: 70%;
+  right: 75%;
   left: auto;
 }
 .boxed {
@@ -410,7 +409,9 @@
   padding-bottom: 50px;
 }
 .partner_img{
-  width: 400px !important;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
 }
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
 
