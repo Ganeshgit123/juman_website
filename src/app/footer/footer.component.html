@@ -1,6 +1,6 @@
 <section class="footer-section">
     <div class="container">
-        <div class="row" *ngFor="let item of getData">
+        <div class="row mb-4" *ngFor="let item of getData">
             <div class="col-lg-6">
                 <img src="../../assets/img/foo-logo.png" class="foo-img">
                 <ul class="li">
@@ -65,6 +65,11 @@
                         <a href="{{item.quickLink[0].usgMeLink}}">{{item.quickLink[0].usgMeString}}</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="foot_cont">تم التصميم والتطوير بواسطة : <a href="https://yellostack.com/" target="_blank">Yellostack</a></p>
             </div>
         </div>
     </div>

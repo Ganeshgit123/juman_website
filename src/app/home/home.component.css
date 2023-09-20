@@ -716,7 +716,14 @@
     background-size: cover;
   }
 }
-
+@media screen and (min-width: 1900px) {
+  .animeslide-slide {
+    position: relative;
+    padding: 15px 0;
+    min-height: 950px;
+    background-size: cover;
+  }
+}
 .animeslide-slide .container {
   position: relative;
   top: 70px;

@@ -3,7 +3,7 @@
     mix-blend-mode: multiply;
     opacity: 1;
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     margin-top: 40px;
 }
 
@@ -95,6 +95,18 @@
 }
 .mob .dot:lang(ar){
    display: none;
+}
+.foot_cont{
+    text-align: center;
+    color: var(--white-color);
+    font-size: var(--para-size);
+    direction: rtl;
+}
+.foot_cont a{
+    color: var(--white-color);
+}
+.foot_cont a:hover{
+    color: var(--main-color);
 }
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
 
