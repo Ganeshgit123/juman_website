@@ -24,7 +24,9 @@
 
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-        <a href="" class="btn-blue">{{"CLICKHERE" | translate}}</a>
+        <span *ngFor="let item of footerData">
+          <a href="{{item.gerflorLink}}" target="_blank" class="btn-blue">{{"CLICKHERE" | translate}}</a>
+        </span>
       </div>
     </div>
 
@@ -36,7 +38,9 @@
 
           <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
           <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-          <a href="" class="btn-orange">{{"CLICKHERE" | translate}}</a>
+          <span *ngFor="let item of footerData">
+            <a href="{{item.usgMeLink}}" target="_blank" class="btn-orange">{{"CLICKHERE" | translate}}</a>
+          </span>
         </div>
       </div>
       <div class="col-md-6 back_operating">
@@ -54,7 +58,9 @@
 
           <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
           <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-          <a href="" class="btn-blue-light">{{"CLICKHERE" | translate}}</a>
+          <span *ngFor="let item of footerData">
+            <a href="{{item.bostikLink}}" target="_blank" class="btn-blue-light">{{"CLICKHERE" | translate}}</a>
+          </span>
         </div>
       </div>
     </div>

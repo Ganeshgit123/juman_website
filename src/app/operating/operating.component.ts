@@ -15,11 +15,12 @@ export class OperatingComponent {
   gerFlowSec = [];
   usgMESec = [];
   bostikSec = [];
-  
+  footerData = [];
+
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'operating');
 
     const bannerData = {
@@ -53,6 +54,11 @@ export class OperatingComponent {
         this.bostikSec = this.getData.filter(element => {
           return element.code === 'BOSTIK';
         })
+      });
+
+    this.authService.getFooter().subscribe(
+      (res: any) => {
+        this.footerData = res.payload[0].quickLink;
       });
   }
 }

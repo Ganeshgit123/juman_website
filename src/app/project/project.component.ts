@@ -45,7 +45,9 @@ export class ProjectComponent implements OnInit {
     }
     this.authService.getSectionsByHeaderId(object).subscribe(
       (res: any) => {
-        this.getData = res.payload;
+        this.getData = res.payload.filter(element => {
+          return element.isActive;
+        })
       });
   }
 

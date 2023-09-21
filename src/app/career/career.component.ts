@@ -76,6 +76,9 @@ export class CareerComponent {
       this.authService.getSectionsByHeaderId(object).subscribe(
         (res: any) => {
           this.getData = res.payload;
+          this.getData = res.payload.filter(element => {
+            return element.isActive;
+          })
         });
    }
    // reset(): void {

@@ -83,7 +83,7 @@ export class ProjectDetailsComponent {
           element.image = this.getData[0]?.images.filter(item => item.seq == 1)
         });
         
-        var imagArray = this.getData[0]?.images.filter(item => item.seq !== 0 && item.seq !==1)
+        var imagArray = this.getData[0]?.images.filter(item => item.seq !== 0 && item.seq !==1 && item.isActive)
         this.projImages = imagArray?.sort(function (first, second) {
           return first.seq - second.seq;
         });

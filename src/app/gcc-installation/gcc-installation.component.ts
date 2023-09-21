@@ -50,7 +50,7 @@ export class GccInstallationComponent {
           return element.code === 'GCC';
         })
         this.gccTabSecArray = this.getData.filter(element => {
-          return element.code === 'GCCTAB';
+          return element.code === 'GCCTAB' && element.isActive;
         })
         this.gccTabSecArray.forEach(element => {
           this.idArray.push(element.id);
@@ -60,12 +60,14 @@ export class GccInstallationComponent {
         }
         this.authService.getImagesBySectionId(ids).subscribe(
           (res: any) => {
-            this.imagesArray = res.payload;
+            this.imagesArray = res.payload.filter(element => {
+              return element.isActive;
+            })
           });
         const allData = {
           code: 'ALLTAB',
           erTitle: "All",
-          arTitle: 'All'
+          arTitle: 'الجميع'
         }
         this.gccTabSecArray.unshift(allData);
         // console.log("te",this.gccTabSecArray)
@@ -80,7 +82,9 @@ export class GccInstallationComponent {
       }
       this.authService.getImagesBySectionId(ids).subscribe(
         (res: any) => {
-          this.imagesArray = res.payload;
+          this.imagesArray = res.payload.filter(element => {
+            return element.isActive;
+          })
         });
     } else {
       const ids = {
@@ -88,7 +92,9 @@ export class GccInstallationComponent {
       }
       this.authService.getImagesBySectionId(ids).subscribe(
         (res: any) => {
-          this.imagesArray = res.payload;
+          this.imagesArray = res.payload.filter(element => {
+            return element.isActive;
+          })
         });
     }
   }

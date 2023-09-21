@@ -258,20 +258,28 @@ export class HomeComponent {
         this.partnerSec = this.getData.filter(element => {
           return element.code === 'PARTNE';
         })
-        this.partnerSecImages = this.partnerSec[0].images.sort(function (first, second) {
-          return first.seq - second.seq;
+        var activePartnerImg = this.partnerSec[0].images.filter(element =>{
+          return element.isActive;
+        })
+        this.partnerSecImages = activePartnerImg.sort(function (first, second) {
+          return first?.seq - second?.seq;
         });
         this.clientSec = this.getData.filter(element => {
           return element.code === 'CLIENT';
         })
-        this.clientImageSec =this.clientSec[0].images.sort(function (first, second) {
-          return first.seq - second.seq;
+
+        var activeClientImg = this.clientSec[0].images.filter(element =>{
+          return element.isActive;
+        })
+        this.clientImageSec = activeClientImg.sort(function (first, second) {
+          return first?.seq - second?.seq;
         });
+
         this.testimonialHeadingSec = this.getData.filter(element => {
           return element.code === 'HOMTET';
         })
         this.testimonialContentSec = this.getData.filter(element => {
-          return element.code === 'TESTI';
+          return element.code === 'TESTI' && element.isActive;
         })
         this.latestSec = this.getData.filter(element => {
           return element.code === 'LANEWS';

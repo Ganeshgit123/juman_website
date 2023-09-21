@@ -123,7 +123,7 @@ export class AboutComponent {
           return element.code === 'INVEST';
         })
         this.strategy = this.getData.filter(element => {
-          return element.code === 'STRAGY';
+          return element.code === 'STRAGY' && element.isActive;
         })
       });
 
