@@ -69,7 +69,8 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="foot_cont">تم التصميم والتطوير بواسطة : <a href="https://yellostack.com/" target="_blank">Yellostack</a></p>
+                <p class="foot_cont" *ngIf="dir == 'ltr'">Designed & Developed : <a href="https://yellostack.com/" target="_blank">Yellostack</a></p>
+                <p class="foot_cont" *ngIf="dir == 'rtl'">تم التصميم والتطوير بواسطة : <a href="https://yellostack.com/" target="_blank">Yellostack</a></p>
             </div>
         </div>
     </div>

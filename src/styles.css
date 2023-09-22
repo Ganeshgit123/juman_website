@@ -124,10 +124,12 @@ img {
     font-size: 72px !important;
     background: transparent !important
 }
-.new .owl-carousel .owl-nav .owl-next :lang(ar){
+
+.new .owl-carousel .owl-nav .owl-next :lang(ar) {
     right: -55%;
     left: auto;
 }
+
 .new .owl-carousel .owl-nav .owl-prev {
     position: relative;
     right: -55%;
@@ -136,10 +138,12 @@ img {
     font-size: 72px !important;
     background: transparent !important
 }
-.new .owl-carousel .owl-nav .owl-prev:lang(ar){
+
+.new .owl-carousel .owl-nav .owl-prev:lang(ar) {
     left: -55%;
     right: auto;
 }
+
 .newr .owl-theme .owl-dots .owl-dot.active span {
     background: var(--main-color);
 }
@@ -159,10 +163,12 @@ img {
     top: 65px;
     left: 231px;
 }
-.set-part .owl-theme .owl-dots .owl-dot span:lang(ar){
+
+.set-part .owl-theme .owl-dots .owl-dot span:lang(ar) {
     right: 231px;
     left: auto;
 }
+
 .set-part .owl-theme .owl-dots .owl-dot.active span {
     background: var(--main-color);
 }
@@ -194,9 +200,14 @@ img {
 }
 
 .navbar-expand-lg .navbar-collapse {
-    margin: 0 20px 0 0;
+    margin: 0 20px 0 8rem;
 }
-
+.navbar-expand-lg .navbar-collapse:lang(ar){
+    margin: 0 8rem 0 20px;
+}
+.navbar>.container-fluid{
+    display: contents !important;
+}
 
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
     .new .owl-carousel .owl-nav .owl-next {

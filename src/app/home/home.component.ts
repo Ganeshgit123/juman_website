@@ -32,7 +32,7 @@ export class HomeComponent {
       nextEl: ".animeslide-button-next",
       prevEl: ".animeslide-button-prev"
     },
-    spaceBetween: 30
+    spaceBetween: 0
   };
 
   success: OwlOptions = {
