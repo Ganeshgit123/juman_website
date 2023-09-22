@@ -37,7 +37,7 @@ export class AboutComponent {
       }
     },
     nav: false,
-    rtl:true
+    rtl: true
   }
   success: OwlOptions = {
     loop: true,
@@ -65,7 +65,7 @@ export class AboutComponent {
       }
     },
     nav: false,
-    rtl:true
+    rtl: true
   }
 
   getData = [];
@@ -81,11 +81,19 @@ export class AboutComponent {
   strategy = [];
   partnerSec = [];
   partnerSecImages = [];
-  
+  revenueCount: number = 0;
+  revenueCountStop: any;
+  reveCoo: any;
+  employeCount: number = 0;
+  employeCountStop: any;
+  employeCoo: any;
+  countryCount: number = 0;
+  countryCountStop: any;
+
   constructor(private router: Router, private route: ActivatedRoute, public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'about');
 
     const object = {
@@ -107,6 +115,28 @@ export class AboutComponent {
         this.countSec = this.getData.filter(element => {
           return element.code === 'COUNT';
         })
+        this.revenueCountStop = setInterval(() => {
+          this.revenueCount++;
+          const [word, digits] = this.countSec[0].additionalInfo.firstValue.match(/\D+|\d+/g);
+          this.reveCoo = digits;
+          if (word == this.revenueCount) {
+            clearInterval(this.revenueCountStop);
+          }
+        }, 1)
+        this.employeCountStop = setInterval(() => {
+          this.employeCount++;
+          const [word, digits] = this.countSec[0].additionalInfo.secondValue.match(/\D+|\d+/g);
+          this.employeCoo = digits;
+          if (word == this.employeCount) {
+            clearInterval(this.employeCountStop);
+          }
+        }, 1)
+        this.countryCountStop = setInterval(() => {
+          this.countryCount++;
+          if (this.countSec[0].additionalInfo.thirdValue == this.countryCount) {
+            clearInterval(this.countryCountStop);
+          }
+        }, 100)
         this.tabSec1 = this.getData.filter(element => {
           return element.code === 'ABOTAB' && element.seq == 3;
         })
@@ -142,4 +172,5 @@ export class AboutComponent {
         });
       });
   }
+
 }
