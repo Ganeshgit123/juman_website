@@ -8,7 +8,10 @@
                     <li class="mob"> <span class="dot"></span>{{item.mobileNumber}}</li>
                     <li> <span class="dot"></span>{{item.address}}</li>
                 </ul>
-                <p class="copy">{{item.copyright}}</p>
+                <p class="copy">
+                    <span *ngIf="dir == 'ltr'">{{item.copyright}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.quickLink[0].copyrightAr}}</span>
+                </p>
                 <p class="copy">
                     <span *ngIf="dir == 'ltr'">{{item.quickLink[0].stayStringEn}}</span>
                     <span *ngIf="dir == 'rtl'">{{item.quickLink[0].stayStringAr}}</span>
