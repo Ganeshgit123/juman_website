@@ -87,6 +87,7 @@ export class HeaderOneComponent {
   }
 
   pageActive(value){
+    this.isCollapsed = !this.isCollapsed;
     sessionStorage.setItem('pageName', value);
   }
 

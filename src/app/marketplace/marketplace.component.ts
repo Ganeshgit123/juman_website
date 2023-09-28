@@ -28,7 +28,9 @@ export class MarketplaceComponent {
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-        this.getBanners = res.payload;
+         this.getBanners = res.payload.filter(element => {
+          return element.isActive;
+        })
       });
 
     const object = {

@@ -177,25 +177,33 @@ export class HomeComponent {
   }
 
   ex: OwlOptions = {
-    loop: false,
     autoWidth: true,
     rtl: true,
     margin: 20,
     dots: false,
-    autoplay: false,
+    mouseDrag: false,
+    touchDrag: true,
     autoplaySpeed: 900,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        autoplay: true,
+        loop: true,
       },
       400: {
-        items: 1
+        items: 1,
+        autoplay: true,
+        loop: true,
       },
       760: {
-        items: 1
+        items: 1,
+        autoplay: true,
+        loop: true,
       },
       1000: {
-        items: 3
+        items: 3,
+        loop: false,
+        autoplay: false,
       }
     },
   }
@@ -230,7 +238,9 @@ export class HomeComponent {
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-        this.getBanners = res.payload;
+         this.getBanners = res.payload.filter(element => {
+          return element.isActive;
+        })
       });
 
     const object = {

@@ -492,7 +492,8 @@
     left: auto;
   }
   .interested {
-    padding: 50px !important;
+    padding: 20px;
+    border-radius: 0;
   }
 
   .interested h6 {
@@ -515,5 +516,27 @@
     right: 47%;
     left: auto;
   }
-
+  .img-h{
+   display: none;
+  }
+  .boxed{
+    max-width: 100%;
+    margin-top:50px
+  }
+  .boxed .lap {
+    width: 220px;
+    top: 40px;
+  }
+  .space-section{
+    padding-top: 0px;
+  }
+  .number p{
+    margin-bottom: 50px;
+  }
+  .about{
+    padding: 15px;
+  }
+  .about .nav-pills li+li {
+    margin-left: 20px;
+  }
 }

@@ -162,6 +162,7 @@
 .navbar.headBackground{
   background: #434345;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 1023px) {
   .menu {
     display: none;
@@ -281,6 +282,21 @@
   .nav-item a {
     padding: 10px;
   }
+  .navbar{
+    background: #434345;
+    padding-bottom: 20px;
+  }
+  .nav-item:hover .dropdown-content {
+    position: relative;
+    left: 2rem;
+  }
+  .nav-item:hover .dropdown-content:lang(ar) {
+    position: relative;
+    left: 0;
+  }
+  .dropdown-content{
+    width: fit-content !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -288,7 +304,6 @@
     padding: 0 3rem;
   }
 }
-
 
 .nav-item a {
   color: var(--white-color);

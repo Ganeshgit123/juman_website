@@ -27,7 +27,7 @@ export class ContactComponent {
 
   ngOnInit() {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
 
     const bannerData = {
       relations: ["header"],
@@ -38,9 +38,10 @@ export class ContactComponent {
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-        this.getBanners = res.payload;
+        this.getBanners = res.payload.filter(element => {
+          return element.isActive;
+        })
       });
-
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required]],

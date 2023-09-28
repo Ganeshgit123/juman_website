@@ -65,7 +65,7 @@
           </a>
         </li>
         <li class="nav-item" *ngFor="let item of contact">
-          <a class="nav-link btn-yellow" routerLink="/contact" (click)="pageActive('contact')"
+          <a class="nav-link btn-yellow" routerLink="/contact"
             (click)="pageActive('contact')"><span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
             <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span></a>
         </li>

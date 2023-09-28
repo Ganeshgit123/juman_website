@@ -73,28 +73,36 @@
   top: 0%;
   height: 500px !important;
   margin-top: 0rem;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
+
 .mar {
   position: relative;
   height: 550px;
   margin-top: -15rem;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .markkk {
     position: relative;
     top: 0%;
     height: 450px !important;
     margin-top: 0rem;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
+
   .mar {
     position: relative;
     height: 500px;
     margin-top: -15rem;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 }
-
-
-
 .im-tt {
   position: relative;
   top: 40%;
@@ -103,17 +111,21 @@
 .equal_space_right {
   padding-right: 20px;
 }
-.equal_space_right:lang(ar){
+
+.equal_space_right:lang(ar) {
   padding-left: 20px;
   padding-right: auto;
 }
+
 .equal_space_left {
   padding-left: 20px;
 }
-.equal_space_left:lang(ar){
+
+.equal_space_left:lang(ar) {
   padding-right: 20px;
   padding-left: auto;
 }
+
 .btn-readd {
   padding: 12px;
   position: relative;
@@ -282,10 +294,6 @@
   .post-slide .date {
     font-size: 14px;
   }
-
-  .markkk {
-    width: 100%;
-  }
 }
 
 .game-section {
@@ -400,11 +408,13 @@
   height: 300px;
   object-fit: contain;
 }
-.client_img{
+
+.client_img {
   width: 100%;
   height: 100px;
   object-fit: contain;
 }
+
 /* END CARD DESIGN */
 .jum {
   position: relative;
@@ -716,6 +726,7 @@
     background-size: cover;
   }
 }
+
 @media screen and (min-width: 1900px) {
   .animeslide-slide {
     position: relative;
@@ -724,6 +735,7 @@
     background-size: cover;
   }
 }
+
 .animeslide-slide .container {
   position: relative;
   top: 70px;
@@ -850,7 +862,6 @@
   padding-right: 15px;
 }
 
-
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .download {
     background: var(--main-color);
@@ -869,20 +880,16 @@
     top: -9rem;
   }
 
-  .markk {
-    width: 350px;
-    height: 500px !important;
-    position: relative;
-    top: 30%;
+  .markkk {
+    height: 400px !important;
+    background-size: contain !important;
   }
 
   .mar {
-    width: 350px;
-    height: 500px !important;
-    position: relative;
-    top: 30%;
+    height: 400px !important;
     margin-top: -6rem;
     background-position: center;
+    background-size: contain !important;
   }
 
   .part {
@@ -909,11 +916,77 @@
 
   .part-two h3 {
     writing-mode: horizontal-tb;
-    left: 20px;
-    top: -40%;
+    left: 10px;
   }
 
   .game-section {
     padding-top: 0px;
+  }
+
+  .part-two p {
+    padding: 0 20px 0 0;
+  }
+
+  .part-two p:lang(ar) {
+    padding-left: 0;
+    padding: 0 10px;
+    margin-top: 60px;
+  }
+  .part-two h3:lang(ar) {
+    right: 0;
+    margin-right: 20px;
+    left: auto;
+  }
+
+  .jum {
+    left: 0;
+    width: 300px;
+  }
+
+  .animeslide-bottom {
+    top: auto;
+    bottom: 6%;
+  }
+
+  .animeslide-heading {
+    font-size: 40px;
+  }
+  .animeslide-heading:lang(ar){
+    margin-right: 25px;
+    margin-left: auto;
+  }
+  .about h6 {
+    padding-top: 2rem;
+  }
+
+  .too {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .btn-read{
+    top: 60%;
+  }
+  .equal_space_left{
+    padding-left: 0;
+  }
+  .set-part{
+    padding-top: 0;
+  }
+  .part h3{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .part p{
+    padding: 20px 10px;
+  }
+  .yes{
+    padding: 15px;
+  }
+  .hero{
+    margin: 60px 15px 0 15px;
+  }
+  .log_caroou:lang(ar) {
+    right: auto;
+    left: auto;
   }
 }

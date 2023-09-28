@@ -73,6 +73,7 @@ export class HeaderComponent {
   }
 
   pageActive(value){
+    this.isCollapsed = !this.isCollapsed;
     if(value == 'home'){
       sessionStorage.setItem('pageName', 'home');
     }else{

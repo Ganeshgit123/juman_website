@@ -169,4 +169,8 @@
   .third_img{
     margin-top: 20px;
   }
+  .set p{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
