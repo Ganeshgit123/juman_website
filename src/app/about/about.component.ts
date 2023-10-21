@@ -89,6 +89,9 @@ export class AboutComponent {
   employeCoo: any;
   countryCount: number = 0;
   countryCountStop: any;
+  regionalCount: number = 0;
+  regionalCountStop: any;
+  regionCoo:any;
 
   constructor(private router: Router, private route: ActivatedRoute, public authService: AuthService,) { }
 
@@ -137,6 +140,15 @@ export class AboutComponent {
             clearInterval(this.countryCountStop);
           }
         }, 100)
+        this.regionalCountStop = setInterval(() => {
+          this.regionalCount++;
+          const [word, digits] = this.countSec[0].additionalInfo.fourthValue.match(/\D+|\d+/g);
+          this.regionCoo = digits;
+          if (word == this.regionalCount) {
+            clearInterval(this.regionalCountStop);
+          }
+        }, 1)
+
         this.tabSec1 = this.getData.filter(element => {
           return element.code === 'ABOTAB' && element.seq == 3;
         })

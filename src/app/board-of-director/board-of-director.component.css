@@ -72,7 +72,10 @@
 .chair h4 {
   font-size: 25px;
 }
-
+.heading_tit{
+  font-size: var(--heading-h6);
+  font-weight: 600;
+}
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .bgimage {
     width: 100%;

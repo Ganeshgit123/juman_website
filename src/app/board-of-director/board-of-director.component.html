@@ -15,56 +15,53 @@
   <div class="container">
     <div class="row space-row" *ngFor="let item of chairmanSec">
       <div class="col-md-3">
-        <div class="board-box">
-          <h5>
-            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
-            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
-          </h5>
-        </div>
+        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-8 chair">
+      <div class="col-md-9 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h4>
+        <h5 class="heading_tit">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
+        </h5>
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
     </div>
 
     <div class="row space-row"  *ngFor="let item of ceoSec">
-      <div class="col-md-8 ceo">
+      <div class="col-md-9 ceo">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h4>
+        <h5 class="heading_tit">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
+        </h5>
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
-      <div class="col-md-4">
-        <div class="board-boxx">
-          <h5>
-            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
-            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
-          </h5>
-        </div>
+      <div class="col-md-3">
+        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
     </div>
 
     <div class="row space-row" *ngFor="let item of boaDD">
       <div class="col-md-3">
-        <div class="board-box">
-          <h5>
-            <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
-            <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
-          </h5>
-        </div>
+        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-8 chair">
+      <div class="col-md-9 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h4>
+        <h5 class="heading_tit">
+          <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
+        </h5>
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>

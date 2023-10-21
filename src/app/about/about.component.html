@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="row number">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h3 class="text-center">
           <span *ngIf="dir == 'ltr'">{{revenueCount}}{{reveCoo}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.firstValueAr}}</span>
@@ -51,7 +51,7 @@
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arFirstContent}}</span>
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h3 class="text-center">
           <span *ngIf="dir == 'ltr'">{{employeCount}}{{employeCoo}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.secondValueAr}}</span>
@@ -60,13 +60,22 @@
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arSecondContent}}</span>
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h3 class="text-center">
           <span *ngIf="dir == 'ltr'">{{countryCount}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.thirdValueAr}}</span>
         </h3>
         <p> <span *ngIf="dir == 'ltr'">{{item.additionalInfo.thirdContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arThirdContent}}</span>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h3 class="text-center">
+          <span *ngIf="dir == 'ltr'">{{regionalCount}}{{regionCoo}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.fourthValueAr}}</span>
+        </h3>
+        <p> <span *ngIf="dir == 'ltr'">{{item.additionalInfo.fourthContent}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.additionalInfo.arFourthContent}}</span>
         </p>
       </div>
     </div>
@@ -194,7 +203,7 @@
   </div>
 </section>
 
-<section class="set-part">
+<!-- <section class="set-part">
   <div class="container-fluid" style="padding:0px;">
     <div class="row g-0" *ngFor="let item of partnerSec">
       <div class="col-md-6 part">
@@ -216,7 +225,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="in-con">
   <div class="container">

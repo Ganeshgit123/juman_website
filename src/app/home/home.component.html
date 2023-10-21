@@ -74,24 +74,21 @@
         </owl-carousel-o>
       </div>
       <div class="col-md-6 part-two">
-        <div class="col-md-6">
-          <owl-carousel-o [options]="succ" class="log_caroou">
-            <ng-template carouselSlide *ngFor="let img of operatingImgSec">
-              <div class="logo-back">
-                <img src="{{endpoint}}/{{img.images[0].path}}" class="logo-pos">
-              </div>
-            </ng-template>
-          </owl-carousel-o>
-        </div>
-
         <div *ngFor="let item of operatingSect">
           <h3>
             <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
             <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
           </h3>
-          <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+          <!-- <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p> -->
         </div>
+        <owl-carousel-o [options]="succ" class="log_caroou">
+          <ng-template carouselSlide *ngFor="let img of operatingImgSec">
+            <div class="logo-back">
+              <img src="{{endpoint}}/{{img.images[0].path}}" class="logo-pos">
+            </div>
+          </ng-template>
+        </owl-carousel-o>
       </div>
     </div>
   </div>
@@ -104,7 +101,7 @@
         <div class="equal_space_right">
           <div class="markkk" style="background: url('{{endpoint}}/{{item.images[1].path}}')">
             <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-            <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
+            <a routerLink="/gcc" class="btn-read">{{"ReadMore" | translate}}</a>
           </div>
         </div>
       </div>
@@ -129,7 +126,7 @@
         <div class="equal_space_left">
           <div class="mar" style="background: url('{{endpoint}}/{{item.images[0].path}}')">
             <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-            <a routerLink="/gcc" class="btn-readd">{{"ReadMore" | translate}}</a>
+            <a routerLink="/market" class="btn-readd">{{"ReadMore" | translate}}</a>
           </div>
         </div>
       </div>
@@ -137,7 +134,7 @@
   </div>
 </section>
 
-<section class="set-part">
+<!-- <section class="set-part">
   <div class="container-fluid" style="padding:0px;">
     <div class="row g-0" *ngFor="let item of partnerSec">
       <div class="col-md-6 part">
@@ -159,16 +156,16 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="client">
   <div class="container-fluid">
     <div class="row" *ngFor="let item of clientSec">
       <div class="col-md-12">
-        <span class="cli">
+        <h2 class="cli">
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
-        </span>
+        </h2>
         <h1 class="trust">
           <span *ngIf="dir == 'ltr'">{{item.erContent}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
@@ -191,11 +188,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12" *ngFor="let item of testimonialHeadingSec">
-        <span class="cli" *ngFor="let clie of clientSec">
+        <h2 class="cli" *ngFor="let clie of clientSec">
           <span *ngIf="dir == 'ltr'">{{clie.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{clie.arTitle}}</span>
-        </span>
-        <h1 class="trust1">
+        </h2>
+        <h1 class="trust">
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h1>
@@ -227,9 +224,9 @@
         <p class="latest">{{"LATESTNEWS" | translate}}</p>
         <h4 class="roln">{{"READURLATESTNEWS" | translate}}</h4>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2" *ngFor="let item of newsLink">
         <br> <br>
-        <a href="" class="btn-yellow"> {{"ViewAll" | translate}}</a>
+        <a href="{{item.erTitle}}" target="_blank" class="btn-yellow"> {{"ViewAll" | translate}}</a>
       </div>
     </div>
     <div class="row">
@@ -242,8 +239,8 @@
               </div>
 
               <div class="hero-description">
-                <p>{{img.erTitle}}</p>
-                <p>{{img.arTitle}}</p>
+                <p class="title">{{img.erTitle}}</p>
+                <p class="descrip">{{img.arTitle}}</p>
               </div>
               <div class="hero-date">
                 <p>{{img.arContent | date:'mediumDate'}}</p>

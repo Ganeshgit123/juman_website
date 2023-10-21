@@ -25,7 +25,7 @@ export class HomeComponent {
       }
     },
     autoplay: {
-      delay: 3000,
+      delay: 7000,
       disableOnInteraction: true
     },
     navigation: {
@@ -222,6 +222,7 @@ export class HomeComponent {
   testimonialHeadingSec = [];
   testimonialContentSec = [];
   latestSec = [];
+  newsLink = [];
   
   constructor(public authService: AuthService,) { }
 
@@ -293,6 +294,9 @@ export class HomeComponent {
         })
         this.latestSec = this.getData.filter(element => {
           return element.code === 'LANEWS';
+        })
+        this.newsLink = this.getData.filter(element => {
+          return element.code === 'NEWSLI';
         })
       });
 

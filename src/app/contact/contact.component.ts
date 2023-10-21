@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactComponent {
   name = 'Set iframe source';
-  url: string = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14944414.958786499!2d34.401570702240775!3d23.870505280491503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2sSaudi%20Arabia!5e0!3m2!1sen!2sin!4v1687955479820!5m2!1sen!2sin";
+  url: string;
   urlSafe: SafeResourceUrl | undefined;
 
   endpoint = environment.baseUrl;
@@ -22,11 +22,29 @@ export class ContactComponent {
   contactForm: FormGroup;
   submitted = false;
   getFooter = [];
+  mapLink = [];
 
   constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService, private toastr: ToastrService,) { }
 
   ngOnInit() {
-    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+    const object = {
+      relations: ["header", "images"],
+      filter: {
+        header: { id: "f251c287-c78c-4a51-a8e9-9573ce28afbc" }
+      },
+      sort: { seq: "ASC" }
+    }
+    this.authService.getSectionsByHeaderId(object).subscribe(
+      (res: any) => {
+        this.getData = res.payload;
+        this.mapLink = this.getData.filter(element => {
+          return element.code === 'MAPLIN';
+        })
+        this.url = this.mapLink[0].erTitle;
+        this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+      })
+
+
     this.dir = localStorage.getItem('dir') || "ltr";
 
     const bannerData = {
