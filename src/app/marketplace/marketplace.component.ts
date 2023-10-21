@@ -12,6 +12,9 @@ export class MarketplaceComponent {
   dir: any;
   getBanners = [];
   getData = [];
+  adImages = [];
+  enAdImage:any;
+  arADImgg:any;
 
   constructor(public authService: AuthService,) { }
 
@@ -42,7 +45,26 @@ export class MarketplaceComponent {
     }
     this.authService.getSectionsByHeaderId(object).subscribe(
       (res: any) => {
-        this.getData = res.payload;
+         this.getData = res.payload.filter(element =>{
+          return element.seq === 0;
+        })
+        
+        var adImageSec = res.payload.filter(element =>{
+          return element.seq === 1;
+        })
+
+        this.adImages = adImageSec[0].images;
+
+        var imagesss = this.adImages.filter(element =>{
+          return element.seq === 0;
+        })
+        this.enAdImage = imagesss[0]?.path;
+
+
+        var dddArImg = this.adImages.filter(element =>{
+          return element.seq === 1;
+        })
+        this.arADImgg = dddArImg[0]?.path;
       });
   }
 }
