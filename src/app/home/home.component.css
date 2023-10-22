@@ -839,10 +839,8 @@
     color: var(--white-color);
   }
 
-  .log_caroou {
-    position: relative;
-    left: 0rem;
-    top: -9rem;
+  .logo-back {
+    margin: 0;
   }
 
   .markkk {
@@ -880,8 +878,7 @@
   }
 
   .part-two h3 {
-    writing-mode: horizontal-tb;
-    left: 10px;
+    font-size: 20px;
   }
 
   .game-section {
@@ -915,7 +912,9 @@
   }
 
   .animeslide-heading {
-    font-size: 40px;
+    font-size: 30px;
+    margin-left: 0;
+    padding: 0 15px;
   }
 
   .animeslide-heading:lang(ar) {
@@ -956,13 +955,22 @@
   .yes {
     padding: 15px;
   }
-
+  .yes h6{
+    text-align: left;
+  }
+  .yes h6:lang(ar){
+    text-align: right;
+  }
   .hero {
     margin: 60px 15px 0 15px;
   }
 
-  .log_caroou:lang(ar) {
-    right: auto;
-    left: auto;
+  .newr .slide img {
+    height: 300px;
+  }
+
+  .trust::after,
+  .trust::before {
+    width: 4rem;
   }
 }
