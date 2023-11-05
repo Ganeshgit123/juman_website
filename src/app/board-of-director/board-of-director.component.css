@@ -103,4 +103,7 @@
   .bgimage h1 {
     line-height: 1.6;
   }
+  .set-space {
+    padding: 15px;
+  }
 }

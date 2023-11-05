@@ -101,7 +101,7 @@
         <div class="equal_space_right">
           <div class="markkk" style="background: url('{{endpoint}}/{{item.images[1].path}}')">
             <!-- <img src="../../assets/img/logo-gcc.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-            <a routerLink="/gcc" class="btn-read">{{"ReadMore" | translate}}</a>
+            <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@
         <div class="equal_space_left">
           <div class="mar" style="background: url('{{endpoint}}/{{item.images[0].path}}')">
             <!-- <img src="../../assets/img/logo-m.png" class="img-fluid im-tt" style="padding:30px;margin-top:-2rem;"> -->
-            <a routerLink="/market" class="btn-readd">{{"ReadMore" | translate}}</a>
+            <a routerLink="/gcc" class="btn-readd">{{"ReadMore" | translate}}</a>
           </div>
         </div>
       </div>
@@ -203,11 +203,15 @@
             <div class="row">
               <div class="col-md-3">
                 <img src="{{endpoint}}/{{item.images[0].path}}" class="img-u">
-                <h6>{{item.erContent}}</h6>
+                <h6>
+                  <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                  <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                </h6>
               </div>
               <div class="col-md-9">
                 <img src="../../assets/img/quote.svg" class="quote">
-                <p [innerHTML]="item.arContent"></p>
+                <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+                <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
               </div>
             </div>
           </ng-template>

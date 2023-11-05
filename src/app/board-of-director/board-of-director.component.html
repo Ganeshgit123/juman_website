@@ -17,7 +17,7 @@
       <div class="col-md-3">
         <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-9 chair">
+      <div class="col-md-6 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -29,10 +29,12 @@
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
+      <div class="col-md-3"></div>
     </div>
 
     <div class="row space-row"  *ngFor="let item of ceoSec">
-      <div class="col-md-9 ceo">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 ceo">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -53,7 +55,7 @@
       <div class="col-md-3">
         <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-9 chair">
+      <div class="col-md-6 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -65,6 +67,7 @@
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
+      <div class="col-md-3"></div>
     </div>
   </div>
 </section>

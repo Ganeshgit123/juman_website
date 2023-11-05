@@ -1,7 +1,10 @@
 .gcc p {
   padding: 10px;
 }
-
+.gcc-p img{
+  width: 100%;
+  height: auto;
+}
 .img-mar {
   padding-top: 38px;
 }
@@ -39,7 +42,10 @@
 .gcc-p {
   padding-top: 60px;
 }
-
+.play_icon img{
+  width: 100%;
+  height: 80px;
+}
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .bgimage {
     width: 100%;
@@ -50,5 +56,8 @@
     height: 500px;
     padding-top: 120px;
   }
-
+  .play_icon img{
+    width: 100%;
+    height: auto;
+  }
 }
