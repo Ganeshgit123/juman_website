@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
-
+import lgZoom from 'lightgallery/plugins/zoom';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -10,6 +11,7 @@ import { environment } from 'src/environments/environment.prod';
 export class ProjectComponent implements OnInit {
   endpoint = environment.baseUrl;
   dir: any;
+  lgZoom:any;
   getBanners = [];
   getData = [];
   POSTS: any;
@@ -52,5 +54,12 @@ export class ProjectComponent implements OnInit {
         })
       });
   }
-
+  settings = {
+    counter: false,
+    plugins: [lgZoom]
+  };
+  onBeforeSlide = (detail: BeforeSlideDetail): void => {
+    const { index, prevIndex } = detail;
+    console.log(index, prevIndex);
+  };
 }

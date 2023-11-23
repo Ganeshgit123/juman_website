@@ -12,6 +12,7 @@ export class HeaderComponent {
   endpoint = environment.baseUrl;
   public isCollapsed = true;
   page:any;
+  lang:any;
   getData = [];
   home = [];
   whoWeAre = [];
@@ -79,5 +80,16 @@ export class HeaderComponent {
     }else{
       this.page = value;
     }
+  }
+  switchLang(lang: any) {
+    if (lang == "ar") {
+      var dir = "rtl";
+    } else {
+      var dir = "ltr";
+    }
+    localStorage.setItem("lang", lang);
+    localStorage.setItem("dir", dir);
+    // console.log("lang",localStorage)
+    window.location.reload();
   }
 }

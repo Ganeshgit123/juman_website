@@ -71,18 +71,28 @@
 }
 .chair h4 {
   font-size: 25px;
+  padding-top:20px;
+  font-weight: 600;
 }
 .heading_tit{
   font-size: var(--heading-h6);
-  font-weight: 600;
+  font-weight: 700;
+  margin-top: -5px;
 }
 .heading_tit1{
   font-size: var(--heading-h6);
-  font-weight: 600;
+  font-weight: 700;
   text-align: right;
 }
 .heading_tit1:lang(ar){
   text-align: left;
+}
+.set-space p{
+padding-top:20px;
+}
+.logo-pos{
+  width:310px;
+  height:290px;
 }
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .bgimage {

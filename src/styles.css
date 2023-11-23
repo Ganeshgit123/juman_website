@@ -1,3 +1,4 @@
+
 :root {
     --main-color: #FAA61A;
     --color-secondary: #11143B;
@@ -103,7 +104,10 @@ p {
     font-size: 16px;
     line-height: 1.6;
 }
-
+p:lang(ar) {
+    font-size: 18px;
+    line-height: 1.6;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -199,9 +203,9 @@ img {
     flex-grow: 0 !important;
 }
 
-.navbar-expand-lg .navbar-collapse {
+/* .navbar-expand-lg .navbar-collapse {
     margin: 0 20px 0 8rem;
-}
+} */
 
 .navbar-expand-lg .navbar-collapse:lang(ar) {
     margin: 0 8rem 0 20px;

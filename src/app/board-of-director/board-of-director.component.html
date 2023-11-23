@@ -14,10 +14,10 @@
 <section class="set-space">
   <div class="container">
     <div class="row space-row" *ngFor="let item of chairmanSec">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-6 chair">
+      <div class="col-md-7 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
@@ -33,29 +33,29 @@
     </div>
 
     <div class="row space-row"  *ngFor="let item of ceoSec">
-      <div class="col-md-3"></div>
-      <div class="col-md-6 ceo">
+      <div class="col-md-4">
+        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
+      </div>
+      <div class="col-md-7 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h4>
-        <h5 class="heading_tit1">
+        <h5 class="heading_tit">
           <span *ngIf="dir == 'ltr'">{{item.additionalInfo.sectionHead}}</span>
           <span *ngIf="dir == 'rtl'">{{item.additionalInfo.sectionHeadAr}}</span>
         </h5>
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
-      <div class="col-md-3">
-        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
-      </div>
+      
     </div>
 
     <div class="row space-row" *ngFor="let item of boaDD">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
       </div>
-      <div class="col-md-6 chair">
+      <div class="col-md-7 chair">
         <h4>
           <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>

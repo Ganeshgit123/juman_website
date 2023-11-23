@@ -32,6 +32,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
     "jquery": "^3.6.3",
+    "lightgallery": "^2.7.2",
     "lottie-web": "^5.11.0",
     "ngx-bootstrap-icons": "^1.9.2",
     "ngx-lottie": "^10.0.0",

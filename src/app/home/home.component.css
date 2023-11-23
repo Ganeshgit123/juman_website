@@ -85,6 +85,7 @@
   background-repeat: no-repeat !important;
 }
 
+
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .markkk {
     position: relative;
@@ -974,3 +975,8 @@
     width: 4rem;
   }
 }
+@media only screen and (min-width: 1263px)  {
+  .newr .slide img {
+    height: 600px !important;
+  }
+  } 

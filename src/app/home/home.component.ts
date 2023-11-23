@@ -59,6 +59,9 @@ export class HomeComponent {
       },
       1000: {
         items: 5
+      },
+      1260:{
+        items: 5
       }
     },
     nav: false,
