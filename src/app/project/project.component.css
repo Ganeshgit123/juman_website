@@ -1,9 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
-@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
-.gallery-item {
-    margin: 15px;
-  }
-  .lightbox { direction: rtl; }
+
 .our-team {
     text-align: center;
     transition: all 0.5s ease 0s;

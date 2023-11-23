@@ -30,6 +30,7 @@ export class HeaderComponent {
   constructor(private router: Router, private route: ActivatedRoute,public authService: AuthService,) { }
 
   ngOnInit(): void {
+    this.lang = localStorage.getItem("lang") || "en";
     this.dir = localStorage.getItem('dir')  || "ltr";
     this.page = sessionStorage.getItem('pageName');
 

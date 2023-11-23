@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-gcc-installation',
@@ -17,8 +19,9 @@ export class GccInstallationComponent {
   selectedItem = 0;
   imagesArray = [];
   idArray = [];
-
-  constructor(public authService: AuthService,) { }
+  popupImg:any;
+  
+  constructor(public authService: AuthService,private modalService: NgbModal,private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
     this.dir = localStorage.getItem('dir')  || "ltr";
@@ -99,5 +102,14 @@ export class GccInstallationComponent {
           })
         });
     }
+  }
+
+  imagePopup(content,img){
+    this.popupImg = img;
+    this.modalService.open(content, { centered: true, size: 'md' });
+  }
+
+  public onClick(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 }

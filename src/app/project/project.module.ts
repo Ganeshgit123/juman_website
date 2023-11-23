@@ -4,7 +4,6 @@ import { ProjectComponent } from './project.component';
 import { RouterModule,Routes } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { TranslateModule } from '@ngx-translate/core';
-import { LightgalleryModule } from 'lightgallery/angular';
 const routes: Routes = [
   {
     path: '',
@@ -18,7 +17,6 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    LightgalleryModule,
     TranslateModule,
     NgxPaginationModule,
     RouterModule.forChild(routes),

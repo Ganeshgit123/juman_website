@@ -49,12 +49,12 @@
 
 .gcc .nav-link {
   background: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-secondary);
   margin: 10px;
-  margin-top: 40px;
-  padding: 12px 30px;
+  margin-top: 10px;
+  padding: 12px 20px;
   margin-bottom: -2px;
   border: 2px solid var(--color-secondary);
   border-radius: 46px;
@@ -68,20 +68,25 @@
 
 .set-space img {
   width: 250px;
-  height: 200px;
+  height: 250px;
   border-radius: 15px;
-}
-
-.box img {
-  width: 250px;
-  ;
-  height: 200px;
 }
 
 .hr {
   margin: 10px;
   height: 3px;
   border-width: 2px;
+}
+.modal-header{
+  border-bottom: none !important;
+  padding-bottom: 0;
+  padding-top: 10px;
+}
+.close{
+  background: transparent !important;
+  font-size: 30px !important;
+  border: none !important;
+  outline: none !important;
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
