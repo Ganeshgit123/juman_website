@@ -68,7 +68,7 @@
 }
 .about .nav-link.active:lang(ar):before{
   margin-left: auto;
-  margin-right: 25px;
+  /* margin-right: 25px; */
 }
 .about .nav-pills {
   border-bottom: 4px solid #D0D0D0;
@@ -85,7 +85,7 @@
   content: '';
   position: absolute;
   margin-top: 28px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   width: 45px;
   height: 8px;
   border-radius: 10px;
@@ -94,10 +94,10 @@
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-.about .nav-link.active:lang(ar):before{
+/* .about .nav-link.active:lang(ar):before{
   margin-right: 20px;
   margin-left: auto;
-}
+} */
 .about .nav-link.active {
   color: #000;
   font-weight: 600;
@@ -116,9 +116,9 @@
   font-family: var(--font-secondary);
 }
 
-.about img {
+/* .about img {
   margin-top: -75px;
-}
+} */
 
 .about {
   padding: 50px;
