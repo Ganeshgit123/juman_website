@@ -148,6 +148,6 @@ label {
 }
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .img-career{
-    padding: 50px 0px 0 0;
+    padding: 0px 0px 0 0;
   }
 }

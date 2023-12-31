@@ -108,8 +108,8 @@
   height: 300px;
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) { 
-  .space-section{
-    padding-top: 0;
+  .space-row {
+    padding-top: 0px;
   }
   .bgimage {
     background-repeat: no-repeat !important;

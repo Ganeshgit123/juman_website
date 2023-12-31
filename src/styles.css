@@ -143,10 +143,10 @@ img {
     background: transparent !important
 }
 
-.new .owl-carousel .owl-nav .owl-prev:lang(ar) {
+/* .new .owl-carousel .owl-nav .owl-prev:lang(ar) {
     left: -55%;
     right: auto;
-}
+} */
 
 .newr .owl-theme .owl-dots .owl-dot.active span {
     background: var(--main-color);
