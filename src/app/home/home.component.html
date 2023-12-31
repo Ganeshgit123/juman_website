@@ -262,7 +262,12 @@
                 <p>{{img.additionalInfo.date | date:'mediumDate'}}</p>
               </div>
               <div class="hero-btn">
-                <a href="{{img.additionalInfo.link}}" target="_blank">{{"LearnMore" | translate}}</a>
+                <span *ngIf="dir == 'ltr'">
+                  <a href="{{img.additionalInfo.link}}" target="_blank">{{"LearnMore" | translate}}</a>
+                </span>
+                <span *ngIf="dir == 'rtl'">
+                  <a href="{{img.additionalInfo.linkAr}}" target="_blank">{{"LearnMore" | translate}}</a>
+                </span>
               </div>
             </div>
           </ng-template>
