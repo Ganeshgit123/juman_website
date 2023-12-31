@@ -223,14 +223,20 @@
 
 <section class="game-section">
   <div class="container">
-    <div class="row">
+    <div class="row" *ngFor="let item of newsLink">
       <div class="col-md-10">
-        <p class="latest">{{"LATESTNEWS" | translate}}</p>
-        <h4 class="roln">{{"READURLATESTNEWS" | translate}}</h4>
+        <p class="latest">
+          <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+        </p>
+        <h4 class="roln">
+          <span *ngIf="dir == 'ltr'">{{item.erContent}}</span>
+          <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
+        </h4>
       </div>
-      <div class="col-md-2" *ngFor="let item of newsLink">
+      <div class="col-md-2">
         <br> <br>
-        <a href="{{item.erTitle}}" target="_blank" class="btn-yellow"> {{"ViewAll" | translate}}</a>
+        <a href="{{item.additionalInfo}}" target="_blank" class="btn-yellow"> {{"ViewAll" | translate}}</a>
       </div>
     </div>
     <div class="row">
@@ -243,14 +249,20 @@
               </div>
 
               <div class="hero-description">
-                <p class="title">{{img.erTitle}}</p>
-                <p class="descrip">{{img.arTitle}}</p>
+                <p class="title">
+                  <span *ngIf="dir == 'ltr'">{{img.erTitle}}</span>
+                  <span *ngIf="dir == 'rtl'">{{img.arTitle}}</span>
+                </p>
+                <p class="descrip">
+                  <span *ngIf="dir == 'ltr'">{{img.erContent}}</span>
+                  <span *ngIf="dir == 'rtl'">{{img.arContent}}</span>
+                </p>
               </div>
               <div class="hero-date">
-                <p>{{img.arContent | date:'mediumDate'}}</p>
+                <p>{{img.additionalInfo.date | date:'mediumDate'}}</p>
               </div>
               <div class="hero-btn">
-                <a href="{{img.erContent}}" target="_blank">{{"LearnMore" | translate}}</a>
+                <a href="{{img.additionalInfo.link}}" target="_blank">{{"LearnMore" | translate}}</a>
               </div>
             </div>
           </ng-template>

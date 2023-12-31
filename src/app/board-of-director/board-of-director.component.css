@@ -107,17 +107,18 @@
   width: 280px;
   height: 300px;
 }
-@media only screen and (max-width: 1199px) and (min-width: 320px) {
-  .bgimage {
-    width: 100%;
-    height: 400px;
-    background-repeat: no-repeat !important;
-    background-position: 100% 100% !important;
-    background-size: cover !important;
-    height: 500px;
-    padding-top: 120px;
+@media only screen and (min-width: 320px) and (max-width: 767px) { 
+  .space-section{
+    padding-top: 0;
   }
-
+  .bgimage {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    margin-top: 7.5rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 320px) {
   .chair h4 {
     line-height: 1.6;
     padding-top: 14px;
@@ -125,6 +126,7 @@
 
   .bgimage h1 {
     line-height: 1.6;
+    padding-top: 2rem;
   }
 
   .set-space {

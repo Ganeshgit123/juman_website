@@ -23,7 +23,7 @@
 }
 
 .contact-i {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .form-text-area {
@@ -357,18 +357,23 @@ label {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
-
-@media only screen and (max-width: 1199px) and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .bgimage {
-    width: 100%;
-    height: 400px;
-    background-repeat: no-repeat !important;
-    background-position: 100% 100% !important;
-    background-size: cover !important;
-    height: 500px;
-    padding-top: 120px;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      margin-top: 6rem;
+      height: auto;
   }
 
+  .bgimage h1 {
+      line-height: 1.6;
+      padding-top: 2rem;
+  }
+  .contact-i{
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 320px) {
   .box {
     background: #FAFAFA;
     border: none;
