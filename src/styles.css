@@ -205,11 +205,11 @@ img {
 
 /* .navbar-expand-lg .navbar-collapse {
     margin: 0 20px 0 8rem;
-} */
+}
 
 .navbar-expand-lg .navbar-collapse:lang(ar) {
     margin: 0 8rem 0 20px;
-}
+} */
 
 .navbar>.container-fluid {
     display: contents !important;
