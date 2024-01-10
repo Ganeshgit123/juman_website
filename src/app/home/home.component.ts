@@ -226,7 +226,9 @@ export class HomeComponent {
   testimonialContentSec = [];
   latestSec = [];
   newsLink = [];
-  
+  gccServiceImg: any;
+  marketServiceImg: any;
+
   constructor(public authService: AuthService,) { }
 
   ngOnInit() {
@@ -269,6 +271,18 @@ export class HomeComponent {
         this.serviceSect = this.getData.filter(element => {
           return element.code === 'SERVIC';
         })
+
+        var serviceImg = this.serviceSect[0]?.images.filter(element => {
+          return element.seq === 0;
+        })
+        this.gccServiceImg = serviceImg[0]?.path;
+
+
+        var marketImg = this.serviceSect[0]?.images.filter(element => {
+          return element.seq === 1;
+        })
+        this.marketServiceImg = marketImg[0]?.path; 
+
         this.partnerSec = this.getData.filter(element => {
           return element.code === 'PARTNE';
         })
