@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="set-space">
+<section [ngClass]="bannerLength == 1 ? 'set-space' : 'set_nobanner_height' ">
   <div class="container">
     <div class="row space-row" *ngFor="let item of chairmanSec">
       <div class="col-md-3">

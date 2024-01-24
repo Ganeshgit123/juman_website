@@ -1,12 +1,14 @@
 .gcc p {
   padding: 10px;
 }
-.gcc-p img{
+
+.gcc-p img {
   width: 100%;
   height: auto;
 }
+
 .img-mar {
-  padding-top: 38px;
+  padding-top: 28px;
 }
 
 .bgimage {
@@ -21,6 +23,10 @@
   color: white;
   padding-top: 8rem;
   text-shadow: 2px 2px #333;
+}
+
+.set_nobanner_height {
+  margin-top: 9rem;
 }
 
 .tex-h h4 {
@@ -42,27 +48,27 @@
 .gcc-p {
   padding-top: 60px;
 }
-.play_icon img{
-  width: 100%;
-  height: 80px;
-}
-@media only screen and (min-width: 320px) and (max-width: 767px) { 
-  .space-section{
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .space-section {
     padding-top: 0;
   }
+
   .bgimage {
     background-repeat: no-repeat !important;
     background-size: contain !important;
     margin-top: 7.5rem;
     height: auto;
   }
+
   .bgimage h1 {
     line-height: 1.6;
     padding-top: 2rem;
   }
 }
+
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
-  .play_icon img{
+  .play_icon img {
     width: 100%;
     height: auto;
   }

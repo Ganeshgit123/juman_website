@@ -35,6 +35,7 @@ export class CareerComponent {
    fileImgUpload: any;
    iconImgUrl: any;
    fileUpload:any;
+   bannerLength: number;
 
    constructor(public fb: FormBuilder,public authService: AuthService,private toastr: ToastrService,) {}
   
@@ -58,6 +59,7 @@ export class CareerComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
       this.careerForm = this.fb.group({

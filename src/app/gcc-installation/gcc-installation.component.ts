@@ -20,7 +20,8 @@ export class GccInstallationComponent {
   imagesArray = [];
   idArray = [];
   popupImg:any;
-  
+  bannerLength:  number;
+
   constructor(public authService: AuthService,private modalService: NgbModal,private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export class GccInstallationComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
     const object = {

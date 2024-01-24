@@ -23,7 +23,11 @@
 }
 
 .contact-i {
-  padding-top: 40px;
+  padding-top: 60px;
+}
+
+.set_nobanner_height {
+  margin-top: 10rem;
 }
 
 .form-text-area {
@@ -357,26 +361,30 @@ label {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .bgimage {
-      background-repeat: no-repeat !important;
-      background-size: contain !important;
-      margin-top: 6rem;
-      height: auto;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    margin-top: 6rem;
+    height: auto;
   }
 
   .bgimage h1 {
-      line-height: 1.6;
-      padding-top: 2rem;
+    line-height: 1.6;
+    padding-top: 2rem;
   }
-  .contact-i{
+
+  .contact-i {
     padding-top: 20px;
   }
+
   .phone-sec {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
+
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .box {
     background: #FAFAFA;

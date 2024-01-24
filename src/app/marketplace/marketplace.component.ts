@@ -15,6 +15,7 @@ export class MarketplaceComponent {
   adImages = [];
   enAdImage:any;
   arADImgg:any;
+  bannerLength:  number;
 
   constructor(public authService: AuthService,) { }
 
@@ -34,6 +35,7 @@ export class MarketplaceComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
     const object = {

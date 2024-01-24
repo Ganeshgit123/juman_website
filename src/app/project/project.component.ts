@@ -17,6 +17,7 @@ export class ProjectComponent implements OnInit {
   count: number = 0;
   tableSize: number = 7;
   tableSizes: any = [3, 6, 9, 12];
+  bannerLength: number;
 
   constructor(public authService: AuthService,) { }
 
@@ -36,6 +37,7 @@ export class ProjectComponent implements OnInit {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
     const object = {

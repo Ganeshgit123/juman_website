@@ -101,7 +101,7 @@ a {
 }
 
 p {
-    font-size: 16px;
+    font-size: var(--heading-h6);
     line-height: 1.6;
 }
 p:lang(ar) {

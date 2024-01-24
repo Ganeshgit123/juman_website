@@ -81,7 +81,9 @@
 .space-section {
   padding-top: 40px;
 }
-
+.set_nobanner_height{
+  margin-top: 10rem;
+}
 .set p {
   padding-left: 30px;
   padding-bottom: 20px;
@@ -101,6 +103,9 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) { 
   .space-section{
     padding-top: 0;
+  }
+  .set_nobanner_height{
+    margin-top: 9rem;
   }
   .bgimage {
     background-repeat: no-repeat !important;

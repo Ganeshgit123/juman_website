@@ -23,6 +23,7 @@ export class ContactComponent {
   submitted = false;
   getFooter = [];
   mapLink = [];
+  bannerLength: number;
 
   constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService, private toastr: ToastrService,) { }
 
@@ -59,6 +60,7 @@ export class ContactComponent {
         this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],

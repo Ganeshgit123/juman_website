@@ -16,6 +16,7 @@ export class OperatingComponent {
   usgMESec = [];
   bostikSec = [];
   footerData = [];
+  bannerLength: number;
 
   constructor(public authService: AuthService,) { }
 
@@ -35,6 +36,7 @@ export class OperatingComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
     const object = {

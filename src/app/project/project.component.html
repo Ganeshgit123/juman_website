@@ -10,7 +10,8 @@
         </div>
     </div>
 </section>
-<section class="space-section">
+
+<section [ngClass]="bannerLength == 1 ? 'space-section' : 'set_nobanner_height' ">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 top-space" *ngFor="let item of getData">

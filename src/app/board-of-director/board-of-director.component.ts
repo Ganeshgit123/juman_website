@@ -15,7 +15,8 @@ export class BoardOfDirectorComponent {
   chairmanSec = [];
   ceoSec = [];
   boaDD = [];
-
+  bannerLength:  number;
+  
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
@@ -34,6 +35,8 @@ export class BoardOfDirectorComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
+        // console.log("sfew",this.getBanners.length)
       });
 
     const object = {

@@ -140,7 +140,11 @@
 }
 
 .space-section {
-    padding-top: 50px;
+    padding-top: 20px;
+}
+
+.set_nobanner_height {
+    margin-top: 8rem;
 }
 
 .btn-or {

@@ -45,6 +45,7 @@ export class ProjectDetailsComponent {
   }
   projectParamsId:any;
   projImages = [];
+  bannerLength: number;
 
   constructor(public authService: AuthService, private router: Router, private route: ActivatedRoute,) { }
   
@@ -68,6 +69,7 @@ export class ProjectDetailsComponent {
          this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
+        this.bannerLength = this.getBanners.length;
       });
 
     const object = {

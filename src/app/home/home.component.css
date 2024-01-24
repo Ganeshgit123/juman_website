@@ -71,7 +71,7 @@
 .markkk {
   position: relative;
   top: 0%;
-  height: 500px !important;
+  height: 400px !important;
   margin-top: 0rem;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -79,8 +79,8 @@
 
 .mar {
   position: relative;
-  height: 550px;
-  margin-top: -15rem;
+  height: 400px;
+  margin-top: 0;
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
@@ -90,7 +90,7 @@
   .markkk {
     position: relative;
     top: 0%;
-    height: 450px !important;
+    height: 500px !important;
     margin-top: 0rem;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -99,7 +99,7 @@
   .mar {
     position: relative;
     height: 500px;
-    margin-top: -15rem;
+    margin-top: 0;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
@@ -148,6 +148,7 @@
 
 .title {
   font-size: var(--heading-h2);
+  font-weight: 600;
 }
 
 .post-slide {
@@ -460,19 +461,19 @@
 }
 
 .about h6 {
-  font-size: 30px;
+  font-size: var(--heading-h2);
   font-weight: 700;
   padding-bottom: 20px;
 }
 
 .client {
-  padding-top: 70px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 
-.client .cli {
+.cli {
   text-align: center;
-  font-size: 12px;
+  font-size: var(--heading-h2);
   color: #37C2D4;
   text-transform: uppercase;
   opacity: 1;
@@ -481,7 +482,8 @@
 
 .trust {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: var(--heading-h6);
+  margin: 10px 0 20px 0;
 }
 
 .trust::after,
@@ -497,15 +499,6 @@
 .testimonal {
   padding-top: 0px;
   padding-bottom: 40px;
-}
-
-.testimonal .cli {
-  text-align: center;
-  font-size: 12px;
-  color: #37C2D4;
-  text-transform: uppercase;
-  opacity: 1;
-  margin-bottom: 0;
 }
 
 .latest {
@@ -629,7 +622,7 @@
 }
 
 .logo-back {
-  background: rgba(255, 255, 255, 0.6);
+  /* background: rgba(255, 255, 255, 0.6); */
   padding: 40px;
   margin: 2rem 4rem 0 4rem;
 }
@@ -640,7 +633,7 @@
 }
 
 .part-two h3 {
-  font-size: 25px;
+  font-size: var(--heading-h2);
   font-weight: 600;
   text-align: center;
 }
@@ -863,7 +856,7 @@
 
   .mar {
     height: 400px !important;
-    margin-top: -6rem;
+    margin-top: 20px;
     background-position: center;
     background-size: contain !important;
   }
@@ -886,9 +879,9 @@
     text-align: right;
   }
 
-  .title {
+  /* .title {
     padding-top: 40px;
-  }
+  } */
 
   .part-two h3 {
     font-size: 20px;

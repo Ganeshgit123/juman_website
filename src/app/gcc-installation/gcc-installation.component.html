@@ -11,13 +11,14 @@
   </div>
 </section>
 
-<section class="gcc">
+<section [ngClass]="bannerLength == 1 ? 'space-section' : 'set_nobanner_height' ">
   <div class="container">
     <div class="row" *ngFor="let item of gccContentSec">
       <div class="col-md-6">
         <br>
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+        <br>
         <p><a (click)="onClick('img_section')" class="btn-orange">{{"knowMore" | translate}}</a></p>
       </div>
       <div class="col-md-6">

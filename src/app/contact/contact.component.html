@@ -10,7 +10,8 @@
         </div>
     </div>
 </section>
-<section class="contact-i">
+
+<section [ngClass]="bannerLength == 1 ? 'contact-i' : 'set_nobanner_height' ">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
