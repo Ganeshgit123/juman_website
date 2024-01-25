@@ -85,7 +85,10 @@
   background-repeat: no-repeat !important;
 }
 
-
+.logo-pos{
+  width: 300px;
+  height: 300px;
+}
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .markkk {
     position: relative;
@@ -518,7 +521,7 @@
 
 .roln {
   text-align: left;
-  font-size: 35px;
+  font-size: var(--heading-h2);
   padding-top: 20px;
   letter-spacing: 0px;
   color: #000000;

@@ -228,6 +228,7 @@ export class HomeComponent {
   newsLink = [];
   gccServiceImg: any;
   marketServiceImg: any;
+  sortedImg = [];
 
   constructor(public authService: AuthService,) { }
 
@@ -277,7 +278,6 @@ export class HomeComponent {
         })
         this.gccServiceImg = serviceImg[0]?.path;
 
-
         var marketImg = this.serviceSect[0]?.images.filter(element => {
           return element.seq === 1;
         })
@@ -326,7 +326,13 @@ export class HomeComponent {
     }
     this.authService.getSectionsByHeaderId(object1).subscribe(
       (res: any) => {
-        this.operatingImgSec = res.payload
+        this.operatingImgSec = res.payload.filter(element => {
+          var sortImg = element.images.sort(function (first, second) {
+            return first?.seq - second?.seq;
+          });
+          this.sortedImg.push(sortImg);
+        });
+        // console.log("gygyg",this.sortedImg)
       });
   }
 

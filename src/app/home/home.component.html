@@ -66,9 +66,9 @@
     <div class="row g-0">
       <div class="col-md-6">
         <owl-carousel-o [options]="suc" class="newr">
-          <ng-template carouselSlide *ngFor="let img of operatingImgSec">
+          <ng-template carouselSlide *ngFor="let img of sortedImg">
             <div class="slide">
-              <img src="{{endpoint}}/{{img.images[1].path}}">
+              <img src="{{endpoint}}/{{img[1].path}}">
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -83,9 +83,9 @@
           <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p> -->
         </div>
         <owl-carousel-o [options]="succ" class="log_caroou">
-          <ng-template carouselSlide *ngFor="let img of operatingImgSec">
+          <ng-template carouselSlide *ngFor="let img of sortedImg">
             <div class="logo-back">
-              <img src="{{endpoint}}/{{img.images[0].path}}" class="logo-pos">
+              <img src="{{endpoint}}/{{img[0].path}}" class="logo-pos">
             </div>
           </ng-template>
         </owl-carousel-o>
