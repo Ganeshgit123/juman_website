@@ -164,9 +164,13 @@ export class AboutComponent {
         this.investHead = this.getData.filter(element => {
           return element.code === 'INVEST';
         })
-        this.strategy = this.getData.filter(element => {
+        var strategyArray = this.getData.filter(element => {
           return element.code === 'STRAGY' && element.isActive;
         })
+
+        this.strategy = strategyArray.sort(function (first, second) {
+          return first?.seq - second?.seq;
+        });
       });
 
     const object1 = {
@@ -183,6 +187,18 @@ export class AboutComponent {
           return first.seq - second.seq;
         });
       });
+  }
+
+  isColor1(index: number): boolean {
+    return index % 3 === 0;
+  }
+
+  isColor2(index: number): boolean {
+    return index % 3 === 1;
+  }
+
+  isColor3(index: number): boolean {
+    return index % 3 === 2;
   }
 
 }

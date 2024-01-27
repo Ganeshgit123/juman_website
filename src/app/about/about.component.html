@@ -19,7 +19,7 @@
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
-      <div class="col-md-4 col-sm-6 inn ">
+      <div class="col-md-4 col-sm-6 inn">
         <div class="boxed">
           <p class="text-right"><img src="../../assets/img/dot.png" class="img-fluid img-h"></p>
           <img src="{{endpoint}}/{{item.images[0].path}}" class="lap">
@@ -190,8 +190,8 @@
       <div class="col-md-12">
         <div class="col-lg-12">
           <owl-carousel-o [options]="customOptions" class="new">
-            <ng-template carouselSlide *ngFor="let item of strategy">
-              <div class="box">
+            <ng-template carouselSlide *ngFor="let item of strategy; let i = index">
+              <div [ngClass]="{'box': isColor1(i), 'box1': isColor2(i), 'box3': isColor3(i)}">
                 <img src="{{endpoint}}/{{item.images[0].path}}">
                 <h2>
                   <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
