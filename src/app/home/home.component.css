@@ -40,77 +40,21 @@
 }
 
 .btn-read {
-  padding: 12px;
+  float: right;
   position: relative;
-  left: 55%;
-  display: inline-block;
+  right: 4rem;
+  top: -6rem;
+  padding: 12px;
   width: 30%;
   text-align: center;
   border-radius: 57px;
   color: var(--white-color);
-  top: 80%;
   background: var(--main-color);
-}
-
-.btn-read:lang(ar) {
-  right: 55%;
-  left: auto;
-}
-
-.im-t {
-  position: absolute;
-  left: 10%;
-  top: 40%;
-}
-
-.im-t:lang(ar) {
-  right: 10%;
-  left: auto;
-}
-
-.markkk {
-  position: relative;
-  top: 0%;
-  height: 400px !important;
-  margin-top: 0rem;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-
-.mar {
-  position: relative;
-  height: 400px;
-  margin-top: 0;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
 }
 
 .logo-pos{
   width: 300px;
   height: 300px;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1366px) {
-  .markkk {
-    position: relative;
-    top: 0%;
-    height: 500px !important;
-    margin-top: 0rem;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .mar {
-    position: relative;
-    height: 500px;
-    margin-top: 0;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-}
-
-.im-tt {
-  position: relative;
-  top: 40%;
 }
 
 .equal_space_right {
@@ -129,24 +73,6 @@
 .equal_space_left:lang(ar) {
   padding-right: 20px;
   padding-left: auto;
-}
-
-.btn-readd {
-  padding: 12px;
-  position: relative;
-  left: 58%;
-  display: inline-block;
-  width: 30% !important;
-  text-align: center;
-  border-radius: 57px;
-  color: var(--white-color);
-  top: 80%;
-  background: var(--main-color);
-}
-
-.btn-readd:lang(ar) {
-  right: 58%;
-  left: auto;
 }
 
 .title {
@@ -303,7 +229,7 @@
 }
 
 .game-section {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -470,22 +396,21 @@
 }
 
 .client {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 
 .cli {
   text-align: center;
   font-size: var(--heading-h2);
-  color: #37C2D4;
+  font-weight: 600;
   text-transform: uppercase;
-  opacity: 1;
   margin-bottom: 0;
 }
 
 .trust {
   text-align: center;
-  font-size: var(--heading-h6);
+  font-size: var(--heading-h2);
   margin: 10px 0 20px 0;
 }
 
@@ -505,18 +430,10 @@
 }
 
 .latest {
-  text-align: left;
-  font-size: 12px;
-  letter-spacing: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  color: var(--main-color);
+  font-size: var(--heading-h2);
   text-transform: uppercase;
-  opacity: 1;
-}
-
-.latest:lang(ar) {
-  text-align: right;
+  font-size: var(--heading-h2);
+  font-weight: 600;
 }
 
 .roln {
@@ -853,12 +770,10 @@
   }
 
   .markkk {
-    height: 400px !important;
     background-size: contain !important;
   }
 
   .mar {
-    height: 400px !important;
     margin-top: 20px;
     background-position: center;
     background-size: contain !important;
@@ -938,10 +853,6 @@
   .too {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .btn-read {
-    top: 60%;
   }
 
   .equal_space_left {
