@@ -3,7 +3,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -25,7 +24,7 @@ export class ContactComponent {
   mapLink = [];
   bannerLength: number;
 
-  constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService, private toastr: ToastrService,) { }
+  constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService) { }
 
   ngOnInit() {
     const object = {
@@ -87,11 +86,8 @@ export class ContactComponent {
       .subscribe((res: any) => {
         if (res.code == 200) {
           this.submitted = false;
-          this.toastr.success('Success ', 'Updated Successfully');
           this.contactForm.reset();
           this.ngOnInit();
-        } else {
-          this.toastr.error('Error ', 'Error');
         }
       });
   }

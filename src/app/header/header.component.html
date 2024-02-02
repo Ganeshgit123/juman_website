@@ -21,7 +21,7 @@
             <a class="nav-link" routerLink="/" [ngClass]="{'active': page == 'home'}" (click)="pageActive('home')">
               <span *ngIf="dir == 'ltr'">{{item.enMenu}}</span>
               <span *ngIf="dir == 'rtl'">{{item.arMenu}}</span>
-              <span class="sr-only">(current)</span></a>
+            </a>
           </li>
           <li class="nav-item" *ngFor="let item of whoWeAre">
             <a class="nav-link" routerLink="/about" [ngClass]="{'active': page == 'about'}"

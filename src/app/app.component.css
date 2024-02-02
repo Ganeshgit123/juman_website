@@ -1,11 +1,15 @@
 .spinner-wrapper {
+    left: 0 !important;
+    top: 0 !important;
     width: 100%;
-    height: calc(100vh - 150px);
-    z-index: 9999;
-    background: var(--white-color);
+    height: 100vh;
+    position: relative;
+    z-index: 10000 !important;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: visibility 0s, opacity 0.4s linear !important;
 }
 .spinner {
     font-size: 10px;

@@ -14,7 +14,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderOneComponent } from './header-one/header-one.component';
 
-import { ToastrModule } from 'ngx-toastr';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -38,11 +37,6 @@ export function createTranslateLoader(http: HttpClient): any {
     NgbModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({ 
-      timeOut: 10000,
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true,
-    }),
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {

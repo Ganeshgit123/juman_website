@@ -1,20 +1,19 @@
-<div>
-  <app-header *ngIf="header"></app-header>
-  <app-header-one *ngIf="transparentHeader"></app-header-one>
-</div>
-<div *ngIf="isLoading" class="spinner-wrapper">
-  <div class="spinner">Loading...</div>
-</div>
+<app-header *ngIf="header"></app-header>
+<app-header-one *ngIf="transparentHeader"></app-header-one>
 
-<div contentAnimate *ngIf="!isLoading">
-  <div *ngIf="dir == 'ltr'">
-    <router-outlet></router-outlet>
-  </div>
-  <div *ngIf="dir == 'rtl'" class="rtl">
-    <router-outlet></router-outlet>
-  </div>
+<div *ngIf="dir == 'ltr'">
+  <router-outlet>
+    <div *ngIf="isLoading" class="spinner-wrapper">
+      <div class="spinner">Loading...</div>
+    </div>
+  </router-outlet>
 </div>
+<div *ngIf="dir == 'rtl'" class="rtl">
+  <router-outlet>
+    <div *ngIf="isLoading" class="spinner-wrapper">
+      <div class="spinner">Loading...</div>
+    </div>
+  </router-outlet>
+</div> 
 
-<div>
-  <app-footer></app-footer>
-</div>
+<app-footer></app-footer>

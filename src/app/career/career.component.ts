@@ -2,7 +2,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
-import { ToastrService } from 'ngx-toastr';
 
 // import { ReCaptcha2Component } from 'ngx-captcha';
 @Component({
@@ -37,7 +36,7 @@ export class CareerComponent {
    fileUpload:any;
    bannerLength: number;
 
-   constructor(public fb: FormBuilder,public authService: AuthService,private toastr: ToastrService,) {}
+   constructor(public fb: FormBuilder,public authService: AuthService) {}
   
    ngOnInit(): void {
     this.dir = localStorage.getItem('dir')  || "ltr";
@@ -136,11 +135,8 @@ export class CareerComponent {
           this.fileImgUpload = null;
           this.iconImg = null;
           this.fileUpload = null;
-          this.toastr.success('Success ', 'Updated Successfully');
           this.careerForm.reset();
           this.ngOnInit();
-        } else {
-          this.toastr.error('Error ', 'Error');
         }
       });
    }
