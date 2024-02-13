@@ -15,7 +15,7 @@
   <div class="container">
     <div class="row space-row" *ngFor="let item of chairmanSec">
       <div class="col-md-3">
-        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos">
+        <img src="{{endpoint}}/{{item.images[0].path}}">
       </div>
       <div class="col-md-7 chair">
         <h4>
@@ -32,7 +32,7 @@
       <div class="col-md-3"></div>
     </div>
 
-    <div class="row space-row"  *ngFor="let item of ceoSec">
+    <div class="row space-row" *ngFor="let item of ceoSec">
       <div class="col-md-3">
         <img src="{{endpoint}}/{{item.images[0].path}}">
       </div>
@@ -48,12 +48,12 @@
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
-      
+      <div class="col-md-3"></div>
     </div>
 
     <div class="row space-row" *ngFor="let item of boaDD">
       <div class="col-md-3">
-        <img src="{{endpoint}}/{{item.images[0].path}}" class="logo-pos1">
+        <img src="{{endpoint}}/{{item.images[0].path}}">
       </div>
       <div class="col-md-7 chair">
         <h4>

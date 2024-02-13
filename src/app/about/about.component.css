@@ -300,7 +300,7 @@ h2{
 }
 
 .interested {
-  background: #FAA61A;
+  background: #F3F3F5;
   padding: 80px;
   border-radius: 69px;
 }
@@ -327,6 +327,10 @@ h2{
   display: inline-block;
   width: 20%;
   color: var(--black-color);
+}
+.interested a:hover{
+  background: var(--main-color);
+  border: var(--main-color);
 }
 .interested a:lang(ar){
   right: 40%;
