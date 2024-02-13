@@ -106,7 +106,7 @@
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
       </div>
       <div class="col-md-6">
-        <img src="{{endpoint}}/{{gccServiceImg}}"> 
+        <img src="{{endpoint}}/{{gccServiceImg}}">
         <a routerLink="/gcc" class="btn-read">{{"ReadMore" | translate}}</a>
       </div>
 
@@ -117,7 +117,7 @@
         </div>
       </div> -->
       <div class="col-md-6">
-        <img src="{{endpoint}}/{{marketServiceImg}}"> 
+        <img src="{{endpoint}}/{{marketServiceImg}}">
         <a routerLink="/market" class="btn-read">{{"ReadMore" | translate}}</a>
       </div>
     </div>
@@ -187,25 +187,27 @@
           <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
         </h1>
       </div>
-      <div class="col-md-12 yes">
-        <owl-carousel-o [options]="car" class="new">
-          <ng-template carouselSlide *ngFor="let item of testimonialContentSec">
-            <div class="row">
-              <div class="col-md-3">
-                <img src="{{endpoint}}/{{item.images[0].path}}" class="img-u">
-                <h6>
-                  <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
-                  <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
-                </h6>
+      <div class="col-md-12">
+        <div class="yes">
+          <owl-carousel-o [options]="car" class="new">
+            <ng-template carouselSlide *ngFor="let item of testimonialContentSec">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="{{endpoint}}/{{item.images[0].path}}" class="img-u">
+                  <h6>
+                    <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+                    <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+                  </h6>
+                </div>
+                <div class="col-md-9">
+                  <img src="../../assets/img/quote.svg" class="quote">
+                  <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
+                  <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
+                </div>
               </div>
-              <div class="col-md-9">
-                <img src="../../assets/img/quote.svg" class="quote">
-                <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-                <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
-              </div>
-            </div>
-          </ng-template>
-        </owl-carousel-o>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
     </div>
   </div>
