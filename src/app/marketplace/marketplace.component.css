@@ -45,9 +45,9 @@
   padding-top: 80px;
 }
 
-.gcc-p {
+/* .gcc-p {
   padding-top: 60px;
-}
+} */
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .space-section {
