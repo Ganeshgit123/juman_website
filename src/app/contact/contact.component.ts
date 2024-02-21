@@ -3,6 +3,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +25,8 @@ export class ContactComponent {
   mapLink = [];
   bannerLength: number;
 
-  constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService) { }
+  constructor(public sanitizer: DomSanitizer, public fb: FormBuilder, public authService: AuthService,
+    private toastr: ToastrService,) { }
 
   ngOnInit() {
     const object = {
@@ -63,8 +65,8 @@ export class ContactComponent {
       });
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
-      email: ['', [Validators.required]],
-      mobileNumber: ['', [Validators.required]],
+      email: ['', [Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
+      mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
       message: ['', [Validators.required]],
     });
 
@@ -85,6 +87,7 @@ export class ContactComponent {
     this.authService.createContact(this.contactForm.value)
       .subscribe((res: any) => {
         if (res.code == 200) {
+          this.toastr.success('Success ', 'Form Submitted Successfully');
           this.submitted = false;
           this.contactForm.reset();
           this.ngOnInit();

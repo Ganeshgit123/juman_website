@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-career',
@@ -21,7 +22,7 @@ export class CareerComponent {
    fileUpload:any;
    bannerLength: number;
 
-   constructor(public fb: FormBuilder,public authService: AuthService) {}
+   constructor(public fb: FormBuilder,public authService: AuthService,private toastr: ToastrService) {}
   
    ngOnInit(): void {
     this.dir = localStorage.getItem('dir')  || "ltr";
@@ -47,7 +48,7 @@ export class CareerComponent {
         email: ['', [Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
         mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
         department: ['', [Validators.required]],
-        resume: ['', [Validators.required]],
+        resume: [''],
       });
 
       const object = {
@@ -106,6 +107,7 @@ export class CareerComponent {
       this.authService.createCareer(formData)
       .subscribe((res: any) => {
         if (res.code == 200) {
+          this.toastr.success('Success ', 'Form Submitted Successfully');
           this.submitted = false;
           this.fileImgUpload = null;
           this.iconImg = null;

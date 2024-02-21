@@ -13,7 +13,7 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderOneComponent } from './header-one/header-one.component';
-
+import { ToastrModule } from 'ngx-toastr';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -36,6 +36,7 @@ export function createTranslateLoader(http: HttpClient): any {
     NgxBootstrapIconsModule.pick(allIcons),
     NgbModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {

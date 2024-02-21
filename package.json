@@ -29,6 +29,7 @@
     "jquery": "^3.6.3",
     "ngx-bootstrap-icons": "^1.9.2",
     "ngx-owl-carousel-o": "^15.0.1",
+    "ngx-toastr": "^17.0.2",
     "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~7.8.0",
     "swiper": "^6.8.4",

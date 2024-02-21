@@ -41,6 +41,8 @@
                                     <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                                         <div *ngIf="f['email'].errors['required']">{{'Required' | translate}}
                                         </div>
+                                        <div *ngIf="f['email'].errors['pattern']">{{"PleaseprovidevalidEmail"
+                                            | translate}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -53,6 +55,8 @@
                                     <div *ngIf="submitted && f['mobileNumber'].errors" class="invalid-feedback">
                                         <div *ngIf="f['mobileNumber'].errors['required']">{{'Required' | translate}}
                                         </div>
+                                        <div *ngIf="f['mobileNumber'].errors['pattern']">{{"Ninedigitsonlyallowed" |
+                                            translate}}</div>
                                     </div>
                                 </div>
                             </div>
