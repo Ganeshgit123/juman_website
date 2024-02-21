@@ -28,7 +28,9 @@
 .set_nobanner_height {
   margin-top: 9rem;
 }
-
+.set_nobanner_height p{
+  text-align: justify;
+}
 .tex-h h4 {
   font-size: 30px;
   font-weight: 700;

@@ -27,7 +27,7 @@
   background: #FAA61A;
   border-radius: 57px;
   text-align: center;
-  padding: 15px 40px;
+  padding: 10px 40px;
   color: #fff;
   margin-top: 20px;
 }
@@ -94,9 +94,18 @@
 .set_nobanner_height {
   margin-top: 10rem;
 }
-.space-section{
+
+.set_nobanner_height p {
+  text-align: justify;
+}
+
+.space-section {
   padding: 60px 0 40px 0;
 }
+#img_section{
+  margin-top: 30px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .space-section {
     padding-top: 0;
@@ -113,10 +122,12 @@
     line-height: 1.6;
     padding-top: 2rem;
   }
+
   .set_nobanner_height {
     margin-top: 8rem;
   }
-  .img-career{
+
+  .img-career {
     margin-top: 40px;
   }
 }
@@ -129,12 +140,12 @@
     opacity: 1;
     width: 80%;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     color: #fff;
     margin-top: 30px;
   }
 
-  .gcc .nav-link{
+  .gcc .nav-link {
     background: none;
     font-size: 18px;
     font-weight: 400;

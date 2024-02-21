@@ -35,7 +35,6 @@ export function createTranslateLoader(http: HttpClient): any {
     HttpClientModule,
     NgxBootstrapIconsModule.pick(allIcons),
     NgbModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',

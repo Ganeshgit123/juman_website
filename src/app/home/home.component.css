@@ -395,6 +395,10 @@
   padding-bottom: 20px;
 }
 
+.about p{
+  text-align: justify;
+}
+
 .client {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -536,6 +540,9 @@
 .service {
   padding-top: 60px;
 }
+.service p{
+  text-align: justify;
+}
 
 .about {
   padding-top: 60px;
@@ -642,6 +649,7 @@
 }
 
 .animeslide-desc {
+  font-size: 20px;
   padding: 15px 22px;
   border-radius: 8px;
   background-color: none;

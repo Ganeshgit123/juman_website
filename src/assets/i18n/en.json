@@ -19,5 +19,7 @@
     "ViewAll":"View All",
     "LearnMore":"Learn More",
     "SelectDepart":"Select Department",
-    "More":"More"
+    "More":"More",
+    "PleaseprovidevalidEmail":"Please provide a valid email address",
+    "Ninedigitsonlyallowed": "Nine digits only allowed"
  }

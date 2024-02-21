@@ -19,5 +19,7 @@
     "ViewAll":"عرض الكل",
     "LearnMore":"اعرف المزيد",
     "SelectDepart":"اختر القسم",
-    "More":"المزيد"
+    "More":"المزيد",
+    "PleaseprovidevalidEmail":"يجب تقديم عنوان بريد إلكتروني صالح",
+    "Ninedigitsonlyallowed": "تسعة أرقام مسموح بها فقط"
  }

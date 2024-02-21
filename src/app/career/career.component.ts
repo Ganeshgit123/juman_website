@@ -1,29 +1,14 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment.prod';
 
-// import { ReCaptcha2Component } from 'ngx-captcha';
 @Component({
   selector: 'app-career',
   templateUrl: './career.component.html',
   styleUrls: ['./career.component.css']
 })
-export class CareerComponent {
-  protected aFormGroup: FormGroup;
-  // @ViewChild('captchaElem') captchaElem: ReCaptcha2Component;
-   @ViewChild('langInput') langInput: ElementRef;
- 
-   public captchaIsLoaded = false;
-   public captchaSuccess = false;
-   public captchaIsExpired = false;
-   public captchaResponse?: string;
- 
-   public theme: 'light' | 'dark' = 'light';
-   public size: 'compact' | 'normal' = 'normal';
-   public lang = 'en';
-   public type: 'image' | 'audio';
-  
+export class CareerComponent {  
    endpoint = environment.baseUrl;
    dir: any;
    getBanners = [];
@@ -42,10 +27,6 @@ export class CareerComponent {
     this.dir = localStorage.getItem('dir')  || "ltr";
     sessionStorage.setItem('pageName', 'career');
 
-     this.aFormGroup = this.fb.group({
-       recaptcha: ['', Validators.required]
-     });
-
      const bannerData = {
       relations: ["header"],
       filter: {
@@ -63,10 +44,10 @@ export class CareerComponent {
 
       this.careerForm = this.fb.group({
         name: ['', [Validators.required]],
-        email: ['', [Validators.required]],
-        mobileNumber: ['', [Validators.required]],
+        email: ['', [Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
+        mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
         department: ['', [Validators.required]],
-        resume: [''],
+        resume: ['', [Validators.required]],
       });
 
       const object = {
@@ -83,12 +64,6 @@ export class CareerComponent {
             return element.isActive;
           })
         });
-   }
-   // reset(): void {
-   //   this.captchaElem.resetCaptcha();
-   // }
-   handleSuccess(data) {
-     console.log(data);
    }
 
    get f() { return this.careerForm.controls; }
