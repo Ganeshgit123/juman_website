@@ -144,14 +144,19 @@
 }
 .top_header a{
   border: 1px solid var(--white-color);
-  padding: 3px 10px;
+  padding: 3px 6px;
   color: var(--white-color);
   font-size: var(--para-size);
   font-weight: 500;
 }
 .top_header a .flag_img{
+  position: relative;
+  top: -1px;
   width: 25px;
-  padding-left: 5px;
+  padding-right: 5px;
+}
+.top_header a .flag_img:lang(ar){
+  top: 0;
 }
 .navbar {
   background: transparent;
@@ -318,7 +323,7 @@
 }
 
 .navbar-brand img {
-  width: 200px;
+  width: 250px;
 }
 
 .bg {

@@ -2,13 +2,14 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="top_header">
       <p class="pb-0 top_para">
-        <a *ngIf="lang == 'en'" (click)="switchLang('ar')">AR <img src="../../assets/img/saudi_flag.png"
-            class="flag_img"></a>
-        <a *ngIf="lang == 'ar'" (click)="switchLang('en')">EN <img src="../../assets/img/en.png" class="flag_img"></a>
+        <a *ngIf="lang == 'en'" (click)="switchLang('ar')"><img src="../../assets/img/language.png"
+          class="flag_img"> AR</a>
+      <a *ngIf="lang == 'ar'" (click)="switchLang('en')"><img src="../../assets/img/language.png"
+          class="flag_img"> EN</a>
       </p>
     </div>
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/"><img src="assets/img/main-logo.png" class="img-fluid"></a>
+      <a class="navbar-brand" routerLink="/"><img src="assets/img/logo_juman.svg" class="img-fluid"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
         aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
         (click)="isCollapsed = !isCollapsed">
