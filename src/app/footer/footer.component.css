@@ -51,10 +51,11 @@
     left: auto;
 }
 .foo-img {
-    margin-left: -35px !important;
+    width: 300px;
+    margin-left: -15px !important;
 }
 .foo-img:lang(ar){
-    margin-right: -35px !important;
+    margin-right: -15px !important;
     margin-left: auto;
 }
 .copy {
