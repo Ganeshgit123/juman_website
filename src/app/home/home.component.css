@@ -52,11 +52,15 @@
   background: var(--main-color);
 }
 
-/* .logo-pos{
-  width: 300px;
+.logo-pos{
+  /* width: 300px; */
   height: 300px;
-} */
-
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) { 
+  .logo-pos{
+    height: auto;
+  }
+}
 .equal_space_right {
   padding-right: 20px;
 }
