@@ -60,7 +60,7 @@ export class HomeComponent {
       1000: {
         items: 5
       },
-      1260:{
+      1260: {
         items: 5
       }
     },
@@ -94,34 +94,7 @@ export class HomeComponent {
     },
     nav: false,
   }
-  suc: OwlOptions = {
-    loop: true,
-    margin: 30,
-    rtl: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 900,
-    navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      760: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    },
-    nav: false,
-  }
+
   succ: OwlOptions = {
     loop: true,
     margin: 30,
@@ -228,13 +201,73 @@ export class HomeComponent {
   newsLink = [];
   gccServiceImg: any;
   marketServiceImg: any;
-  sortedImg = [];
+  sortedOperatingImg = [];
+  suc: OwlOptions;
 
   constructor(public authService: AuthService,) { }
 
   ngOnInit() {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'home');
+
+    if (this.dir === 'ltr') {
+      this.suc = {
+        loop: true,
+        margin: 30,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 900,
+        navSpeed: 600,
+        navText: ['&#8249', '&#8250;'],
+        responsive: {
+          0: {
+            items: 1
+          },
+          400: {
+            items: 1
+          },
+          760: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        },
+        nav: false,
+      }
+    }else{
+      this.suc = {
+        loop: true,
+        rtl: true,
+        margin: 30,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 900,
+        navSpeed: 600,
+        navText: ['&#8249', '&#8250;'],
+        responsive: {
+          0: {
+            items: 1
+          },
+          400: {
+            items: 1
+          },
+          760: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        },
+        nav: false,
+      }
+    }
 
     const bannerData = {
       relations: ["header"],
@@ -245,7 +278,7 @@ export class HomeComponent {
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
       });
@@ -269,6 +302,19 @@ export class HomeComponent {
         this.operatingSect = this.getData.filter(element => {
           return element.code === 'HOPERA';
         })
+
+        var operatingIMgSection = this.getData.filter(element => {
+          return element.code === 'HOMEOP';
+        })
+
+        var activeoperatingIMg = operatingIMgSection[0].images.filter(element => {
+          return element.isActive;
+        })
+
+        this.sortedOperatingImg = activeoperatingIMg.sort(function (first, second) {
+          return first?.seq - second?.seq;
+        });
+
         this.serviceSect = this.getData.filter(element => {
           return element.code === 'SERVIC';
         })
@@ -281,12 +327,12 @@ export class HomeComponent {
         var marketImg = this.serviceSect[0]?.images.filter(element => {
           return element.seq === 1;
         })
-        this.marketServiceImg = marketImg[0]?.path; 
+        this.marketServiceImg = marketImg[0]?.path;
 
         this.partnerSec = this.getData.filter(element => {
           return element.code === 'PARTNE';
         })
-        var activePartnerImg = this.partnerSec[0].images.filter(element =>{
+        var activePartnerImg = this.partnerSec[0].images.filter(element => {
           return element.isActive;
         })
         this.partnerSecImages = activePartnerImg.sort(function (first, second) {
@@ -296,7 +342,7 @@ export class HomeComponent {
           return element.code === 'CLIENT';
         })
 
-        var activeClientImg = this.clientSec[0].images.filter(element =>{
+        var activeClientImg = this.clientSec[0].images.filter(element => {
           return element.isActive;
         })
         this.clientImageSec = activeClientImg.sort(function (first, second) {
@@ -320,22 +366,27 @@ export class HomeComponent {
     const object1 = {
       relations: ["header", "images"],
       filter: {
-        header: {"id": "071232d9-db59-46f8-90a9-7a341ca4455a"}
+        header: { "id": "071232d9-db59-46f8-90a9-7a341ca4455a" }
       },
       sort: { seq: "ASC" }
     }
-    this.authService.getSectionsByHeaderId(object1).subscribe(
-      (res: any) => {
-        this.operatingImgSec = res.payload.filter(element => {
-          var sortImg = element.images.sort(function (first, second) {
-            return first?.seq - second?.seq;
-          });
-          this.sortedImg.push(sortImg);
-        });
-        // console.log("gygyg",this.sortedImg)
-      });
+    // this.authService.getSectionsByHeaderId(object1).subscribe(
+    //   (res: any) => {
+    //     this.operatingImgSec = res.payload.filter(element => {
+    //       var sortImg = element.images.sort(function (first, second) {
+    //         return first?.seq - second?.seq;
+    //       });
+    //       this.sortedImg.push(sortImg);
+    //     });
+    //   });
   }
-
+  getImagesToShow() {
+    if (this.dir === 'ltr') {
+      return this.sortedOperatingImg.filter((_, index) => index % 2 === 0);
+    } else {
+      return this.sortedOperatingImg.filter((_, index) => index % 2 !== 0);
+    }
+  }
 }
 
 $(document).ready(function () {

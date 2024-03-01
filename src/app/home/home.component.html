@@ -62,25 +62,29 @@
 </section>
 
 <section class="set-part">
-  <div class="container-fluid">
-    <div class="row g-0">
-      <div class="col-md-6">
-        <owl-carousel-o [options]="suc" class="newr">
-          <ng-template carouselSlide *ngFor="let img of sortedImg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let item of operatingSect">
+          <h3 class="title text-center">
+            <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
+            <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
+          </h3>
+        </div>
+        <owl-carousel-o [options]="suc">
+          <ng-template carouselSlide *ngFor="let img of getImagesToShow()">
             <div class="slide">
-              <img src="{{endpoint}}/{{img[1].path}}">
+              <img src="{{endpoint}}/{{img.path}}">
             </div>
           </ng-template>
         </owl-carousel-o>
       </div>
-      <div class="col-md-6 part-two">
+      <!-- <div class="col-md-6 part-two">
         <div *ngFor="let item of operatingSect">
           <h3>
             <span *ngIf="dir == 'ltr'">{{item.erTitle}}</span>
             <span *ngIf="dir == 'rtl'">{{item.arTitle}}</span>
           </h3>
-          <!-- <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
-          <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p> -->
         </div>
         <owl-carousel-o [options]="succ" class="log_caroou">
           <ng-template carouselSlide *ngFor="let img of sortedImg">
@@ -89,7 +93,7 @@
             </div>
           </ng-template>
         </owl-carousel-o>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
