@@ -13,14 +13,15 @@ export class MarketplaceComponent {
   getBanners = [];
   getData = [];
   adImages = [];
-  enAdImage:any;
-  arADImgg:any;
-  bannerLength:  number;
+  enAdImage: any;
+  arADImgg: any;
+  bannerLength: number;
+  appLinks: any;
 
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'service');
 
     const bannerData = {
@@ -32,7 +33,7 @@ export class MarketplaceComponent {
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
@@ -47,23 +48,23 @@ export class MarketplaceComponent {
     }
     this.authService.getSectionsByHeaderId(object).subscribe(
       (res: any) => {
-         this.getData = res.payload.filter(element =>{
+        this.getData = res.payload.filter(element => {
           return element.seq === 0;
         })
-        
-        var adImageSec = res.payload.filter(element =>{
+        this.appLinks = this.getData[0].additionalInfo;
+
+        var adImageSec = res.payload.filter(element => {
           return element.seq === 1;
         })
 
         this.adImages = adImageSec[0].images;
 
-        var imagesss = this.adImages.filter(element =>{
+        var imagesss = this.adImages.filter(element => {
           return element.seq === 0;
         })
         this.enAdImage = imagesss[0]?.path;
 
-
-        var dddArImg = this.adImages.filter(element =>{
+        var dddArImg = this.adImages.filter(element => {
           return element.seq === 1;
         })
         this.arADImgg = dddArImg[0]?.path;
