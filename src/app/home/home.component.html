@@ -153,7 +153,7 @@
 </section> -->
 
 <section class="client">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row" *ngFor="let item of clientSec">
       <div class="col-md-12">
         <h2 class="cli">
@@ -165,14 +165,16 @@
           <span *ngIf="dir == 'rtl'">{{item.arContent}}</span>
         </h1>
       </div>
-      <div class="col-md-12 car">
-        <owl-carousel-o [options]="success" class="new">
-          <ng-template carouselSlide *ngFor="let item of clientImageSec">
-            <div class="slide">
-              <img src="{{endpoint}}/{{item.path}}" alt="img 1" class="client_img">
-            </div>
-          </ng-template>
-        </owl-carousel-o>
+      <div class="col-md-12">
+        <div class="car">
+          <owl-carousel-o [options]="success" class="new">
+            <ng-template carouselSlide *ngFor="let item of clientImageSec">
+              <div class="slide">
+                <img src="{{endpoint}}/{{item.path}}" alt="img 1" class="client_img">
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
     </div>
   </div>
