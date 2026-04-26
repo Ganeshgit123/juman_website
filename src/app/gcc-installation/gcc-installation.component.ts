@@ -19,25 +19,25 @@ export class GccInstallationComponent {
   selectedItem = 0;
   imagesArray = [];
   idArray = [];
-  popupImg:any;
-  bannerLength:  number;
+  popupImg: any;
+  bannerLength: number;
 
-  constructor(public authService: AuthService,private modalService: NgbModal,private viewportScroller: ViewportScroller) { }
+  constructor(public authService: AuthService, private modalService: NgbModal, private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'service');
 
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "ed2f323a-bb2e-406f-a7d7-13032e5dfb00" }
+        header: { id: "597f86b2-bb38-47b6-88ef-1ffc85bf1097" }
       },
       sort: { seq: "ASC" }
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
@@ -46,7 +46,7 @@ export class GccInstallationComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "ed2f323a-bb2e-406f-a7d7-13032e5dfb00" }
+        header: { id: "597f86b2-bb38-47b6-88ef-1ffc85bf1097" }
       },
       sort: { seq: "ASC" }
     }
@@ -106,12 +106,12 @@ export class GccInstallationComponent {
     }
   }
 
-  imagePopup(content,img){
+  imagePopup(content, img) {
     this.popupImg = img;
     this.modalService.open(content, { centered: true, size: 'md' });
   }
 
-  public onClick(elementId: string): void { 
+  public onClick(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 }

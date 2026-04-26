@@ -238,7 +238,7 @@ export class HomeComponent {
         },
         nav: false,
       }
-    }else{
+    } else {
       this.suc = {
         loop: true,
         rtl: true,
@@ -272,7 +272,7 @@ export class HomeComponent {
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "d0001922-3379-4f30-8c77-531571649537" }
+        header: { id: "d5dc29ae-481b-47a4-80f3-2f1afa274da0" }
       },
       sort: { seq: "ASC" }
     }
@@ -286,7 +286,7 @@ export class HomeComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "d0001922-3379-4f30-8c77-531571649537" }
+        header: { id: "d5dc29ae-481b-47a4-80f3-2f1afa274da0" }
       },
       sort: { seq: "ASC" }
     }
@@ -304,14 +304,14 @@ export class HomeComponent {
         })
 
         var operatingIMgSection = this.getData.filter(element => {
-          return element.code === 'HOMEOP';
+          return element.code === 'HOPERA';
         })
 
-        var activeoperatingIMg = operatingIMgSection[0].images.filter(element => {
+        var activeoperatingIMg = operatingIMgSection[0]?.images.filter(element => {
           return element.isActive;
         })
 
-        this.sortedOperatingImg = activeoperatingIMg.sort(function (first, second) {
+        this.sortedOperatingImg = activeoperatingIMg?.sort(function (first, second) {
           return first?.seq - second?.seq;
         });
 
@@ -332,17 +332,17 @@ export class HomeComponent {
         this.partnerSec = this.getData.filter(element => {
           return element.code === 'PARTNE';
         })
-        var activePartnerImg = this.partnerSec[0].images.filter(element => {
+        var activePartnerImg = this.partnerSec[0]?.images.filter(element => {
           return element.isActive;
         })
-        this.partnerSecImages = activePartnerImg.sort(function (first, second) {
+        this.partnerSecImages = activePartnerImg?.sort(function (first, second) {
           return first?.seq - second?.seq;
         });
         this.clientSec = this.getData.filter(element => {
           return element.code === 'CLIENT';
         })
 
-        var activeClientImg = this.clientSec[0].images.filter(element => {
+        var activeClientImg = this.clientSec[0]?.images.filter(element => {
           return element.isActive;
         })
         this.clientImageSec = activeClientImg.sort(function (first, second) {
@@ -362,29 +362,13 @@ export class HomeComponent {
           return element.code === 'NEWSLI';
         })
       });
-
-    const object1 = {
-      relations: ["header", "images"],
-      filter: {
-        header: { "id": "071232d9-db59-46f8-90a9-7a341ca4455a" }
-      },
-      sort: { seq: "ASC" }
-    }
-    // this.authService.getSectionsByHeaderId(object1).subscribe(
-    //   (res: any) => {
-    //     this.operatingImgSec = res.payload.filter(element => {
-    //       var sortImg = element.images.sort(function (first, second) {
-    //         return first?.seq - second?.seq;
-    //       });
-    //       this.sortedImg.push(sortImg);
-    //     });
-    //   });
   }
+
   getImagesToShow() {
     if (this.dir === 'ltr') {
-      return this.sortedOperatingImg.filter((_, index) => index % 2 === 0);
+      return this.sortedOperatingImg?.filter((_, index) => index % 2 === 0);
     } else {
-      return this.sortedOperatingImg.filter((_, index) => index % 2 !== 0);
+      return this.sortedOperatingImg?.filter((_, index) => index % 2 !== 0);
     }
   }
 }

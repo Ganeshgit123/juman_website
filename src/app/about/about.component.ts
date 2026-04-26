@@ -91,7 +91,7 @@ export class AboutComponent {
   countryCountStop: any;
   regionalCount: number = 0;
   regionalCountStop: any;
-  regionCoo:any;
+  regionCoo: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public authService: AuthService,) { }
 
@@ -102,7 +102,7 @@ export class AboutComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "78e7e440-9dba-4fa4-8f9c-edf4942424c4" }
+        header: { id: "8f94b895-b239-48c1-af46-c0304acbb32f" }
       },
       sort: { seq: "ASC" }
     }
@@ -176,14 +176,14 @@ export class AboutComponent {
     const object1 = {
       relations: ["header", "images"],
       filter: {
-        id: "0cce9f1b-c98a-49ab-a6bd-11770eeefcc2"
+        id: "8f94b895-b239-48c1-af46-c0304acbb32f"
       },
       sort: { seq: "ASC" }
     }
     this.authService.getSectionsByHeaderId(object1).subscribe(
       (res: any) => {
         this.partnerSec = res.payload
-        this.partnerSecImages = this.partnerSec[0].images.sort(function (first, second) {
+        this.partnerSecImages = this.partnerSec[0]?.images.sort(function (first, second) {
           return first.seq - second.seq;
         });
       });

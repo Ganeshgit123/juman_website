@@ -27,13 +27,13 @@ export class OperatingComponent {
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "071232d9-db59-46f8-90a9-7a341ca4455a" }
+        header: { id: "93033b65-6a67-4b14-8033-8e2a0ad4964c" }
       },
       sort: { seq: "ASC" }
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
@@ -42,7 +42,7 @@ export class OperatingComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "071232d9-db59-46f8-90a9-7a341ca4455a" }
+        header: { id: "93033b65-6a67-4b14-8033-8e2a0ad4964c" }
       },
       sort: { seq: "ASC" }
     }

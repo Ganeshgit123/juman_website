@@ -22,19 +22,19 @@ export class ProjectComponent implements OnInit {
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'project');
 
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "7461720a-fc9c-49a3-b281-3d41b818190c" }
+        header: { id: "370637af-3d03-41d3-be36-d5d7cc35bce4" }
       },
       sort: { seq: "ASC" }
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
@@ -43,7 +43,7 @@ export class ProjectComponent implements OnInit {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "7461720a-fc9c-49a3-b281-3d41b818190c" }
+        header: { id: "370637af-3d03-41d3-be36-d5d7cc35bce4" }
       },
       sort: { seq: "ASC" }
     }

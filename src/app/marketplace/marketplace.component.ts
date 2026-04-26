@@ -27,7 +27,7 @@ export class MarketplaceComponent {
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "65e5128c-b24c-4bbd-8069-4c29d89d4ea9" }
+        header: { id: "e13a7ca1-c97a-4d7e-be5c-05b90421fe9e" }
       },
       sort: { seq: "ASC" }
     }
@@ -42,7 +42,7 @@ export class MarketplaceComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "65e5128c-b24c-4bbd-8069-4c29d89d4ea9" }
+        header: { id: "e13a7ca1-c97a-4d7e-be5c-05b90421fe9e" }
       },
       sort: { seq: "ASC" }
     }
@@ -57,17 +57,17 @@ export class MarketplaceComponent {
           return element.seq === 1;
         })
 
-        this.adImages = adImageSec[0].images;
+        this.adImages = adImageSec[0]?.images;
 
-        var imagesss = this.adImages.filter(element => {
+        var imagesss = this.adImages?.filter(element => {
           return element.seq === 0;
         })
-        this.enAdImage = imagesss[0]?.path;
+        this.enAdImage = imagesss?.[0]?.path;
 
-        var dddArImg = this.adImages.filter(element => {
+        var dddArImg = this.adImages?.filter(element => {
           return element.seq === 1;
         })
-        this.arADImgg = dddArImg[0]?.path;
+        this.arADImgg = dddArImg?.[0]?.path;
       });
   }
 }

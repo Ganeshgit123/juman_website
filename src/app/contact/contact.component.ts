@@ -32,7 +32,7 @@ export class ContactComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "f251c287-c78c-4a51-a8e9-9573ce28afbc" }
+        header: { id: "8ba840aa-c59a-4c23-97bc-578f1b95bd40" }
       },
       sort: { seq: "ASC" }
     }
@@ -52,7 +52,7 @@ export class ContactComponent {
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "f251c287-c78c-4a51-a8e9-9573ce28afbc" }
+        header: { id: "8ba840aa-c59a-4c23-97bc-578f1b95bd40" }
       },
       sort: { seq: "ASC" }
     }
@@ -65,7 +65,7 @@ export class ContactComponent {
       });
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
-      email: ['', [Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
+      email: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
       mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
       message: ['', [Validators.required]],
     });

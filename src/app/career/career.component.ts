@@ -9,68 +9,68 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './career.component.html',
   styleUrls: ['./career.component.css']
 })
-export class CareerComponent {  
-   endpoint = environment.baseUrl;
-   dir: any;
-   getBanners = [];
-   getData = [];
-   careerForm: FormGroup;
-   submitted = false;
-   iconImg = null;
-   fileImgUpload: any;
-   iconImgUrl: any;
-   fileUpload:any;
-   bannerLength: number;
+export class CareerComponent {
+  endpoint = environment.baseUrl;
+  dir: any;
+  getBanners = [];
+  getData = [];
+  careerForm: FormGroup;
+  submitted = false;
+  iconImg = null;
+  fileImgUpload: any;
+  iconImgUrl: any;
+  fileUpload: any;
+  bannerLength: number;
 
-   constructor(public fb: FormBuilder,public authService: AuthService,private toastr: ToastrService) {}
-  
-   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+  constructor(public fb: FormBuilder, public authService: AuthService, private toastr: ToastrService) { }
+
+  ngOnInit(): void {
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'career');
 
-     const bannerData = {
+    const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "168d8ed9-6ea5-4707-bdce-c8d0689090f4" }
+        header: { id: "6b9bb815-f5b2-4044-b4c6-33e5a70af2cc" }
       },
       sort: { seq: "ASC" }
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
       });
 
-      this.careerForm = this.fb.group({
-        name: ['', [Validators.required]],
-        email: ['', [Validators.required,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
-        mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
-        department: ['', [Validators.required]],
-        resume: [''],
+    this.careerForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")]],
+      mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{9}")]],
+      department: ['', [Validators.required]],
+      resume: [''],
+    });
+
+    const object = {
+      relations: ["header", "images"],
+      filter: {
+        header: { id: "6b9bb815-f5b2-4044-b4c6-33e5a70af2cc" }
+      },
+      sort: { seq: "ASC" }
+    }
+    this.authService.getSectionsByHeaderId(object).subscribe(
+      (res: any) => {
+        this.getData = res.payload;
+        this.getData = res.payload.filter(element => {
+          return element.isActive;
+        })
       });
+  }
 
-      const object = {
-        relations: ["header", "images"],
-        filter: {
-          header: { id: "168d8ed9-6ea5-4707-bdce-c8d0689090f4" }
-        },
-        sort: { seq: "ASC" }
-      }
-      this.authService.getSectionsByHeaderId(object).subscribe(
-        (res: any) => {
-          this.getData = res.payload;
-          this.getData = res.payload.filter(element => {
-            return element.isActive;
-          })
-        });
-   }
-
-   get f() { return this.careerForm.controls; }
+  get f() { return this.careerForm.controls; }
 
 
-   checkFileFormat(checkFile) {
+  checkFileFormat(checkFile) {
     if (checkFile.type == 'image/png' || checkFile.type == 'image/jpeg' || checkFile.type == 'application/pdf') {
       return false;
     } else {
@@ -78,7 +78,7 @@ export class CareerComponent {
     }
   }
 
-   uploadImageFile(event){
+  uploadImageFile(event) {
     const file = event.target.files && event.target.files[0];
     var valid = this.checkFileFormat(event.target.files[0]);
     if (!valid) {
@@ -89,22 +89,22 @@ export class CareerComponent {
       }
       this.fileImgUpload = file;
     }
-   }
+  }
 
-   onSubmitData(){
+  onSubmitData() {
     this.submitted = true;
-      if (!(this.careerForm.valid && this.fileImgUpload)) {
-        return false;
-      }
+    if (!(this.careerForm.valid && this.fileImgUpload)) {
+      return false;
+    }
 
-      const formData = new FormData();
-      formData.append('resume', this.fileImgUpload)
-      formData.append('name', this.careerForm.value.name)
-      formData.append('email', this.careerForm.value.email)
-      formData.append('mobileNumber', this.careerForm.value.mobileNumber)
-      formData.append('department', this.careerForm.value.department)
+    const formData = new FormData();
+    formData.append('resume', this.fileImgUpload)
+    formData.append('name', this.careerForm.value.name)
+    formData.append('email', this.careerForm.value.email)
+    formData.append('mobileNumber', this.careerForm.value.mobileNumber)
+    formData.append('department', this.careerForm.value.department)
 
-      this.authService.createCareer(formData)
+    this.authService.createCareer(formData)
       .subscribe((res: any) => {
         if (res.code == 200) {
           this.toastr.success('Success ', 'Form Submitted Successfully');
@@ -116,6 +116,6 @@ export class CareerComponent {
           this.ngOnInit();
         }
       });
-   }
+  }
 
 }

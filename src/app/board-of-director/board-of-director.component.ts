@@ -15,24 +15,24 @@ export class BoardOfDirectorComponent {
   chairmanSec = [];
   ceoSec = [];
   boaDD = [];
-  bannerLength:  number;
-  
+  bannerLength: number;
+
   constructor(public authService: AuthService,) { }
 
   ngOnInit(): void {
-    this.dir = localStorage.getItem('dir')  || "ltr";
+    this.dir = localStorage.getItem('dir') || "ltr";
     sessionStorage.setItem('pageName', 'bod');
 
     const bannerData = {
       relations: ["header"],
       filter: {
-        header: { id: "664c1463-a1ad-4fd4-b660-bcf0b26ceb08" }
+        header: { id: "3f6ce278-c5c8-4475-83fc-612ad4f7de8e" }
       },
       sort: { seq: "ASC" }
     }
     this.authService.getBanners(bannerData).subscribe(
       (res: any) => {
-         this.getBanners = res.payload.filter(element => {
+        this.getBanners = res.payload.filter(element => {
           return element.isActive;
         })
         this.bannerLength = this.getBanners.length;
@@ -42,7 +42,7 @@ export class BoardOfDirectorComponent {
     const object = {
       relations: ["header", "images"],
       filter: {
-        header: { id: "664c1463-a1ad-4fd4-b660-bcf0b26ceb08" }
+        header: { id: "3f6ce278-c5c8-4475-83fc-612ad4f7de8e" }
       },
       sort: { seq: "ASC" }
     }

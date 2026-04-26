@@ -46,7 +46,7 @@
         <p [innerHTML]="item.erContent" *ngIf="dir == 'ltr'"></p>
         <p [innerHTML]="item.arContent" *ngIf="dir == 'rtl'"></p>
         <!-- <img src="../../assets/img/jum-logo.svg" class="jum"> -->
-        <a href="{{endpoint}}/{{item.images[0].path}}" target="_blank" class="download">{{"Download" | translate}}</a>
+        <a href="{{endpoint}}/{{item?.images[0]?.path}}" target="_blank" class="download">{{"Download" | translate}}</a>
       </div>
       <div class="col-md-6" *ngFor="let item of whatWeDoSec">
         <h6>
@@ -246,7 +246,7 @@
         <owl-carousel-o [options]="ex" class="new">
           <ng-template carouselSlide *ngFor="let img of latestSec">
             <div class="second hero">
-              <img class="hero-profile-img" src="{{endpoint}}/{{img.images[0].path}}" alt="">
+              <img class="hero-profile-img" src="{{endpoint}}/{{img.images[0]?.path}}" alt="">
               <div class="hero-description-bk">
               </div>
 
@@ -261,14 +261,14 @@
                 </p>
               </div>
               <div class="hero-date">
-                <p>{{img.additionalInfo.date | date:'mediumDate'}}</p>
+                <p>{{img.additionalInfo?.date | date:'mediumDate'}}</p>
               </div>
               <div class="hero-btn">
                 <span *ngIf="dir == 'ltr'">
-                  <a href="{{img.additionalInfo.link}}" target="_blank">{{"LearnMore" | translate}}</a>
+                  <a href="{{img.additionalInfo?.link}}" target="_blank">{{"LearnMore" | translate}}</a>
                 </span>
                 <span *ngIf="dir == 'rtl'">
-                  <a href="{{img.additionalInfo.linkAr}}" target="_blank">{{"LearnMore" | translate}}</a>
+                  <a href="{{img.additionalInfo?.linkAr}}" target="_blank">{{"LearnMore" | translate}}</a>
                 </span>
               </div>
             </div>
