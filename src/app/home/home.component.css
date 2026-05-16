@@ -52,15 +52,17 @@
   background: var(--main-color);
 }
 
-.logo-pos{
+.logo-pos {
   /* width: 300px; */
   height: 300px;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1366px) { 
-  .logo-pos{
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .logo-pos {
     height: auto;
   }
 }
+
 .equal_space_right {
   padding-right: 20px;
 }
@@ -399,7 +401,7 @@
   padding-bottom: 20px;
 }
 
-.about p{
+.about p {
   text-align: justify;
 }
 
@@ -542,9 +544,10 @@
 }
 
 .service {
-  padding-top: 60px;
+  padding-top: 0px;
 }
-.service p{
+
+.service p {
   text-align: justify;
 }
 
@@ -607,12 +610,15 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) { 
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .animeslide-slide {
     background-image: none !important;
     background: #3AC1D1 !important;
   }
-  .animeslide-heading, .animeslide-desc{
+
+  .animeslide-heading,
+  .animeslide-desc {
     color: #000;
   }
 }
@@ -743,11 +749,14 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) { 
-  .about{
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .about {
     padding-top: 0;
+    padding-bottom: 40px;
   }
 }
+
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
   .download {
     background: var(--main-color);
@@ -869,12 +878,15 @@
   .yes {
     padding: 15px;
   }
-  .yes h6{
+
+  .yes h6 {
     text-align: left;
   }
-  .yes h6:lang(ar){
+
+  .yes h6:lang(ar) {
     text-align: right;
   }
+
   .hero {
     margin: 60px 15px 0 15px;
   }
@@ -888,8 +900,9 @@
     width: 4rem;
   }
 }
-@media only screen and (min-width: 1263px)  {
+
+@media only screen and (min-width: 1263px) {
   .newr .slide img {
     height: 600px !important;
   }
-  } 
+}
