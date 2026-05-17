@@ -1,6 +1,6 @@
 .get {
-  padding-top: 120px;
-  padding-bottom: 40px;
+  padding-top: 140px;
+  padding-bottom: 0px;
 }
 
 .get h1 {
@@ -10,9 +10,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-h2{
+
+h2 {
   font-size: var(--heading-h2);
 }
+
 .hr {
   width: 100px;
   background: #000;
@@ -21,7 +23,8 @@ h2{
   top: -31px;
   left: 40%;
 }
-.hr:lang(ar){
+
+.hr:lang(ar) {
   right: 40%;
   left: auto;
 }
@@ -30,14 +33,17 @@ h2{
   background: #F3F3F5;
   height: 300px;
 }
-.about .nav-link.active span{
+
+.about .nav-link.active span {
   padding-bottom: 7px;
   border-bottom: 6px solid #FAA61A;
   border-radius: 4px;
 }
-.about .nav-link.active span:lang(ar){
+
+.about .nav-link.active span:lang(ar) {
   padding-bottom: 2px;
 }
+
 /* .about .nav-link.active span:before {
   content: '';
   position: absolute;
@@ -54,13 +60,16 @@ h2{
 .about .nav-pills {
   border-bottom: 4px solid #D0D0D0;
 }
-.nav{
+
+.nav {
   display: flex;
   justify-content: space-around !important;
 }
-.nav:lang(ar){
+
+.nav:lang(ar) {
   padding-right: 0;
 }
+
 .about .nav-link.active {
   color: #000;
   font-weight: 600;
@@ -118,9 +127,11 @@ h2{
   color: #fff;
   text-align: right;
 }
-.box a:lang(ar){
+
+.box a:lang(ar) {
   text-align: left;
 }
+
 .box1 img {
   width: 50px;
   height: 50px;
@@ -172,9 +183,11 @@ h2{
   color: #fff;
   text-align: right;
 }
-.box3 a:lang(ar){
+
+.box3 a:lang(ar) {
   text-align: left;
 }
+
 .juman {
   margin: 40px auto;
   text-align: center;
@@ -195,7 +208,8 @@ h2{
   top: 50%;
   position: absolute;
 }
-.juman:lang(ar):before{
+
+.juman:lang(ar):before {
   right: -150px;
   left: auto;
 }
@@ -210,7 +224,8 @@ h2{
   top: 50%;
   position: absolute;
 }
-.juman:lang(ar):after{
+
+.juman:lang(ar):after {
   left: -150px;
   right: auto;
 }
@@ -253,10 +268,12 @@ h2{
   top: 50%;
   position: absolute;
 }
-.invest:lang(ar):before{
+
+.invest:lang(ar):before {
   right: -250px;
   left: auto;
 }
+
 .invest:after {
   content: "";
   display: block;
@@ -267,10 +284,12 @@ h2{
   top: 50%;
   position: absolute;
 }
-.invest:lang(ar):after{
+
+.invest:lang(ar):after {
   left: -250px;
   right: auto;
 }
+
 .part {
   background: var(--color-secondary);
 }
@@ -328,14 +347,17 @@ h2{
   width: 20%;
   color: var(--black-color);
 }
-.interested a:hover{
+
+.interested a:hover {
   background: var(--main-color);
   border: var(--main-color);
 }
-.interested a:lang(ar){
+
+.interested a:lang(ar) {
   right: 40%;
   left: auto;
 }
+
 .in-con {
   padding-top: 60px;
 }
@@ -347,10 +369,12 @@ h2{
   top: 320px;
   height: 80px;
 }
-.img-h:lang(ar){
+
+.img-h:lang(ar) {
   right: 75%;
   left: auto;
 }
+
 .boxed {
   background: #FAA61A 0% 0% no-repeat padding-box;
   border-radius: 32px;
@@ -369,23 +393,28 @@ h2{
   transform: translate(50%, 0) scale(1.5);
   height: 250px;
 }
-.boxed .lap:lang(ar){
+
+.boxed .lap:lang(ar) {
   right: -20px;
   left: auto;
   transform: translate(-50%, 0) scale(1.5);
 }
+
 .space-section {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
-.space-section p{
+
+.space-section p {
   text-align: justify;
 }
-.partner_img{
+
+.partner_img {
   width: 100%;
   height: 300px;
   object-fit: contain;
 }
+
 @media only screen and (max-width: 1199px) and (min-width: 320px) {
 
   .juman:before {
@@ -398,9 +427,11 @@ h2{
     top: 50%;
     position: absolute;
   }
-  .juman:lang(ar):before{
+
+  .juman:lang(ar):before {
     right: 0px;
   }
+
   .juman:after {
     content: "";
     display: block;
@@ -411,9 +442,11 @@ h2{
     top: 50%;
     position: absolute;
   }
-  .juman:lang(ar):after{
+
+  .juman:lang(ar):after {
     left: 0px;
   }
+
   .invest:before {
     content: "";
     display: block;
@@ -424,9 +457,11 @@ h2{
     top: 50%;
     position: absolute;
   }
-  .invest:lang(ar):before{
-    right:0px;
+
+  .invest:lang(ar):before {
+    right: 0px;
   }
+
   .invest:after {
     content: "";
     display: block;
@@ -437,9 +472,11 @@ h2{
     top: 50%;
     position: absolute;
   }
-  .invest:lang(ar):after{
+
+  .invest:lang(ar):after {
     left: 0px;
   }
+
   .sec-t {
     height: auto;
   }
@@ -460,10 +497,12 @@ h2{
     width: 80%;
     color: var(--black-color);
   }
-  .interested a:lang(ar){
+
+  .interested a:lang(ar) {
     right: 10%;
     left: auto;
   }
+
   .interested {
     padding: 20px;
     border-radius: 0;
@@ -485,30 +524,38 @@ h2{
     top: -31px;
     left: 58%;
   }
-  .hr:lang(ar){
+
+  .hr:lang(ar) {
     right: 50%;
     left: auto;
   }
-  .img-h{
-   display: none;
+
+  .img-h {
+    display: none;
   }
-  .boxed{
+
+  .boxed {
     max-width: 100%;
-    margin-top:50px
+    margin-top: 50px
   }
+
   .boxed .lap {
     width: 220px;
     top: 40px;
   }
-  .space-section{
+
+  .space-section {
     padding-top: 0px;
   }
-  .number p{
+
+  .number p {
     margin-bottom: 50px;
   }
-  .about{
+
+  .about {
     padding: 15px;
   }
+
   .about .nav-pills li+li {
     margin-left: 20px;
   }
